@@ -10,6 +10,8 @@
 		427DBFD6CEB472C5DFFD612E /* Pods_restaurant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343CE87D7B6726D122F057C1 /* Pods_restaurant.framework */; };
 		6E69CFA92157857C00A06020 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69CFA72157857C00A06020 /* SettingTableViewCell.swift */; };
 		6E69CFAA2157857C00A06020 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */; };
+		6E69CFB12157907900A06020 /* SubSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69CFAF2157907900A06020 /* SubSettingTableViewCell.swift */; };
+		6E69CFB22157907900A06020 /* SubSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFB02157907900A06020 /* SubSettingTableViewCell.xib */; };
 		D01BA5BD21574B4200E6ADE9 /* SpotAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5BC21574B4200E6ADE9 /* SpotAnnotation.swift */; };
 		D01BA5C221574E2300E6ADE9 /* UtilClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5C121574E2300E6ADE9 /* UtilClass.swift */; };
 		D01BA5C421575E4B00E6ADE9 /* SpotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01BA5C321575E4B00E6ADE9 /* SpotView.xib */; };
@@ -47,6 +49,8 @@
 		343CE87D7B6726D122F057C1 /* Pods_restaurant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_restaurant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E69CFA72157857C00A06020 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		6E69CFAF2157907900A06020 /* SubSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSettingTableViewCell.swift; sourceTree = "<group>"; };
+		6E69CFB02157907900A06020 /* SubSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubSettingTableViewCell.xib; sourceTree = "<group>"; };
 		D01BA5BC21574B4200E6ADE9 /* SpotAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotAnnotation.swift; sourceTree = "<group>"; };
 		D01BA5C121574E2300E6ADE9 /* UtilClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilClass.swift; sourceTree = "<group>"; };
 		D01BA5C321575E4B00E6ADE9 /* SpotView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotView.xib; sourceTree = "<group>"; };
@@ -311,6 +315,8 @@
 				D085D0342157471300936233 /* SettingViewController.xib */,
 				6E69CFA72157857C00A06020 /* SettingTableViewCell.swift */,
 				6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */,
+				6E69CFAF2157907900A06020 /* SubSettingTableViewCell.swift */,
+				6E69CFB02157907900A06020 /* SubSettingTableViewCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 				D06CD59921572F9100D0C982 /* Main.storyboard in Resources */,
 				D01BA5DE215768FD00E6ADE9 /* BearCollectionViewCell.xib in Resources */,
 				D01BA5E6215769C100E6ADE9 /* BearReleaseView.xib in Resources */,
+				6E69CFB22157907900A06020 /* SubSettingTableViewCell.xib in Resources */,
 				D085D02E215746EE00936233 /* MapViewController.xib in Resources */,
 				D085D0322157470000936233 /* CouponViewController.xib in Resources */,
 				D01BA5C421575E4B00E6ADE9 /* SpotView.xib in Resources */,
@@ -467,6 +474,7 @@
 				D085D02D215746EE00936233 /* MapViewController.swift in Sources */,
 				D01BA5E42157699F00E6ADE9 /* BearReleaseView.swift in Sources */,
 				D01BA5BD21574B4200E6ADE9 /* SpotAnnotation.swift in Sources */,
+				6E69CFB12157907900A06020 /* SubSettingTableViewCell.swift in Sources */,
 				D06CD59C21572F9100D0C982 /* restaurant.xcdatamodeld in Sources */,
 				D085D0352157471300936233 /* SettingViewController.swift in Sources */,
 				6E69CFA92157857C00A06020 /* SettingTableViewCell.swift in Sources */,
