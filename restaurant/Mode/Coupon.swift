@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Bear: Object {
+class Coupon: Object {
     
     @objc dynamic var bearImageName = ""
     @objc dynamic var catchTime = ""

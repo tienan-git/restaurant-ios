@@ -9,23 +9,17 @@
 import RealmSwift
 import SwiftyJSON
 
-class Spot: Object {
+class Restaurant: Object {
     
-    @objc dynamic var spotId: String = ""
-    @objc dynamic var spotName: String = ""
-    @objc dynamic var spotType: String = ""
-    @objc dynamic var spotImageUrl: String = ""
-    @objc dynamic var spotLatitude: String = ""
-    @objc dynamic var spotLongitude: String = ""
-    @objc dynamic var spotService1: Bool = false
-    @objc dynamic var spotService2: Bool = false
-    @objc dynamic var spotService3: Bool = false
-    @objc dynamic var spotService4: Bool = false
-    @objc dynamic var spotService5: Bool = false
-    @objc dynamic var spotService6: Bool = false
-    @objc dynamic var spotService7: Bool = false
-    @objc dynamic var spotService8: Bool = false
-    @objc dynamic var spotFlag: String = ""
+    @objc dynamic var restaurantId: String = ""
+    @objc dynamic var restaurantName: String = ""
+    @objc dynamic var restaurantPhone: String = ""
+    @objc dynamic var restaurantOpenTime: String = ""
+    @objc dynamic var latitude: String = ""
+    @objc dynamic var longitude: String = ""
+    @objc dynamic var restauranatAddress: String = ""
+    @objc dynamic var longitude: String = ""
+    @objc dynamic var longitude: String = ""
     
     convenience init(json: JSON) {
         self.init()

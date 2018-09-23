@@ -48,14 +48,14 @@ class BearReleaseView: UIView {
         let realm = try! Realm()
         if targetName == "ゆたぽん（ファイブ）" {
             // 全てゆたぽんを削除する
-            let bears = realm.objects(Bear.self).filter("status == '0'")
+            let bears = realm.objects(Coupon.self).filter("status == '0'")
             try! realm.write {
                 bears.setValue("1", forKey: "status")
             }
             letAllGoButtonFlag = true
         } else {
             // 該当ゆたぽんを削除する
-            if let result = realm.objects(Bear.self).filter("bearImageName = %@ AND status == '0'", targetName).first {
+            if let result = realm.objects(Coupon.self).filter("bearImageName = %@ AND status == '0'", targetName).first {
                 try! realm.write {
                     result.status = "1"
                 }

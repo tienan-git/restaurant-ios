@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 let realm = try! Realm()
-let results = realm.objects(Bear.self).filter("status == '0'")
+let results = realm.objects(Coupon.self).filter("status == '0'")
 
 class CouponViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, BearReleaseViewDelegate, SpotViewDelegate {
     func routeGuideOrOnlyForClose() {
@@ -84,7 +84,7 @@ class CouponViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func addBear(){
         let realm = try! Realm()
-        let newBear = Bear(bearImageName: "ゆたぽん（レッド）", catchTime: Date.currentDateStringWithoutTimeZoneString, catchPlace: "秋葉原", status: "0")
+        let newBear = Coupon(bearImageName: "ゆたぽん（レッド）", catchTime: Date.currentDateStringWithoutTimeZoneString, catchPlace: "秋葉原", status: "0")
         try! realm.write {
             realm.add(newBear)
         }

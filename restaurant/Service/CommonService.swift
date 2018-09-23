@@ -20,13 +20,13 @@ class CommonService: NSObject {
     }
     
     // MARK: - メソッド：施設情報取得
-    func getSpots(url: String, succeed: @escaping ([Spot]) -> Void, failed: @escaping (String) -> Void) {
+    func getSpots(url: String, succeed: @escaping ([Restaurant]) -> Void, failed: @escaping (String) -> Void) {
         URLCache.shared.removeAllCachedResponses()
         AlamofireInstance.requestNoHeader(method: .get, URLString: url, encoding: JSONEncoding.default, completionHandler: {(response, result, data) in
             if response?.statusCode == 200 {
                 let json = JSON(data ?? Data()).arrayValue
                 dPrint("dataJSON------------\(json)")
-                let spots = json.map(Spot.init)
+                let spots = json.map(Restaurant.init)
                 succeed(spots)
             } else {
                 let message = "施設情報が取得できません。"

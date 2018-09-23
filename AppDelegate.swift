@@ -90,7 +90,7 @@ extension AppDelegate {
                                         },
                                                                       failed: { (message) in
                                                                         let realm = try! Realm()
-                                                                        if realm.objects(Spot.self).isEmpty { // 最新施設情報取得失敗時にローカル施設情報が無い場合、下記アラートを画面に表示させる
+                                                                        if realm.objects(Restaurant.self).isEmpty { // 最新施設情報取得失敗時にローカル施設情報が無い場合、下記アラートを画面に表示させる
                                                                             UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: message, sureHandler: nil)
                                                                         }
                                         }
@@ -100,10 +100,10 @@ extension AppDelegate {
     }
     
     // 施設情報洗替
-    func addSpots(newSpots: [Spot]) {
+    func addSpots(newSpots: [Restaurant]) {
         
         let realm = try! Realm()
-        let oldSpots = realm.objects(Spot.self)
+        let oldSpots = realm.objects(Restaurant.self)
         try! realm.write {
             realm.delete(oldSpots)
             for spot in newSpots {
@@ -123,10 +123,10 @@ extension AppDelegate {
         
         // ゆたぽん情報取得
         let realm = try! Realm()
-        let bearObjs = realm.objects(Bear.self)
+        let bearObjs = realm.objects(Coupon.self)
         var bearDics: [[String:Any]] = []
         if bearObjs.count > 0 {
-            for bearObj: Bear in bearObjs {
+            for bearObj: Coupon in bearObjs {
                 let bearDic: [String:Any] = bearObj.convertIntoDictionary()
                 bearDics.append(bearDic)
             }
