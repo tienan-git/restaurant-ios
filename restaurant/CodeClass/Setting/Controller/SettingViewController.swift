@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TimedSilver
 
 class SettingViewController: UIViewController {
     @IBOutlet weak var settingTableView: UITableView!
@@ -29,9 +30,10 @@ class SettingViewController: UIViewController {
 //        settingTableView.register(UINib(nibName: "SettingTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingTableViewController")
         
         //settingTableView .register(SettingTableViewCell.classForCoder(), forCellReuseIdentifier: "SettingTableViewCell")
-        //self.settingTableView.ts_registerCellNib(SettingTableViewCell.self)
-       // settingTableView.dataSource = self
-       // settingTableView.delegate = self
+        self.settingTableView.ts_registerCellNib(SettingTableViewCell.self)
+        self.settingTableView.ts_registerCellNib(SubSettingTableViewCell.self)
+        settingTableView.dataSource = self
+        settingTableView.delegate = self
         self.settingTableView.tableFooterView = UIView()
 
         // Do any additional setup after loading the view.
@@ -59,38 +61,37 @@ extension SettingViewController: UITableViewDelegate {
 }
 
 // MARK: @protocol - UITableViewDataSource
-//extension SettingViewController: UITableViewDataSource {
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return self.itemDataSouce.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        let rows = self.itemDataSouce[section]
-//        return rows.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.section == 0 {
-//            return 88.0
-//        } else {
-//            return 44.0
-//        }
-//    }
+extension SettingViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.itemDataSouce.count
+    }
 
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.section == 0 {
-//            //自定义cell
-//           // let cell:SettingTableViewCell = settingTableView.dequeueReusableCell(withIdentifier: "SettingTableViewCell", for: indexPath) as! SettingTableViewCell
-//
-//          // let cell = settingTableView.dequeueReusableCell(withIdentifier: "SettingTableViewController", for: indexPath) as! SettingTableViewCell
-//
-//            return cell
-//        } else {
-//           //自定义cell
-//          // let cell:SettingTableViewCell = settingTableView.dequeueReusableCell(withIdentifier: "SettingTableViewCell", for: indexPath) as! SettingTableViewCell
-//           // let cell = settingTableView.dequeueReusableCell(withIdentifier: "SettingTableViewController", for: indexPath) as! SettingTableViewCell
-//            _ = self.itemDataSouce[indexPath.section][indexPath.row]
-//            return cell
-//        }
-//    }
-//}
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let rows = self.itemDataSouce[section]
+        return rows.count
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 88.0
+        } else {
+            return 44.0
+        }
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            //自定义cell
+          
+            let cell:SettingTableViewCell = tableView.ts_dequeueReusableCell(SettingTableViewCell.self)
+            return cell
+        } else {
+           //自定义cell
+          
+            let cell:SubSettingTableViewCell = tableView.ts_dequeueReusableCell(SubSettingTableViewCell.self)
+            let item = self.itemDataSouce[indexPath.section][indexPath.row]
+            cell.titleLabel.text = item
+            return cell
+        }
+    }
+}
