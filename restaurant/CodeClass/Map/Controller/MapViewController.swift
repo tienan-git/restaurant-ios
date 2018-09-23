@@ -82,7 +82,7 @@ class MapViewController: UIViewController {
         
         // 施設情報取得
         let realm = try! Realm()
-        let spots = realm.objects(Spot.self)
+        let spots = realm.objects(Restaurant.self)
         dPrint("spots: \(spots)")
         
         // 施設アノテーション追加

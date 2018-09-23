@@ -14,12 +14,12 @@
 		D01BA5C221574E2300E6ADE9 /* UtilClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5C121574E2300E6ADE9 /* UtilClass.swift */; };
 		D01BA5C421575E4B00E6ADE9 /* SpotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01BA5C321575E4B00E6ADE9 /* SpotView.xib */; };
 		D01BA5C621575E5F00E6ADE9 /* SpotVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5C521575E5F00E6ADE9 /* SpotVIew.swift */; };
-		D01BA5CC21575EE600E6ADE9 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5CB21575EE600E6ADE9 /* Spot.swift */; };
+		D01BA5CC21575EE600E6ADE9 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5CB21575EE600E6ADE9 /* Restaurant.swift */; };
 		D01BA5CE21575F4500E6ADE9 /* DefaultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5CD21575F4500E6ADE9 /* DefaultData.swift */; };
 		D01BA5D02157607600E6ADE9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01BA5CF2157607600E6ADE9 /* MapKit.framework */; };
 		D01BA5D42157634200E6ADE9 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5D32157634200E6ADE9 /* CommonService.swift */; };
 		D01BA5D62157636F00E6ADE9 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5D52157636F00E6ADE9 /* ServiceManager.swift */; };
-		D01BA5D8215763AD00E6ADE9 /* Bear.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5D7215763AD00E6ADE9 /* Bear.swift */; };
+		D01BA5D8215763AD00E6ADE9 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5D7215763AD00E6ADE9 /* Coupon.swift */; };
 		D01BA5DA215765F500E6ADE9 /* ExtensionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5D9215765F500E6ADE9 /* ExtensionKit.swift */; };
 		D01BA5DD215768FD00E6ADE9 /* BearCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5DB215768FD00E6ADE9 /* BearCollectionViewCell.swift */; };
 		D01BA5DE215768FD00E6ADE9 /* BearCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01BA5DC215768FD00E6ADE9 /* BearCollectionViewCell.xib */; };
@@ -51,12 +51,12 @@
 		D01BA5C121574E2300E6ADE9 /* UtilClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilClass.swift; sourceTree = "<group>"; };
 		D01BA5C321575E4B00E6ADE9 /* SpotView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotView.xib; sourceTree = "<group>"; };
 		D01BA5C521575E5F00E6ADE9 /* SpotVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotVIew.swift; sourceTree = "<group>"; };
-		D01BA5CB21575EE600E6ADE9 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
+		D01BA5CB21575EE600E6ADE9 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		D01BA5CD21575F4500E6ADE9 /* DefaultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultData.swift; sourceTree = "<group>"; };
 		D01BA5CF2157607600E6ADE9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D01BA5D32157634200E6ADE9 /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
 		D01BA5D52157636F00E6ADE9 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
-		D01BA5D7215763AD00E6ADE9 /* Bear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bear.swift; sourceTree = "<group>"; };
+		D01BA5D7215763AD00E6ADE9 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
 		D01BA5D9215765F500E6ADE9 /* ExtensionKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionKit.swift; sourceTree = "<group>"; };
 		D01BA5DB215768FD00E6ADE9 /* BearCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearCollectionViewCell.swift; sourceTree = "<group>"; };
 		D01BA5DC215768FD00E6ADE9 /* BearCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BearCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -126,8 +126,8 @@
 		D01BA5C721575EB000E6ADE9 /* Mode */ = {
 			isa = PBXGroup;
 			children = (
-				D01BA5CB21575EE600E6ADE9 /* Spot.swift */,
-				D01BA5D7215763AD00E6ADE9 /* Bear.swift */,
+				D01BA5CB21575EE600E6ADE9 /* Restaurant.swift */,
+				D01BA5D7215763AD00E6ADE9 /* Coupon.swift */,
 			);
 			path = Mode;
 			sourceTree = "<group>";
@@ -476,13 +476,13 @@
 				D01BA5C621575E5F00E6ADE9 /* SpotVIew.swift in Sources */,
 				D01BA5DA215765F500E6ADE9 /* ExtensionKit.swift in Sources */,
 				D085D01A2157449A00936233 /* TabBarController.swift in Sources */,
-				D01BA5CC21575EE600E6ADE9 /* Spot.swift in Sources */,
+				D01BA5CC21575EE600E6ADE9 /* Restaurant.swift in Sources */,
 				D01BA5C221574E2300E6ADE9 /* UtilClass.swift in Sources */,
 				D06CD59621572F9100D0C982 /* ViewController.swift in Sources */,
 				D085D0312157470000936233 /* CouponViewController.swift in Sources */,
 				D06CD59421572F9100D0C982 /* AppDelegate.swift in Sources */,
 				D01BA5D62157636F00E6ADE9 /* ServiceManager.swift in Sources */,
-				D01BA5D8215763AD00E6ADE9 /* Bear.swift in Sources */,
+				D01BA5D8215763AD00E6ADE9 /* Coupon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
