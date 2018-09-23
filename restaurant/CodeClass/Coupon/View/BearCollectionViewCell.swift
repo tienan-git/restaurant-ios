@@ -27,7 +27,6 @@ class BearCollectionViewCell: UICollectionViewCell {
         timeLabel.text = catchTime
         locationLabel.text = catchPlace
         imageView.image = UIImage(named: bearName)
-        
         letItGoCellButton.addTarget(target, action: action, for: events)
         letItGoCellButton.tag = tag
     }

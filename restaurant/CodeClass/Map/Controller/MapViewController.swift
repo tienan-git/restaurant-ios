@@ -201,6 +201,10 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MKMapViewDelegate, SpotViewDelegate {
+    func useCoupon() {
+        
+    }
+    
     
     // MARK: - イベント：施設ピンマークをタップする時
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {

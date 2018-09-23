@@ -12,13 +12,17 @@ import RealmSwift
 let realm = try! Realm()
 let results = realm.objects(Bear.self).filter("status == '0'")
 
-class CouponViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, BearReleaseViewDelegate {
+class CouponViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, BearReleaseViewDelegate, SpotViewDelegate {
+    func routeGuideOrOnlyForClose() {
+        
+    }
+    
     
     @IBOutlet weak var bearCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addBear()
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize.init(width: (kScreenWidth - 70) / 2, height:280)
         layout.sectionInset = UIEdgeInsets(top: 20, left: 25, bottom: 0, right: 25)
@@ -36,12 +40,18 @@ class CouponViewController: UIViewController, UICollectionViewDelegate, UICollec
         super.didReceiveMemoryWarning()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addBear()
+    }
+    
     
     // MARK: - イベント：「逃がす」ボタンをタップする時
     @objc func onClickMyButton(_ sender: UIButton) {
-        let BearReleaseView = Bundle.main.loadNibNamed("BearReleaseView", owner: nil, options: nil)?.first as! BearReleaseView
-        BearReleaseView.delegate = self
-        BearReleaseView.makeMyWindow(name: results[sender.tag].bearImageName, text: results[sender.tag].bearImageName + "を\n逃しますか？")
+        let spotView = Bundle.main.loadNibNamed("SpotView", owner: nil, options: nil)?.first as! SpotView
+        spotView.spotRouteGuideButton.setTitle("使用する", for: UIControlState.normal)
+        spotView.makeMyWindow(spotName: "", spotType: "", spotServiceArray: [], spotImageUrl: "")
+        spotView.delegate = self as? SpotViewDelegate
     }
     
     // MARK: - イベント：「全て逃がす」ボタンをタップする時
@@ -68,33 +78,16 @@ class CouponViewController: UIViewController, UICollectionViewDelegate, UICollec
         return cell
     }
     
-    // MARK: - メソッド：「全て逃がす」「ゆたぽんを捕まえてください」の表示制御
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if (kind == UICollectionElementKindSectionFooter) {
-            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CartFooterCollectionReusableView", for: indexPath) as! FooterReusableView
-            footerView.configureData(target: self, action: #selector(onClickLetAllGoButton(_:)), events: .touchUpInside)
-            
-            if results.count == 0 { // buttonFlag == true ||
-                footerView.LetAllGoButton.setTitle("ゆたぽんを捕まえてください", for: .normal)
-                footerView.LetAllGoButton.isEnabled = false
-                footerView.LetAllGoButton.setTitleColor(UIColor.gray, for: .normal)
-                footerView.LetAllGoButton.backgroundColor = UIColor.white
-            } else {
-                footerView.LetAllGoButton.setTitle("全て逃がす", for: .normal)
-                footerView.LetAllGoButton.isEnabled = true
-                footerView.LetAllGoButton.setTitleColor(UIColor.white, for: .normal)
-                footerView.LetAllGoButton.backgroundColor = Color_letAllGoBGColor
-            }
-            
-            return footerView
+    func useCoupon() {
+        dPrint("クーポン使用")
+    }
+    
+    func addBear(){
+        let realm = try! Realm()
+        let newBear = Bear(bearImageName: "ゆたぽん（レッド）", catchTime: Date.currentDateStringWithoutTimeZoneString, catchPlace: "秋葉原", status: "0")
+        try! realm.write {
+            realm.add(newBear)
         }
-        
-        if (kind == UICollectionElementKindSectionHeader) {
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CartHeaderCollectionReusableView", for: indexPath)
-            return headerView
-        }
-        
-        fatalError()
     }
     
 }

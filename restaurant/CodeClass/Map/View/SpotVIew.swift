@@ -11,6 +11,7 @@ import AlamofireImage
 
 protocol SpotViewDelegate: class {
     func routeGuideOrOnlyForClose()
+    func useCoupon()
 }
 
 class SpotView: UIView {
@@ -47,6 +48,9 @@ class SpotView: UIView {
         dismiss()
         if delegate is MapViewController {
             delegate?.routeGuideOrOnlyForClose()
+        }
+        if delegate is CouponViewController {
+            delegate?.useCoupon()
         }
     }
     
