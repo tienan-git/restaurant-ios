@@ -14,6 +14,15 @@
 		D06CD59C21572F9100D0C982 /* restaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D06CD59A21572F9100D0C982 /* restaurant.xcdatamodeld */; };
 		D06CD59E21572F9200D0C982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06CD59D21572F9200D0C982 /* Assets.xcassets */; };
 		D06CD5A121572F9200D0C982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06CD59F21572F9200D0C982 /* LaunchScreen.storyboard */; };
+		D085D01A2157449A00936233 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D085D0192157449A00936233 /* TabBarController.swift */; };
+		D085D029215746D000936233 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D085D027215746D000936233 /* HomeViewController.swift */; };
+		D085D02A215746D000936233 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D085D028215746D000936233 /* HomeViewController.xib */; };
+		D085D02D215746EE00936233 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D085D02B215746EE00936233 /* MapViewController.swift */; };
+		D085D02E215746EE00936233 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D085D02C215746EE00936233 /* MapViewController.xib */; };
+		D085D0312157470000936233 /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D085D02F2157470000936233 /* CouponViewController.swift */; };
+		D085D0322157470000936233 /* CouponViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D085D0302157470000936233 /* CouponViewController.xib */; };
+		D085D0352157471300936233 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D085D0332157471300936233 /* SettingViewController.swift */; };
+		D085D0362157471300936233 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D085D0342157471300936233 /* SettingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +36,15 @@
 		D06CD59D21572F9200D0C982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D06CD5A021572F9200D0C982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D06CD5A221572F9200D0C982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D085D0192157449A00936233 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D085D027215746D000936233 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D085D028215746D000936233 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		D085D02B215746EE00936233 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D085D02C215746EE00936233 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		D085D02F2157470000936233 /* CouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
+		D085D0302157470000936233 /* CouponViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponViewController.xib; sourceTree = "<group>"; };
+		D085D0332157471300936233 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		D085D0342157471300936233 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		F1AC3716CB83D9E425280DC2 /* Pods-restaurant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-restaurant.release.xcconfig"; path = "Pods/Target Support Files/Pods-restaurant/Pods-restaurant.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +80,7 @@
 		D06CD58721572F9100D0C982 = {
 			isa = PBXGroup;
 			children = (
+				D06CD59321572F9100D0C982 /* AppDelegate.swift */,
 				D06CD59221572F9100D0C982 /* restaurant */,
 				D06CD59121572F9100D0C982 /* Products */,
 				819D4BC6683FBEBEF2F35B2C /* Pods */,
@@ -80,7 +99,7 @@
 		D06CD59221572F9100D0C982 /* restaurant */ = {
 			isa = PBXGroup;
 			children = (
-				D06CD59321572F9100D0C982 /* AppDelegate.swift */,
+				D085D0142157436800936233 /* CodeClass */,
 				D06CD59521572F9100D0C982 /* ViewController.swift */,
 				D06CD59721572F9100D0C982 /* Main.storyboard */,
 				D06CD59D21572F9200D0C982 /* Assets.xcassets */,
@@ -89,6 +108,134 @@
 				D06CD59A21572F9100D0C982 /* restaurant.xcdatamodeld */,
 			);
 			path = restaurant;
+			sourceTree = "<group>";
+		};
+		D085D0142157436800936233 /* CodeClass */ = {
+			isa = PBXGroup;
+			children = (
+				D085D0152157437B00936233 /* Base */,
+				D085D01B215745D000936233 /* Home */,
+				D085D01C215745DF00936233 /* Map */,
+				D085D01D215745ED00936233 /* Coupon */,
+				D085D01E215745F700936233 /* Setting */,
+			);
+			path = CodeClass;
+			sourceTree = "<group>";
+		};
+		D085D0152157437B00936233 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D085D016215743A700936233 /* Controller */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D085D016215743A700936233 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D085D0192157449A00936233 /* TabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D085D01B215745D000936233 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D085D01F2157464100936233 /* Controller */,
+				D085D0202157464D00936233 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D085D01C215745DF00936233 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D085D0212157467900936233 /* Controller */,
+				D085D0222157468000936233 /* View */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		D085D01D215745ED00936233 /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				D085D0232157468900936233 /* Controller */,
+				D085D0242157469400936233 /* View */,
+			);
+			path = Coupon;
+			sourceTree = "<group>";
+		};
+		D085D01E215745F700936233 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				D085D0252157469B00936233 /* Controller */,
+				D085D026215746A300936233 /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		D085D01F2157464100936233 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D085D027215746D000936233 /* HomeViewController.swift */,
+				D085D028215746D000936233 /* HomeViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D085D0202157464D00936233 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D085D0212157467900936233 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D085D02B215746EE00936233 /* MapViewController.swift */,
+				D085D02C215746EE00936233 /* MapViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D085D0222157468000936233 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D085D0232157468900936233 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D085D02F2157470000936233 /* CouponViewController.swift */,
+				D085D0302157470000936233 /* CouponViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D085D0242157469400936233 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D085D0252157469B00936233 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D085D0332157471300936233 /* SettingViewController.swift */,
+				D085D0342157471300936233 /* SettingViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D085D026215746A300936233 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +298,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D085D0362157471300936233 /* SettingViewController.xib in Resources */,
 				D06CD5A121572F9200D0C982 /* LaunchScreen.storyboard in Resources */,
 				D06CD59E21572F9200D0C982 /* Assets.xcassets in Resources */,
 				D06CD59921572F9100D0C982 /* Main.storyboard in Resources */,
+				D085D02E215746EE00936233 /* MapViewController.xib in Resources */,
+				D085D0322157470000936233 /* CouponViewController.xib in Resources */,
+				D085D02A215746D000936233 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,8 +364,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D085D029215746D000936233 /* HomeViewController.swift in Sources */,
+				D085D02D215746EE00936233 /* MapViewController.swift in Sources */,
 				D06CD59C21572F9100D0C982 /* restaurant.xcdatamodeld in Sources */,
+				D085D0352157471300936233 /* SettingViewController.swift in Sources */,
+				D085D01A2157449A00936233 /* TabBarController.swift in Sources */,
 				D06CD59621572F9100D0C982 /* ViewController.swift in Sources */,
+				D085D0312157470000936233 /* CouponViewController.swift in Sources */,
 				D06CD59421572F9100D0C982 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,14 +521,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Q2AY77295;
 				INFOPLIST_FILE = restaurant/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.sparkworks.restaurant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -385,14 +541,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Q2AY77295;
 				INFOPLIST_FILE = restaurant/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.sparkworks.restaurant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
