@@ -6,45 +6,30 @@
 //  Copyright © 2018年 劉鉄男. All rights reserved.
 //
 
-import Foundation
 import RealmSwift
+import SwiftyJSON
 
 class Coupon: Object {
     
-    @objc dynamic var bearImageName = ""
-    @objc dynamic var catchTime = ""
-    @objc dynamic var catchPlace = ""
-    @objc dynamic var status = ""
+    @objc dynamic var couponId = ""
+    @objc dynamic var couponName = ""
+    @objc dynamic var couponDetail = ""
+    @objc dynamic var couponPeriod = ""
     
-    convenience init(bearImageName: String, catchTime: String, catchPlace: String, status: String) {
+    convenience init(json: JSON) {
         self.init()
-        self.bearImageName = bearImageName
-        self.catchTime = catchTime
-        self.catchPlace = catchPlace
-        self.status = status
+        couponId = json["couponId"].stringValue
+        couponName = json["couponName"].stringValue
+        couponDetail = json["couponDetail"].stringValue
+        couponPeriod = json["couponPeriod"].stringValue
     }
     
     func convertIntoDictionary() -> Dictionary<String, Any> {
-        var yutaponType = ""
-        switch self.bearImageName {
-        case "ゆたぽん（レッド）":
-            yutaponType = "red"
-        case "ゆたぽん（ピンク）":
-            yutaponType = "pink"
-        case "ゆたぽん（イエロー）":
-            yutaponType = "yellow"
-        case "ゆたぽん（グリーン）":
-            yutaponType = "green"
-        case "ゆたぽん（ブルー）":
-            yutaponType = "blue"
-        default:
-            yutaponType = ""
-        }
         let dic = [
-            "yutaponType": yutaponType,
-            "spotName": self.catchPlace,
-            "dateTime": self.catchTime,
-            "status": self.status
+            "couponId": couponId,
+            "couponName": couponName,
+            "couponDetail": couponDetail,
+            "couponPeriod": couponPeriod,
             ] as [String : Any]
         return dic
     }
