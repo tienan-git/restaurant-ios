@@ -10,6 +10,7 @@ target 'restaurant' do
   pod 'AlamofireImage'
   pod 'MJRefresh', '~> 3.1.12'
   pod 'SVProgressHUD', '~> 2.2'
+  pod 'TimedSilver', '1.1.0'
 
   # Pods for LotterApp
 
