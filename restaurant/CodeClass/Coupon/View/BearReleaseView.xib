@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BearReleaseView" customModule="ARAPP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSF-WA-FQB">
+                    <rect key="frame" x="30" y="120" width="354" height="486"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GN6-Gr-NX0">
+                            <rect key="frame" x="15" y="25" width="324" height="311"/>
+                            <gestureRecognizers/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbb" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAu-Da-Bbp">
+                            <rect key="frame" x="15" y="336" width="324" height="80"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSF-QC-J0k">
+                            <rect key="frame" x="15" y="416" width="324" height="55"/>
+                            <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                            <state key="normal" title="逃がす">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="letItGo:" destination="iN0-l3-epB" eventType="touchUpInside" id="5Q5-tV-Zki"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBM-Tl-lpb">
+                            <rect key="frame" x="329" y="5" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="hBM-Tl-lpb" secondAttribute="height" id="tqY-5p-5Pb"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="closeUpImage"/>
+                            <connections>
+                                <action selector="close:" destination="iN0-l3-epB" eventType="touchUpInside" id="5lV-W1-ozn"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="hBM-Tl-lpb" firstAttribute="top" secondItem="fSF-WA-FQB" secondAttribute="top" constant="5" id="04B-ja-TlO"/>
+                        <constraint firstAttribute="bottom" secondItem="rSF-QC-J0k" secondAttribute="bottom" constant="15" id="12I-tV-ejT"/>
+                        <constraint firstAttribute="trailing" secondItem="GN6-Gr-NX0" secondAttribute="trailing" constant="15" id="1J8-lj-rW6"/>
+                        <constraint firstItem="aAu-Da-Bbp" firstAttribute="centerX" secondItem="GN6-Gr-NX0" secondAttribute="centerX" id="2ee-vJ-iS5"/>
+                        <constraint firstItem="GN6-Gr-NX0" firstAttribute="top" secondItem="hBM-Tl-lpb" secondAttribute="bottom" id="2oz-7r-Sd9"/>
+                        <constraint firstItem="rSF-QC-J0k" firstAttribute="centerX" secondItem="aAu-Da-Bbp" secondAttribute="centerX" id="5Mc-Iy-1ZE"/>
+                        <constraint firstItem="aAu-Da-Bbp" firstAttribute="top" secondItem="GN6-Gr-NX0" secondAttribute="bottom" id="9Mf-LP-4er"/>
+                        <constraint firstAttribute="trailing" secondItem="hBM-Tl-lpb" secondAttribute="trailing" constant="5" id="JI8-o1-bRZ"/>
+                        <constraint firstItem="GN6-Gr-NX0" firstAttribute="top" secondItem="fSF-WA-FQB" secondAttribute="top" constant="25" id="Lp7-o7-0K0"/>
+                        <constraint firstItem="rSF-QC-J0k" firstAttribute="width" secondItem="aAu-Da-Bbp" secondAttribute="width" id="LsK-1Q-wQh"/>
+                        <constraint firstItem="aAu-Da-Bbp" firstAttribute="width" secondItem="GN6-Gr-NX0" secondAttribute="width" id="P1f-le-uHC"/>
+                        <constraint firstAttribute="bottom" secondItem="GN6-Gr-NX0" secondAttribute="bottom" constant="150" id="gAk-Tm-uxX"/>
+                        <constraint firstItem="GN6-Gr-NX0" firstAttribute="leading" secondItem="fSF-WA-FQB" secondAttribute="leading" constant="15" id="pBg-kQ-xyB"/>
+                        <constraint firstAttribute="bottom" secondItem="aAu-Da-Bbp" secondAttribute="bottom" constant="70" id="sbk-Q8-9rq"/>
+                        <constraint firstItem="rSF-QC-J0k" firstAttribute="top" secondItem="aAu-Da-Bbp" secondAttribute="bottom" id="w0M-zB-fgO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fSF-WA-FQB" secondAttribute="trailing" constant="30" id="4Jb-7b-2ED"/>
+                <constraint firstItem="fSF-WA-FQB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="120" id="NOc-K3-qH5"/>
+                <constraint firstItem="fSF-WA-FQB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="Qdz-Ct-YuP"/>
+                <constraint firstAttribute="bottom" secondItem="fSF-WA-FQB" secondAttribute="bottom" constant="130" id="XcG-oQ-aqT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bearView" destination="fSF-WA-FQB" id="zuQ-Ze-MwZ"/>
+                <outlet property="bearViewGesture" destination="I5o-kr-in2" id="Utz-Le-bOp"/>
+                <outlet property="bearViewImage" destination="GN6-Gr-NX0" id="c8T-kD-W1e"/>
+                <outlet property="bearViewLabel" destination="aAu-Da-Bbp" id="8Hj-6Q-Lop"/>
+                <outlet property="closeButton" destination="hBM-Tl-lpb" id="SxR-bl-fuQ"/>
+                <outlet property="letItGoButton" destination="rSF-QC-J0k" id="ky1-cI-gfj"/>
+                <outletCollection property="gestureRecognizers" destination="I5o-kr-in2" appends="YES" id="5Z7-mF-Sjo"/>
+            </connections>
+            <point key="canvasLocation" x="75.362318840579718" y="81.521739130434796"/>
+        </view>
+        <tapGestureRecognizer id="I5o-kr-in2">
+            <connections>
+                <action selector="dismiss:" destination="iN0-l3-epB" id="Rrs-e6-Iuo"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="closeUpImage" width="85" height="85"/>
+    </resources>
+</document>

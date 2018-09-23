@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5Fr-wu-dj7" customClass="SpotView" customModule="ARAPP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0i-oa-9TU" userLabel="Spot View">
+                    <rect key="frame" x="38" y="133.5" width="300" height="400"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinMarker" translatesAutoresizingMaskIntoConstraints="NO" id="efq-tc-gO7" userLabel="Spot Pin Marker Image">
+                            <rect key="frame" x="10.5" y="10" width="40" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="ddo-7R-rjK"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="グリーンホテル" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJF-F3-C77" userLabel="Spot Name Label">
+                            <rect key="frame" x="50.5" y="20" width="200.5" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="jax-rI-hdS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-aN-oNZ" userLabel="Spot Close Up Button">
+                            <rect key="frame" x="270" y="10" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="hOW-Vl-Zri"/>
+                                <constraint firstAttribute="height" constant="20" id="rfo-BC-uO3"/>
+                            </constraints>
+                            <state key="normal" image="closeUpImage"/>
+                            <connections>
+                                <action selector="closeUpByButton:" destination="5Fr-wu-dj7" eventType="touchUpInside" id="YbX-uG-NzR"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rxc-Aw-qo9" userLabel="Spot Image View">
+                            <rect key="frame" x="25.5" y="60" width="250" height="130"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <gestureRecognizers/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宿泊施設" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vT8-Ej-RFc" userLabel="Spot Type Label">
+                            <rect key="frame" x="25.5" y="200" width="250" height="20"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="hiD-K8-EV0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HBn-ro-v5c" userLabel="Spot Service Label">
+                            <rect key="frame" x="25.5" y="230" width="250" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="Qn5-4r-mFn"/>
+                            </constraints>
+                            <string key="text">［利用可能サービス］
+                                ゆび登録
+                                現金チャージ</string>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of0-Bg-OnZ" userLabel="Spot Route Guide Button">
+                            <rect key="frame" x="20.5" y="340" width="260" height="40"/>
+                            <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="4N9-Ex-NDW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="経路案内">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="routeGuideOrOnlyForClose:" destination="5Fr-wu-dj7" eventType="touchUpInside" id="H95-fM-tJr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="efq-tc-gO7" firstAttribute="top" secondItem="a0i-oa-9TU" secondAttribute="top" constant="10" id="75i-8P-IN9"/>
+                        <constraint firstAttribute="bottom" secondItem="Of0-Bg-OnZ" secondAttribute="bottom" constant="20" id="8vm-yd-eAx"/>
+                        <constraint firstAttribute="trailing" secondItem="rxc-Aw-qo9" secondAttribute="trailing" constant="25" id="AlE-hu-tCr"/>
+                        <constraint firstItem="efq-tc-gO7" firstAttribute="leading" secondItem="a0i-oa-9TU" secondAttribute="leading" constant="10" id="Ffi-NU-1Yz"/>
+                        <constraint firstItem="vT8-Ej-RFc" firstAttribute="top" secondItem="rxc-Aw-qo9" secondAttribute="bottom" constant="10" id="Hkj-Bk-zjm"/>
+                        <constraint firstItem="efq-tc-gO7" firstAttribute="centerY" secondItem="GJF-F3-C77" secondAttribute="centerY" id="KlN-EV-kHN"/>
+                        <constraint firstItem="HBn-ro-v5c" firstAttribute="centerX" secondItem="a0i-oa-9TU" secondAttribute="centerX" id="MEc-ye-WKa"/>
+                        <constraint firstItem="rxc-Aw-qo9" firstAttribute="centerX" secondItem="a0i-oa-9TU" secondAttribute="centerX" id="No6-xe-VnO"/>
+                        <constraint firstItem="pDe-aN-oNZ" firstAttribute="top" secondItem="a0i-oa-9TU" secondAttribute="top" constant="10" id="OmO-2H-mGa"/>
+                        <constraint firstItem="GJF-F3-C77" firstAttribute="top" secondItem="a0i-oa-9TU" secondAttribute="top" constant="20" id="Pdf-Zq-QfL"/>
+                        <constraint firstItem="rxc-Aw-qo9" firstAttribute="top" secondItem="GJF-F3-C77" secondAttribute="bottom" constant="10" id="RO7-Vd-xS7"/>
+                        <constraint firstItem="vT8-Ej-RFc" firstAttribute="centerX" secondItem="a0i-oa-9TU" secondAttribute="centerX" id="Rgq-Nz-fbE"/>
+                        <constraint firstAttribute="trailing" secondItem="pDe-aN-oNZ" secondAttribute="trailing" constant="10" id="Wcg-D4-8lI"/>
+                        <constraint firstItem="HBn-ro-v5c" firstAttribute="top" secondItem="vT8-Ej-RFc" secondAttribute="bottom" constant="10" id="ZKY-Pq-D7r"/>
+                        <constraint firstItem="rxc-Aw-qo9" firstAttribute="leading" secondItem="a0i-oa-9TU" secondAttribute="leading" constant="25" id="aUS-27-H2E"/>
+                        <constraint firstItem="GJF-F3-C77" firstAttribute="centerX" secondItem="a0i-oa-9TU" secondAttribute="centerX" id="gQy-Av-g9x"/>
+                        <constraint firstAttribute="trailing" secondItem="Of0-Bg-OnZ" secondAttribute="trailing" constant="20" id="i06-C0-UUL"/>
+                        <constraint firstItem="HBn-ro-v5c" firstAttribute="width" secondItem="rxc-Aw-qo9" secondAttribute="width" id="lMQ-1B-Two"/>
+                        <constraint firstItem="GJF-F3-C77" firstAttribute="leading" secondItem="efq-tc-gO7" secondAttribute="trailing" id="lN7-vW-js3"/>
+                        <constraint firstItem="Of0-Bg-OnZ" firstAttribute="top" secondItem="HBn-ro-v5c" secondAttribute="bottom" constant="10" id="sCd-I1-gpI"/>
+                        <constraint firstItem="Of0-Bg-OnZ" firstAttribute="centerX" secondItem="a0i-oa-9TU" secondAttribute="centerX" id="tga-K3-din"/>
+                        <constraint firstItem="vT8-Ej-RFc" firstAttribute="width" secondItem="rxc-Aw-qo9" secondAttribute="width" id="wnS-Tb-GwM"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="a0i-oa-9TU" firstAttribute="height" secondItem="5Fr-wu-dj7" secondAttribute="height" multiplier="0.6" id="Gyk-XR-EFT"/>
+                <constraint firstItem="a0i-oa-9TU" firstAttribute="width" secondItem="5Fr-wu-dj7" secondAttribute="width" multiplier="0.8" id="VFY-o4-GCq"/>
+                <constraint firstItem="a0i-oa-9TU" firstAttribute="centerY" secondItem="5Fr-wu-dj7" secondAttribute="centerY" id="cwF-O7-Rnr"/>
+                <constraint firstItem="a0i-oa-9TU" firstAttribute="centerX" secondItem="5Fr-wu-dj7" secondAttribute="centerX" id="flL-Ra-gcu"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Bgx-XZ-Cf1"/>
+            <connections>
+                <outlet property="spotCloseUpButton" destination="pDe-aN-oNZ" id="KGh-Jk-2ye"/>
+                <outlet property="spotImageView" destination="rxc-Aw-qo9" id="1te-Dr-Nah"/>
+                <outlet property="spotNameLabel" destination="GJF-F3-C77" id="Tgz-US-GvB"/>
+                <outlet property="spotRouteGuideButton" destination="Of0-Bg-OnZ" id="UtU-eX-Wrg"/>
+                <outlet property="spotServiceLabel" destination="HBn-ro-v5c" id="Ukq-ef-CtO"/>
+                <outlet property="spotTapGestureRecognizer" destination="6bs-jt-3hR" id="KpG-e4-BYg"/>
+                <outlet property="spotTypeLabel" destination="vT8-Ej-RFc" id="KC6-75-Yub"/>
+                <outletCollection property="gestureRecognizers" destination="6bs-jt-3hR" appends="YES" id="Af4-Ra-fqK"/>
+            </connections>
+            <point key="canvasLocation" x="75.5" y="81.5"/>
+        </view>
+        <tapGestureRecognizer id="6bs-jt-3hR">
+            <connections>
+                <action selector="closeUpByGesture:" destination="5Fr-wu-dj7" id="nni-vF-5fG"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="closeUpImage" width="128" height="128"/>
+        <image name="pinMarker" width="41" height="54"/>
+    </resources>
+</document>

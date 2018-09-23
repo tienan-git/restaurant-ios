@@ -8,6 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		427DBFD6CEB472C5DFFD612E /* Pods_restaurant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343CE87D7B6726D122F057C1 /* Pods_restaurant.framework */; };
+		D01BA5BD21574B4200E6ADE9 /* SpotAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5BC21574B4200E6ADE9 /* SpotAnnotation.swift */; };
+		D01BA5C221574E2300E6ADE9 /* UtilClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5C121574E2300E6ADE9 /* UtilClass.swift */; };
+		D01BA5C421575E4B00E6ADE9 /* SpotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01BA5C321575E4B00E6ADE9 /* SpotView.xib */; };
+		D01BA5C621575E5F00E6ADE9 /* SpotVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5C521575E5F00E6ADE9 /* SpotVIew.swift */; };
+		D01BA5CC21575EE600E6ADE9 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5CB21575EE600E6ADE9 /* Spot.swift */; };
+		D01BA5CE21575F4500E6ADE9 /* DefaultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5CD21575F4500E6ADE9 /* DefaultData.swift */; };
+		D01BA5D02157607600E6ADE9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01BA5CF2157607600E6ADE9 /* MapKit.framework */; };
+		D01BA5D42157634200E6ADE9 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5D32157634200E6ADE9 /* CommonService.swift */; };
+		D01BA5D62157636F00E6ADE9 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5D52157636F00E6ADE9 /* ServiceManager.swift */; };
+		D01BA5D8215763AD00E6ADE9 /* Bear.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5D7215763AD00E6ADE9 /* Bear.swift */; };
+		D01BA5DA215765F500E6ADE9 /* ExtensionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5D9215765F500E6ADE9 /* ExtensionKit.swift */; };
+		D01BA5DD215768FD00E6ADE9 /* BearCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5DB215768FD00E6ADE9 /* BearCollectionViewCell.swift */; };
+		D01BA5DE215768FD00E6ADE9 /* BearCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01BA5DC215768FD00E6ADE9 /* BearCollectionViewCell.xib */; };
+		D01BA5E12157695E00E6ADE9 /* FooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5DF2157695E00E6ADE9 /* FooterReusableView.swift */; };
+		D01BA5E22157695E00E6ADE9 /* FooterReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01BA5E02157695E00E6ADE9 /* FooterReusableView.xib */; };
+		D01BA5E42157699F00E6ADE9 /* BearReleaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5E32157699F00E6ADE9 /* BearReleaseView.swift */; };
+		D01BA5E6215769C100E6ADE9 /* BearReleaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01BA5E5215769C100E6ADE9 /* BearReleaseView.xib */; };
 		D06CD59421572F9100D0C982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CD59321572F9100D0C982 /* AppDelegate.swift */; };
 		D06CD59621572F9100D0C982 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CD59521572F9100D0C982 /* ViewController.swift */; };
 		D06CD59921572F9100D0C982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06CD59721572F9100D0C982 /* Main.storyboard */; };
@@ -28,6 +45,23 @@
 /* Begin PBXFileReference section */
 		268C020143075963CC51C406 /* Pods-restaurant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-restaurant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-restaurant/Pods-restaurant.debug.xcconfig"; sourceTree = "<group>"; };
 		343CE87D7B6726D122F057C1 /* Pods_restaurant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_restaurant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01BA5BC21574B4200E6ADE9 /* SpotAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotAnnotation.swift; sourceTree = "<group>"; };
+		D01BA5C121574E2300E6ADE9 /* UtilClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilClass.swift; sourceTree = "<group>"; };
+		D01BA5C321575E4B00E6ADE9 /* SpotView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotView.xib; sourceTree = "<group>"; };
+		D01BA5C521575E5F00E6ADE9 /* SpotVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotVIew.swift; sourceTree = "<group>"; };
+		D01BA5CB21575EE600E6ADE9 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
+		D01BA5CD21575F4500E6ADE9 /* DefaultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultData.swift; sourceTree = "<group>"; };
+		D01BA5CF2157607600E6ADE9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D01BA5D32157634200E6ADE9 /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
+		D01BA5D52157636F00E6ADE9 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		D01BA5D7215763AD00E6ADE9 /* Bear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bear.swift; sourceTree = "<group>"; };
+		D01BA5D9215765F500E6ADE9 /* ExtensionKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionKit.swift; sourceTree = "<group>"; };
+		D01BA5DB215768FD00E6ADE9 /* BearCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearCollectionViewCell.swift; sourceTree = "<group>"; };
+		D01BA5DC215768FD00E6ADE9 /* BearCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BearCollectionViewCell.xib; sourceTree = "<group>"; };
+		D01BA5DF2157695E00E6ADE9 /* FooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterReusableView.swift; sourceTree = "<group>"; };
+		D01BA5E02157695E00E6ADE9 /* FooterReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterReusableView.xib; sourceTree = "<group>"; };
+		D01BA5E32157699F00E6ADE9 /* BearReleaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearReleaseView.swift; sourceTree = "<group>"; };
+		D01BA5E5215769C100E6ADE9 /* BearReleaseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BearReleaseView.xib; sourceTree = "<group>"; };
 		D06CD59021572F9100D0C982 /* restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06CD59321572F9100D0C982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D06CD59521572F9100D0C982 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01BA5D02157607600E6ADE9 /* MapKit.framework in Frameworks */,
 				427DBFD6CEB472C5DFFD612E /* Pods_restaurant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +98,7 @@
 		1CD5502DA5B00E86E94EDE00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D01BA5CF2157607600E6ADE9 /* MapKit.framework */,
 				343CE87D7B6726D122F057C1 /* Pods_restaurant.framework */,
 			);
 			name = Frameworks;
@@ -75,6 +111,41 @@
 				F1AC3716CB83D9E425280DC2 /* Pods-restaurant.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D01BA5C021574DF000E6ADE9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D01BA5C121574E2300E6ADE9 /* UtilClass.swift */,
+				D01BA5CD21575F4500E6ADE9 /* DefaultData.swift */,
+				D01BA5D9215765F500E6ADE9 /* ExtensionKit.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		D01BA5C721575EB000E6ADE9 /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+				D01BA5CB21575EE600E6ADE9 /* Spot.swift */,
+				D01BA5D7215763AD00E6ADE9 /* Bear.swift */,
+			);
+			path = Mode;
+			sourceTree = "<group>";
+		};
+		D01BA5D12157630600E6ADE9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D01BA5D32157634200E6ADE9 /* CommonService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D01BA5D22157631500E6ADE9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D01BA5D52157636F00E6ADE9 /* ServiceManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		D06CD58721572F9100D0C982 = {
@@ -100,6 +171,10 @@
 			isa = PBXGroup;
 			children = (
 				D085D0142157436800936233 /* CodeClass */,
+				D01BA5C721575EB000E6ADE9 /* Mode */,
+				D01BA5D12157630600E6ADE9 /* Service */,
+				D01BA5D22157631500E6ADE9 /* Manager */,
+				D01BA5C021574DF000E6ADE9 /* Util */,
 				D06CD59521572F9100D0C982 /* ViewController.swift */,
 				D06CD59721572F9100D0C982 /* Main.storyboard */,
 				D06CD59D21572F9200D0C982 /* Assets.xcassets */,
@@ -202,6 +277,9 @@
 		D085D0222157468000936233 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D01BA5BC21574B4200E6ADE9 /* SpotAnnotation.swift */,
+				D01BA5C321575E4B00E6ADE9 /* SpotView.xib */,
+				D01BA5C521575E5F00E6ADE9 /* SpotVIew.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,6 +296,12 @@
 		D085D0242157469400936233 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D01BA5DB215768FD00E6ADE9 /* BearCollectionViewCell.swift */,
+				D01BA5DC215768FD00E6ADE9 /* BearCollectionViewCell.xib */,
+				D01BA5DF2157695E00E6ADE9 /* FooterReusableView.swift */,
+				D01BA5E02157695E00E6ADE9 /* FooterReusableView.xib */,
+				D01BA5E32157699F00E6ADE9 /* BearReleaseView.swift */,
+				D01BA5E5215769C100E6ADE9 /* BearReleaseView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +356,11 @@
 				TargetAttributes = {
 					D06CD58F21572F9100D0C982 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -302,8 +391,12 @@
 				D06CD5A121572F9200D0C982 /* LaunchScreen.storyboard in Resources */,
 				D06CD59E21572F9200D0C982 /* Assets.xcassets in Resources */,
 				D06CD59921572F9100D0C982 /* Main.storyboard in Resources */,
+				D01BA5DE215768FD00E6ADE9 /* BearCollectionViewCell.xib in Resources */,
+				D01BA5E6215769C100E6ADE9 /* BearReleaseView.xib in Resources */,
 				D085D02E215746EE00936233 /* MapViewController.xib in Resources */,
+				D01BA5E22157695E00E6ADE9 /* FooterReusableView.xib in Resources */,
 				D085D0322157470000936233 /* CouponViewController.xib in Resources */,
+				D01BA5C421575E4B00E6ADE9 /* SpotView.xib in Resources */,
 				D085D02A215746D000936233 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,8 +432,10 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-SwiftyJSON/Alamofire_SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -348,8 +443,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,12 +463,24 @@
 			files = (
 				D085D029215746D000936233 /* HomeViewController.swift in Sources */,
 				D085D02D215746EE00936233 /* MapViewController.swift in Sources */,
+				D01BA5E42157699F00E6ADE9 /* BearReleaseView.swift in Sources */,
+				D01BA5BD21574B4200E6ADE9 /* SpotAnnotation.swift in Sources */,
 				D06CD59C21572F9100D0C982 /* restaurant.xcdatamodeld in Sources */,
 				D085D0352157471300936233 /* SettingViewController.swift in Sources */,
+				D01BA5CE21575F4500E6ADE9 /* DefaultData.swift in Sources */,
+				D01BA5DD215768FD00E6ADE9 /* BearCollectionViewCell.swift in Sources */,
+				D01BA5D42157634200E6ADE9 /* CommonService.swift in Sources */,
+				D01BA5C621575E5F00E6ADE9 /* SpotVIew.swift in Sources */,
+				D01BA5DA215765F500E6ADE9 /* ExtensionKit.swift in Sources */,
 				D085D01A2157449A00936233 /* TabBarController.swift in Sources */,
+				D01BA5CC21575EE600E6ADE9 /* Spot.swift in Sources */,
+				D01BA5C221574E2300E6ADE9 /* UtilClass.swift in Sources */,
 				D06CD59621572F9100D0C982 /* ViewController.swift in Sources */,
 				D085D0312157470000936233 /* CouponViewController.swift in Sources */,
 				D06CD59421572F9100D0C982 /* AppDelegate.swift in Sources */,
+				D01BA5E12157695E00E6ADE9 /* FooterReusableView.swift in Sources */,
+				D01BA5D62157636F00E6ADE9 /* ServiceManager.swift in Sources */,
+				D01BA5D8215763AD00E6ADE9 /* Bear.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

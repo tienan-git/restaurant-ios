@@ -8,6 +8,8 @@ target 'restaurant' do
   pod 'Alamofire-SwiftyJSON'
   pod 'RealmSwift'
   pod 'AlamofireImage'
+  pod 'MJRefresh', '~> 3.1.12'
+  pod 'SVProgressHUD', '~> 2.2'
 
   # Pods for LotterApp
 
