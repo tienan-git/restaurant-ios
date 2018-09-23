@@ -24,7 +24,7 @@
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ザッカーバーグ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvh-Es-9Nc">
-                        <rect key="frame" x="70" y="12" width="184" height="22"/>
+                        <rect key="frame" x="70" y="12" width="164" height="22"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                     <constraint firstItem="Bvh-Es-9Nc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="1Vs-DY-uuX"/>
                     <constraint firstItem="oLe-Gx-Qkg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="Ih7-sg-QOT"/>
                     <constraint firstItem="oLe-Gx-Qkg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="1" id="UgZ-hc-HTo"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Bvh-Es-9Nc" secondAttribute="trailing" constant="50" id="b52-cV-KP4"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Bvh-Es-9Nc" secondAttribute="trailing" constant="70" id="b52-cV-KP4"/>
                     <constraint firstAttribute="trailing" secondItem="oLe-Gx-Qkg" secondAttribute="trailing" constant="260" id="fGw-pI-aGO"/>
                     <constraint firstAttribute="bottom" secondItem="oLe-Gx-Qkg" secondAttribute="bottom" constant="1" id="nun-ZM-C1Z"/>
                     <constraint firstItem="Bvh-Es-9Nc" firstAttribute="leading" secondItem="oLe-Gx-Qkg" secondAttribute="trailing" constant="10" id="sqB-jS-ILH"/>

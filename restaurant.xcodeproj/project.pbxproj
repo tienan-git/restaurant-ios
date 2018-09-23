@@ -12,6 +12,8 @@
 		6E69CFAA2157857C00A06020 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */; };
 		6E69CFB12157907900A06020 /* SubSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69CFAF2157907900A06020 /* SubSettingTableViewCell.swift */; };
 		6E69CFB22157907900A06020 /* SubSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFB02157907900A06020 /* SubSettingTableViewCell.xib */; };
+		6E69CFB52157974300A06020 /* CyuSenListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69CFB32157974300A06020 /* CyuSenListViewController.swift */; };
+		6E69CFB62157974300A06020 /* CyuSenListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFB42157974300A06020 /* CyuSenListViewController.xib */; };
 		D01BA5BD21574B4200E6ADE9 /* SpotAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5BC21574B4200E6ADE9 /* SpotAnnotation.swift */; };
 		D01BA5C221574E2300E6ADE9 /* UtilClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5C121574E2300E6ADE9 /* UtilClass.swift */; };
 		D01BA5C421575E4B00E6ADE9 /* SpotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01BA5C321575E4B00E6ADE9 /* SpotView.xib */; };
@@ -51,6 +53,8 @@
 		6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		6E69CFAF2157907900A06020 /* SubSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSettingTableViewCell.swift; sourceTree = "<group>"; };
 		6E69CFB02157907900A06020 /* SubSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubSettingTableViewCell.xib; sourceTree = "<group>"; };
+		6E69CFB32157974300A06020 /* CyuSenListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CyuSenListViewController.swift; path = restaurant/CodeClass/Setting/Controller/CyuSenListViewController.swift; sourceTree = SOURCE_ROOT; };
+		6E69CFB42157974300A06020 /* CyuSenListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CyuSenListViewController.xib; path = restaurant/CodeClass/Setting/Controller/CyuSenListViewController.xib; sourceTree = SOURCE_ROOT; };
 		D01BA5BC21574B4200E6ADE9 /* SpotAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotAnnotation.swift; sourceTree = "<group>"; };
 		D01BA5C121574E2300E6ADE9 /* UtilClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilClass.swift; sourceTree = "<group>"; };
 		D01BA5C321575E4B00E6ADE9 /* SpotView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotView.xib; sourceTree = "<group>"; };
@@ -324,6 +328,8 @@
 		D085D026215746A300936233 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6E69CFB32157974300A06020 /* CyuSenListViewController.swift */,
+				6E69CFB42157974300A06020 /* CyuSenListViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 				6E69CFB22157907900A06020 /* SubSettingTableViewCell.xib in Resources */,
 				D085D02E215746EE00936233 /* MapViewController.xib in Resources */,
 				D085D0322157470000936233 /* CouponViewController.xib in Resources */,
+				6E69CFB62157974300A06020 /* CyuSenListViewController.xib in Resources */,
 				D01BA5C421575E4B00E6ADE9 /* SpotView.xib in Resources */,
 				D085D02A215746D000936233 /* HomeViewController.xib in Resources */,
 			);
@@ -487,6 +494,7 @@
 				D01BA5CC21575EE600E6ADE9 /* Restaurant.swift in Sources */,
 				D01BA5C221574E2300E6ADE9 /* UtilClass.swift in Sources */,
 				D06CD59621572F9100D0C982 /* ViewController.swift in Sources */,
+				6E69CFB52157974300A06020 /* CyuSenListViewController.swift in Sources */,
 				D085D0312157470000936233 /* CouponViewController.swift in Sources */,
 				D06CD59421572F9100D0C982 /* AppDelegate.swift in Sources */,
 				D01BA5D62157636F00E6ADE9 /* ServiceManager.swift in Sources */,

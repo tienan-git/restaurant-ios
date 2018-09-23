@@ -27,9 +27,6 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.view.backgroundColor = UIColor.viewBackgroundColor
-//        settingTableView.register(UINib(nibName: "SettingTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingTableViewController")
-        
-        //settingTableView .register(SettingTableViewCell.classForCoder(), forCellReuseIdentifier: "SettingTableViewCell")
         self.settingTableView.ts_registerCellNib(SettingTableViewCell.self)
         self.settingTableView.ts_registerCellNib(SubSettingTableViewCell.self)
         settingTableView.dataSource = self
@@ -57,6 +54,9 @@ extension SettingViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        //ここに遷移処理を書く
+        self.present(CyuSenListViewController(), animated: true, completion: nil)
     }
 }
 
@@ -82,16 +82,15 @@ extension SettingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             //自定义cell
-          
             let cell:SettingTableViewCell = tableView.ts_dequeueReusableCell(SettingTableViewCell.self)
             return cell
         } else {
            //自定义cell
-          
             let cell:SubSettingTableViewCell = tableView.ts_dequeueReusableCell(SubSettingTableViewCell.self)
             let item = self.itemDataSouce[indexPath.section][indexPath.row]
             cell.titleLabel.text = item
             return cell
         }
     }
+    
 }
