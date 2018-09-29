@@ -21,7 +21,7 @@ class SettingViewController: UIViewController {
     
     fileprivate enum SettingTableViewRowType {
 //        case userInfoTitle
-//        case otherTitle
+//            case otherTitle
         case user
         case cyusen
         case feedback
@@ -120,13 +120,14 @@ extension SettingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.section == 0 {
-            return 88.0
+            return 200.0
         } else {
             return 44.0
         }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if indexPath.section == 0 {
             //自定义cell
             let cell:SettingTableViewCell = tableView.ts_dequeueReusableCell(SettingTableViewCell.self)

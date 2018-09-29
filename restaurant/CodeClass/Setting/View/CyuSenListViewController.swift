@@ -10,22 +10,14 @@ import UIKit
 
 class CyuSenListViewController: UIViewController {
     
-    @IBOutlet weak var toolBar: UINavigationBar!
-    @IBOutlet weak var backBarButton: UIBarButtonItem!
+   
+    @IBOutlet weak var cyusenTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
     }
-
-    
-    
-    @IBAction func goBackPage(_ sender: Any) {
-    
-
-    }
-    
 
    
 }
