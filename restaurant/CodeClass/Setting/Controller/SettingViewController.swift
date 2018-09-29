@@ -99,14 +99,9 @@ extension SettingViewController: UITableViewDelegate {
             self.navigationController?.pushViewController(LegalViewController(), animated: true)
             break
         case .version:
-           // self.navigationController?.pushViewController(VersionViewController(), animated: true)
+            self.navigationController?.pushViewController(VersionViewController(), animated: true)
             break
         }
-        
-//        if controller != nil {
-//            controller!.view.clipsToBounds = true
-//            self.navigationController?.pushViewController(controller!, animated: true)
-//        }
 
     }
 }
