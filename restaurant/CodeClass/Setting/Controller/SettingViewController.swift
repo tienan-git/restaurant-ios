@@ -12,6 +12,35 @@ import TimedSilver
 class SettingViewController: UIViewController {
     @IBOutlet weak var settingTableView: UITableView!
     
+    fileprivate var sections = [Section]()
+    
+    fileprivate enum SettingTableViewSettingType: Int {
+        case userInfo
+        case other
+    }
+    
+    fileprivate enum SettingTableViewRowType {
+//        case userInfoTitle
+//        case otherTitle
+        case user
+        case cyusen
+        case feedback
+        case legal
+        case version
+    }
+    
+    fileprivate struct Section {
+        var sectionType: SettingTableViewSettingType
+        var rowItems: [SettingTableViewRowType]
+    }
+    
+     func initializeTableViewStruct(){
+        sections = [Section(sectionType: .userInfo, rowItems: [.user]),
+                    Section(sectionType: .other, rowItems: [.cyusen, .feedback, .legal, .version])
+        
+        ]
+    }
+    
     fileprivate let itemDataSouce: [[(String)]] = [
         [
             (""),
@@ -23,7 +52,7 @@ class SettingViewController: UIViewController {
             ("バージョン情報"),
             ],
         ]
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.view.backgroundColor = UIColor.viewBackgroundColor
@@ -32,8 +61,8 @@ class SettingViewController: UIViewController {
         settingTableView.dataSource = self
         settingTableView.delegate = self
         self.settingTableView.tableFooterView = UIView()
+        self.initializeTableViewStruct()
 
-        // Do any additional setup after loading the view.
     }
 
 }
@@ -56,7 +85,29 @@ extension SettingViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         //ここに遷移処理を書く
-        self.present(CyuSenListViewController(), animated: true, completion: nil)
+        switch sections[indexPath.section].rowItems[indexPath.row] {
+        case .user:
+            self.navigationController?.pushViewController(UserViewController(), animated: true)
+            break
+        case .cyusen:
+            self.navigationController?.pushViewController(CyuSenListViewController(), animated: true)
+            break
+        case .feedback:
+            self.navigationController?.pushViewController(FeedBackViewController(), animated: true)
+            break
+        case .legal:
+            self.navigationController?.pushViewController(LegalViewController(), animated: true)
+            break
+        case .version:
+           // self.navigationController?.pushViewController(VersionViewController(), animated: true)
+            break
+        }
+        
+//        if controller != nil {
+//            controller!.view.clipsToBounds = true
+//            self.navigationController?.pushViewController(controller!, animated: true)
+//        }
+
     }
 }
 
@@ -72,6 +123,7 @@ extension SettingViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         if indexPath.section == 0 {
             return 88.0
         } else {

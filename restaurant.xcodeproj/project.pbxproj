@@ -18,8 +18,8 @@
 		6E69CFBA215797AE00A06020 /* FeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFB8215797AE00A06020 /* FeedBackViewController.xib */; };
 		6E69CFBD215797C200A06020 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69CFBB215797C200A06020 /* LegalViewController.swift */; };
 		6E69CFBE215797C200A06020 /* LegalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFBC215797C200A06020 /* LegalViewController.xib */; };
-		6E69CFC1215797D200A06020 /* VersionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69CFBF215797D200A06020 /* VersionViewController.swift */; };
-		6E69CFC2215797D200A06020 /* VersionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFC0215797D200A06020 /* VersionViewController.xib */; };
+		6E9E969F215F538F0029FDBD /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E969D215F538F0029FDBD /* UserViewController.swift */; };
+		6E9E96A0215F538F0029FDBD /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E969E215F538F0029FDBD /* UserViewController.xib */; };
 		D01BA5BD21574B4200E6ADE9 /* SpotAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5BC21574B4200E6ADE9 /* SpotAnnotation.swift */; };
 		D01BA5C221574E2300E6ADE9 /* UtilClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5C121574E2300E6ADE9 /* UtilClass.swift */; };
 		D01BA5C421575E4B00E6ADE9 /* SpotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01BA5C321575E4B00E6ADE9 /* SpotView.xib */; };
@@ -59,14 +59,14 @@
 		6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		6E69CFAF2157907900A06020 /* SubSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSettingTableViewCell.swift; sourceTree = "<group>"; };
 		6E69CFB02157907900A06020 /* SubSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubSettingTableViewCell.xib; sourceTree = "<group>"; };
-		6E69CFB32157974300A06020 /* CyuSenListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CyuSenListViewController.swift; path = restaurant/CodeClass/Setting/Controller/CyuSenListViewController.swift; sourceTree = SOURCE_ROOT; };
-		6E69CFB42157974300A06020 /* CyuSenListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CyuSenListViewController.xib; path = restaurant/CodeClass/Setting/Controller/CyuSenListViewController.xib; sourceTree = SOURCE_ROOT; };
-		6E69CFB7215797AE00A06020 /* FeedBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedBackViewController.swift; path = restaurant/CodeClass/Setting/Controller/FeedBackViewController.swift; sourceTree = SOURCE_ROOT; };
-		6E69CFB8215797AE00A06020 /* FeedBackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FeedBackViewController.xib; path = restaurant/CodeClass/Setting/Controller/FeedBackViewController.xib; sourceTree = SOURCE_ROOT; };
-		6E69CFBB215797C200A06020 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LegalViewController.swift; path = restaurant/CodeClass/Setting/Controller/LegalViewController.swift; sourceTree = SOURCE_ROOT; };
-		6E69CFBC215797C200A06020 /* LegalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LegalViewController.xib; path = restaurant/CodeClass/Setting/Controller/LegalViewController.xib; sourceTree = SOURCE_ROOT; };
-		6E69CFBF215797D200A06020 /* VersionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionViewController.swift; path = restaurant/CodeClass/Setting/Controller/VersionViewController.swift; sourceTree = SOURCE_ROOT; };
-		6E69CFC0215797D200A06020 /* VersionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VersionViewController.xib; path = restaurant/CodeClass/Setting/Controller/VersionViewController.xib; sourceTree = SOURCE_ROOT; };
+		6E69CFB32157974300A06020 /* CyuSenListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CyuSenListViewController.swift; path = restaurant/CodeClass/Setting/View/CyuSenListViewController.swift; sourceTree = SOURCE_ROOT; };
+		6E69CFB42157974300A06020 /* CyuSenListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CyuSenListViewController.xib; path = restaurant/CodeClass/Setting/View/CyuSenListViewController.xib; sourceTree = SOURCE_ROOT; };
+		6E69CFB7215797AE00A06020 /* FeedBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedBackViewController.swift; path = restaurant/CodeClass/Setting/View/FeedBackViewController.swift; sourceTree = SOURCE_ROOT; };
+		6E69CFB8215797AE00A06020 /* FeedBackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FeedBackViewController.xib; path = restaurant/CodeClass/Setting/View/FeedBackViewController.xib; sourceTree = SOURCE_ROOT; };
+		6E69CFBB215797C200A06020 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LegalViewController.swift; path = restaurant/CodeClass/Setting/View/LegalViewController.swift; sourceTree = SOURCE_ROOT; };
+		6E69CFBC215797C200A06020 /* LegalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LegalViewController.xib; path = restaurant/CodeClass/Setting/View/LegalViewController.xib; sourceTree = SOURCE_ROOT; };
+		6E9E969D215F538F0029FDBD /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		6E9E969E215F538F0029FDBD /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		D01BA5BC21574B4200E6ADE9 /* SpotAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotAnnotation.swift; sourceTree = "<group>"; };
 		D01BA5C121574E2300E6ADE9 /* UtilClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilClass.swift; sourceTree = "<group>"; };
 		D01BA5C321575E4B00E6ADE9 /* SpotView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotView.xib; sourceTree = "<group>"; };
@@ -346,8 +346,8 @@
 				6E69CFB8215797AE00A06020 /* FeedBackViewController.xib */,
 				6E69CFBB215797C200A06020 /* LegalViewController.swift */,
 				6E69CFBC215797C200A06020 /* LegalViewController.xib */,
-				6E69CFBF215797D200A06020 /* VersionViewController.swift */,
-				6E69CFC0215797D200A06020 /* VersionViewController.xib */,
+				6E9E969D215F538F0029FDBD /* UserViewController.swift */,
+				6E9E969E215F538F0029FDBD /* UserViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -430,9 +430,9 @@
 				6E69CFBA215797AE00A06020 /* FeedBackViewController.xib in Resources */,
 				D085D0322157470000936233 /* CouponViewController.xib in Resources */,
 				6E69CFB62157974300A06020 /* CyuSenListViewController.xib in Resources */,
+				6E9E96A0215F538F0029FDBD /* UserViewController.xib in Resources */,
 				D01BA5C421575E4B00E6ADE9 /* SpotView.xib in Resources */,
 				D085D02A215746D000936233 /* HomeViewController.xib in Resources */,
-				6E69CFC2215797D200A06020 /* VersionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +505,6 @@
 				6E69CFB9215797AE00A06020 /* FeedBackViewController.swift in Sources */,
 				6E69CFB12157907900A06020 /* SubSettingTableViewCell.swift in Sources */,
 				D06CD59C21572F9100D0C982 /* restaurant.xcdatamodeld in Sources */,
-				6E69CFC1215797D200A06020 /* VersionViewController.swift in Sources */,
 				D085D0352157471300936233 /* SettingViewController.swift in Sources */,
 				6E69CFA92157857C00A06020 /* SettingTableViewCell.swift in Sources */,
 				D01BA5CE21575F4500E6ADE9 /* DefaultData.swift in Sources */,
@@ -513,6 +512,7 @@
 				D01BA5D42157634200E6ADE9 /* CommonService.swift in Sources */,
 				D01BA5C621575E5F00E6ADE9 /* SpotVIew.swift in Sources */,
 				D01BA5DA215765F500E6ADE9 /* ExtensionKit.swift in Sources */,
+				6E9E969F215F538F0029FDBD /* UserViewController.swift in Sources */,
 				D085D01A2157449A00936233 /* TabBarController.swift in Sources */,
 				D01BA5CC21575EE600E6ADE9 /* Restaurant.swift in Sources */,
 				6E69CFBD215797C200A06020 /* LegalViewController.swift in Sources */,

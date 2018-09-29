@@ -1,14 +1,14 @@
 //
-//  CyuSenListViewController.swift
+//  UserViewController.swift
 //  restaurant
 //
-//  Created by パク・セイミ on 2018/09/23.
+//  Created by パク・セイミ on 2018/09/29.
 //  Copyright © 2018年 劉鉄男. All rights reserved.
 //
 
 import UIKit
 
-class CyuSenListViewController: UIViewController {
+class UserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
