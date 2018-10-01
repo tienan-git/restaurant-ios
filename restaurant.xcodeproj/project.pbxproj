@@ -22,6 +22,11 @@
 		6E9E96A0215F538F0029FDBD /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E969E215F538F0029FDBD /* UserViewController.xib */; };
 		6E9E96AF215F975E0029FDBD /* VersionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E96AD215F975E0029FDBD /* VersionViewController.swift */; };
 		6E9E96B0215F975E0029FDBD /* VersionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E96AE215F975E0029FDBD /* VersionViewController.xib */; };
+		6E9E96B7216270870029FDBD /* Cyusen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E96B6216270870029FDBD /* Cyusen.swift */; };
+		6E9E96BA2162727D0029FDBD /* CyusenListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E96B82162727D0029FDBD /* CyusenListViewCell.swift */; };
+		6E9E96BB2162727D0029FDBD /* CyusenListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E96B92162727D0029FDBD /* CyusenListViewCell.xib */; };
+		6E9E96BE216279190029FDBD /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E96BC216279180029FDBD /* UserTableViewCell.swift */; };
+		6E9E96BF216279190029FDBD /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E96BD216279180029FDBD /* UserTableViewCell.xib */; };
 		D01BA5BD21574B4200E6ADE9 /* SpotAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5BC21574B4200E6ADE9 /* SpotAnnotation.swift */; };
 		D01BA5C221574E2300E6ADE9 /* UtilClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5C121574E2300E6ADE9 /* UtilClass.swift */; };
 		D01BA5C421575E4B00E6ADE9 /* SpotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01BA5C321575E4B00E6ADE9 /* SpotView.xib */; };
@@ -71,6 +76,11 @@
 		6E9E969E215F538F0029FDBD /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		6E9E96AD215F975E0029FDBD /* VersionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionViewController.swift; sourceTree = "<group>"; };
 		6E9E96AE215F975E0029FDBD /* VersionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VersionViewController.xib; sourceTree = "<group>"; };
+		6E9E96B6216270870029FDBD /* Cyusen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cyusen.swift; sourceTree = "<group>"; };
+		6E9E96B82162727D0029FDBD /* CyusenListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyusenListViewCell.swift; sourceTree = "<group>"; };
+		6E9E96B92162727D0029FDBD /* CyusenListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CyusenListViewCell.xib; sourceTree = "<group>"; };
+		6E9E96BC216279180029FDBD /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		6E9E96BD216279180029FDBD /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		D01BA5BC21574B4200E6ADE9 /* SpotAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotAnnotation.swift; sourceTree = "<group>"; };
 		D01BA5C121574E2300E6ADE9 /* UtilClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilClass.swift; sourceTree = "<group>"; };
 		D01BA5C321575E4B00E6ADE9 /* SpotView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotView.xib; sourceTree = "<group>"; };
@@ -126,6 +136,14 @@
 				343CE87D7B6726D122F057C1 /* Pods_restaurant.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E9E96B5216270680029FDBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E9E96B6216270870029FDBD /* Cyusen.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		819D4BC6683FBEBEF2F35B2C /* Pods */ = {
@@ -267,6 +285,7 @@
 		D085D01E215745F700936233 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				6E9E96B5216270680029FDBD /* Model */,
 				D085D0252157469B00936233 /* Controller */,
 				D085D026215746A300936233 /* View */,
 			);
@@ -354,6 +373,10 @@
 				6E9E969E215F538F0029FDBD /* UserViewController.xib */,
 				6E9E96AD215F975E0029FDBD /* VersionViewController.swift */,
 				6E9E96AE215F975E0029FDBD /* VersionViewController.xib */,
+				6E9E96B82162727D0029FDBD /* CyusenListViewCell.swift */,
+				6E9E96B92162727D0029FDBD /* CyusenListViewCell.xib */,
+				6E9E96BC216279180029FDBD /* UserTableViewCell.swift */,
+				6E9E96BD216279180029FDBD /* UserTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -426,6 +449,7 @@
 				D085D0362157471300936233 /* SettingViewController.xib in Resources */,
 				D06CD5A121572F9200D0C982 /* LaunchScreen.storyboard in Resources */,
 				D06CD59E21572F9200D0C982 /* Assets.xcassets in Resources */,
+				6E9E96BB2162727D0029FDBD /* CyusenListViewCell.xib in Resources */,
 				6E69CFAA2157857C00A06020 /* SettingTableViewCell.xib in Resources */,
 				6E69CFBE215797C200A06020 /* LegalViewController.xib in Resources */,
 				D06CD59921572F9100D0C982 /* Main.storyboard in Resources */,
@@ -438,6 +462,7 @@
 				D085D0322157470000936233 /* CouponViewController.xib in Resources */,
 				6E69CFB62157974300A06020 /* CyuSenListViewController.xib in Resources */,
 				6E9E96A0215F538F0029FDBD /* UserViewController.xib in Resources */,
+				6E9E96BF216279190029FDBD /* UserTableViewCell.xib in Resources */,
 				D01BA5C421575E4B00E6ADE9 /* SpotView.xib in Resources */,
 				D085D02A215746D000936233 /* HomeViewController.xib in Resources */,
 			);
@@ -506,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D085D029215746D000936233 /* HomeViewController.swift in Sources */,
+				6E9E96B7216270870029FDBD /* Cyusen.swift in Sources */,
 				D085D02D215746EE00936233 /* MapViewController.swift in Sources */,
 				D01BA5E42157699F00E6ADE9 /* BearReleaseView.swift in Sources */,
 				D01BA5BD21574B4200E6ADE9 /* SpotAnnotation.swift in Sources */,
@@ -514,6 +540,7 @@
 				D06CD59C21572F9100D0C982 /* restaurant.xcdatamodeld in Sources */,
 				D085D0352157471300936233 /* SettingViewController.swift in Sources */,
 				6E69CFA92157857C00A06020 /* SettingTableViewCell.swift in Sources */,
+				6E9E96BA2162727D0029FDBD /* CyusenListViewCell.swift in Sources */,
 				D01BA5CE21575F4500E6ADE9 /* DefaultData.swift in Sources */,
 				D01BA5DD215768FD00E6ADE9 /* BearCollectionViewCell.swift in Sources */,
 				D01BA5D42157634200E6ADE9 /* CommonService.swift in Sources */,
@@ -523,6 +550,7 @@
 				6E9E96AF215F975E0029FDBD /* VersionViewController.swift in Sources */,
 				D085D01A2157449A00936233 /* TabBarController.swift in Sources */,
 				D01BA5CC21575EE600E6ADE9 /* Restaurant.swift in Sources */,
+				6E9E96BE216279190029FDBD /* UserTableViewCell.swift in Sources */,
 				6E69CFBD215797C200A06020 /* LegalViewController.swift in Sources */,
 				D01BA5C221574E2300E6ADE9 /* UtilClass.swift in Sources */,
 				D06CD59621572F9100D0C982 /* ViewController.swift in Sources */,

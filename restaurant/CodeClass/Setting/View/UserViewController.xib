@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserViewController" customModule="restaurant" customModuleProvider="target">
             <connections>
+                <outlet property="userTableView" destination="YDB-bb-vnV" id="j0U-z4-X56"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,15 +21,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJi-07-bjw">
-                    <rect key="frame" x="157" y="286" width="34" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YDB-bb-vnV">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YDB-bb-vnV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GGb-RM-IIe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YDB-bb-vnV" secondAttribute="trailing" id="K56-Nr-hQt"/>
+                <constraint firstItem="YDB-bb-vnV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Q6h-1D-8ZI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YDB-bb-vnV" secondAttribute="bottom" id="b3W-aM-Pgc"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
