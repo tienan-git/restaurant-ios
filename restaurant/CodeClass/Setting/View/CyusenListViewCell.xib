@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CyusenListViewCell" customModule="restaurant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018/10/01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efD-8a-Bwp">
+                        <rect key="frame" x="16" y="11" width="85" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IPHONE Xs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tf-mD-fhy">
+                        <rect key="frame" x="116" y="11" width="86" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="応募あたり" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRG-ft-WzY">
+                        <rect key="frame" x="217" y="11" width="87" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9tf-mD-fhy" firstAttribute="leading" secondItem="efD-8a-Bwp" secondAttribute="trailing" constant="15" id="2bV-iz-blC"/>
+                    <constraint firstItem="LRG-ft-WzY" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="E2P-pS-cYw"/>
+                    <constraint firstItem="LRG-ft-WzY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="M7k-Hy-Y20"/>
+                    <constraint firstItem="9tf-mD-fhy" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="O1p-7a-Wpn"/>
+                    <constraint firstItem="efD-8a-Bwp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="RLE-QX-wzT"/>
+                    <constraint firstItem="efD-8a-Bwp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ROZ-bD-YYr"/>
+                    <constraint firstItem="LRG-ft-WzY" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="WFi-im-PNp"/>
+                    <constraint firstItem="efD-8a-Bwp" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="hVT-tT-2KH"/>
+                    <constraint firstItem="LRG-ft-WzY" firstAttribute="leading" secondItem="9tf-mD-fhy" secondAttribute="trailing" constant="15" id="lbx-nX-MY2"/>
+                    <constraint firstItem="9tf-mD-fhy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="thK-Yh-73Y"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="CyusenDateLabel" destination="efD-8a-Bwp" id="aei-eY-3xi"/>
+                <outlet property="CyusenItemLabel" destination="9tf-mD-fhy" id="Lyy-oA-v2v"/>
+                <outlet property="CyusenResultLabel" destination="LRG-ft-WzY" id="G7Z-i3-pGY"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

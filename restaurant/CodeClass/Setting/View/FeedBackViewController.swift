@@ -1,5 +1,5 @@
 //
-//  CyuSenListViewController.swift
+//  FeedBackViewController.swift
 //  restaurant
 //
 //  Created by パク・セイミ on 2018/09/23.
@@ -8,11 +8,18 @@
 
 import UIKit
 
-class CyuSenListViewController: UIViewController {
+class FeedBackViewController: UIViewController {
 
+    @IBOutlet weak var feedbackTextView: UITextView!
+    @IBOutlet weak var saveButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        feedbackTextView.text = "入力してください"
+        feedbackTextView.layer.borderWidth = 1
+        //是否可以滚动
+        feedbackTextView.isScrollEnabled = true
         // Do any additional setup after loading the view.
     }
 

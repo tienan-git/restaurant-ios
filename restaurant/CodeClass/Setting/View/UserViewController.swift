@@ -1,44 +1,36 @@
 //
-//  SettingViewController.swift
+//  UserViewController.swift
 //  restaurant
 //
-//  Created by 劉鉄男 on 2018/9/23.
+//  Created by パク・セイミ on 2018/09/29.
 //  Copyright © 2018年 劉鉄男. All rights reserved.
 //
 
 import UIKit
 import TimedSilver
 
-class SettingViewController: UIViewController {
-    @IBOutlet weak var settingTableView: UITableView!
-    
+class UserViewController: UIViewController {
+
+    @IBOutlet weak var userTableView: UITableView!
+
     fileprivate var sections = [Section]()
+//    fileprivate var headerView: ProfileSettingViewHeaderView?
+//    var tmpUser: User = User()
     
-    fileprivate enum SettingTableViewSettingType: Int {
-        case userInfo
-        case other
+    // ================================================================================
+    // MARK: tableView struct
+    fileprivate enum UserViewTableViewSectionType: Int {
+        case userSetting
     }
     
-    fileprivate enum SettingTableViewRowType {
-//        case userInfoTitle
-//            case otherTitle
-        case user
-        case cyusen
-        case feedback
-        case legal
-        case version
+    fileprivate enum UserViewTableViewRowType {
+        case nickName
+        case profileSettingSaveButton
     }
     
     fileprivate struct Section {
-        var sectionType: SettingTableViewSettingType
-        var rowItems: [SettingTableViewRowType]
-    }
-    
-     func initializeTableViewStruct(){
-        sections = [Section(sectionType: .userInfo, rowItems: [.user]),
-                    Section(sectionType: .other, rowItems: [.cyusen, .feedback, .legal, .version])
-        
-        ]
+        var sectionType: UserViewTableViewSectionType
+        var rowItems: [UserViewTableViewRowType]
     }
     
     fileprivate let itemDataSouce: [[(String)]] = [
@@ -46,29 +38,45 @@ class SettingViewController: UIViewController {
             (""),
             ],
         [
-            ("抽選応募履歴"),
-            ("フィードバック"),
-            ("利用規約"),
-            ("バージョン情報"),
+            ("名前"),
             ],
         ]
     
+//    func footerHeight() -> CGFloat {
+//        return 0
+//    }
+//
+//     func registerDataSourceClass() -> AnyClass? {
+//        return nil
+//    }
+    
+     func initializeTableViewStruct() {
+        sections = [Section(sectionType: .userSetting, rowItems: [.nickName, .profileSettingSaveButton])]
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor.viewBackgroundColor
-        self.settingTableView.ts_registerCellNib(SettingTableViewCell.self)
-        self.settingTableView.ts_registerCellNib(SubSettingTableViewCell.self)
-        settingTableView.dataSource = self
-        settingTableView.delegate = self
-        self.settingTableView.tableFooterView = UIView()
+        self.userTableView.ts_registerCellNib(UserTableViewCell.self)
+        userTableView.dataSource = self
+        userTableView.delegate = self
+        self.userTableView.tableFooterView = UIView()
         self.initializeTableViewStruct()
-
     }
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
 
 // MARK: @protocol - UITableViewDelegate
-extension SettingViewController: UITableViewDelegate {
+extension UserViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 15
@@ -86,37 +94,28 @@ extension SettingViewController: UITableViewDelegate {
         
         //ここに遷移処理を書く
         switch sections[indexPath.section].rowItems[indexPath.row] {
-        case .user:
+        case .nickName:
             self.navigationController?.pushViewController(UserViewController(), animated: true)
             break
-        case .cyusen:
+        case .profileSettingSaveButton:
             self.navigationController?.pushViewController(CyuSenListViewController(), animated: true)
             break
-        case .feedback:
-            self.navigationController?.pushViewController(FeedBackViewController(), animated: true)
-            break
-        case .legal:
-            self.navigationController?.pushViewController(LegalViewController(), animated: true)
-            break
-        case .version:
-            self.navigationController?.pushViewController(VersionViewController(), animated: true)
-            break
         }
-
+        
     }
 }
 
 // MARK: @protocol - UITableViewDataSource
-extension SettingViewController: UITableViewDataSource {
+extension UserViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.itemDataSouce.count
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let rows = self.itemDataSouce[section]
         return rows.count
     }
-
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.section == 0 {
@@ -125,20 +124,21 @@ extension SettingViewController: UITableViewDataSource {
             return 44.0
         }
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
             //自定义cell
-            let cell:SettingTableViewCell = tableView.ts_dequeueReusableCell(SettingTableViewCell.self)
+            let cell:UserTableViewCell = tableView.ts_dequeueReusableCell(UserTableViewCell.self)
             return cell
         } else {
-           //自定义cell
-            let cell:SubSettingTableViewCell = tableView.ts_dequeueReusableCell(SubSettingTableViewCell.self)
+            //自定义cell
+            let cell:UserTableViewCell = tableView.ts_dequeueReusableCell(UserTableViewCell.self)
             let item = self.itemDataSouce[indexPath.section][indexPath.row]
-            cell.titleLabel.text = item
+            //cell.titleLabel.text = item
             return cell
         }
     }
     
 }
+

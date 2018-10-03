@@ -12,14 +12,14 @@ class TabBarController: UITabBarController {
     
     let homeVC = HomeViewController()
     let mapVC = MapViewController()
-    let couponVC = CouponViewController()
+//    let couponVC = CouponViewController()
     let settingVC = SettingViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addChildVC(vc: homeVC, title: "ホーム")
         addChildVC(vc: mapVC, title: "地図")
-        addChildVC(vc: couponVC, title: "クーポン")
+//        addChildVC(vc: couponVC, title: "クーポン")
         addChildVC(vc: settingVC, title: "設定")
     }
     

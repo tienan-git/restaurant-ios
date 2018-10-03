@@ -1,17 +1,15 @@
 //
-//  SettingTableViewCell.swift
+//  UserTableViewCell.swift
 //  restaurant
 //
-//  Created by パク・セイミ on 2018/09/23.
+//  Created by パク・セイミ on 2018/10/02.
 //  Copyright © 2018年 劉鉄男. All rights reserved.
 //
 
 import UIKit
 
-class SettingTableViewCell: UITableViewCell {
+class UserTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var label: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

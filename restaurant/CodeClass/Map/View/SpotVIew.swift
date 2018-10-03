@@ -49,9 +49,9 @@ class SpotView: UIView {
         if delegate is MapViewController {
             delegate?.routeGuideOrOnlyForClose()
         }
-        if delegate is CouponViewController {
-            delegate?.useCoupon()
-        }
+//        if delegate is CouponViewController {
+//            delegate?.useCoupon()
+//        }
     }
     
     // MARK: - メソッド：View（施設情報画面）を表示させる

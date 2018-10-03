@@ -25,7 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let tabbar = TabBarController()
-        window?.rootViewController = tabbar
+        let nav = UINavigationController(rootViewController: tabbar)
+        
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
         
         // 位置情報使用権限確認
@@ -108,9 +110,9 @@ extension AppDelegate {
             realm.delete(oldSpots)
             for spot in newSpots {
                 // 施設情報に不備がある場合、取り込み対象外とする
-                if spot.spotId != "" {
-                    realm.add(spot)
-                }
+//                if spot.spotId != "" {
+//                    realm.add(spot)
+//                }
             }
         }
     }
