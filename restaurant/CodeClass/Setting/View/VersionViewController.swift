@@ -10,10 +10,16 @@ import UIKit
 
 class VersionViewController: UIViewController {
 
+    @IBOutlet weak var version: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let versionno: String! = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        
+        version.text="バージョン "+versionno
     }
 
 
