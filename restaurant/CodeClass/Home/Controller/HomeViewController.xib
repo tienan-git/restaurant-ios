@@ -12,6 +12,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="restaurant" customModuleProvider="target">
             <connections>
+                <outlet property="imageView" destination="QhQ-qi-h2J" id="ucE-gS-3AB"/>
+                <outlet property="itemNameLabel" destination="OpU-iI-ece" id="VVy-jg-EVf"/>
+                <outlet property="itemPriceLabel" destination="sUs-kD-Ea6" id="6sS-Uq-dQP"/>
+                <outlet property="oboButton" destination="znh-Xc-43X" id="Qqy-AH-p9J"/>
+                <outlet property="oboEndtimeLabel" destination="4nl-wq-7CN" id="5AX-ju-jHC"/>
+                <outlet property="oboNumbersLabel" destination="ULP-Rh-DHs" id="gnu-uR-FFV"/>
+                <outlet property="oboResultTimeLabel" destination="RfL-DM-Zgo" id="v83-He-GMd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -79,6 +86,9 @@
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="oboOnClick:" destination="-1" eventType="touchUpInside" id="gal-FG-2vy"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Echo Spot(エコースポット)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpU-iI-ece">
                     <rect key="frame" x="65" y="307" width="245" height="21"/>
