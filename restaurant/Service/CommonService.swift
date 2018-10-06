@@ -62,5 +62,22 @@ class CommonService: NSObject {
         })
     }
     
+    // MARK: - メソッド：応募情報取得
+    func getLottery(url: String, succeed: @escaping (Lottery) -> Void, failed: @escaping (String) -> Void) {
+        URLCache.shared.removeAllCachedResponses()
+        AlamofireInstance.requestBySwiftyJSON(method: .get, URLString: url, encoding: JSONEncoding.default, completionHandler: {(response, data) in
+            if response?.statusCode == 200 {
+                dPrint("data------------\(data)")
+                let json = data!["lottery"]
+                dPrint("dataJSON------------\(json)")
+                let lottery = Lottery.init(json)
+                succeed(lottery)
+            } else {
+                let message = "店情報は取得できません。"
+                failed(message)
+            }
+        })
+    }
+    
 }
 
