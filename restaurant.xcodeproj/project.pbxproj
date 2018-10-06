@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		425B3FB0216851A40037C088 /* CouponService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3FAF216851A40037C088 /* CouponService.swift */; };
+		425B3FB22168534A0037C088 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3FB12168534A0037C088 /* EventService.swift */; };
+		425B3FB4216853580037C088 /* FeedBackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3FB3216853580037C088 /* FeedBackService.swift */; };
+		425B3FB6216853660037C088 /* LotteryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3FB5216853660037C088 /* LotteryService.swift */; };
+		425B3FB8216853730037C088 /* RestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3FB7216853730037C088 /* RestaurantService.swift */; };
+		425B3FBA2168537F0037C088 /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3FB92168537F0037C088 /* SynchronizationService.swift */; };
 		427DBFD6CEB472C5DFFD612E /* Pods_restaurant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343CE87D7B6726D122F057C1 /* Pods_restaurant.framework */; };
 		6E69CFA92157857C00A06020 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69CFA72157857C00A06020 /* SettingTableViewCell.swift */; };
 		6E69CFAA2157857C00A06020 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */; };
@@ -60,6 +66,12 @@
 /* Begin PBXFileReference section */
 		268C020143075963CC51C406 /* Pods-restaurant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-restaurant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-restaurant/Pods-restaurant.debug.xcconfig"; sourceTree = "<group>"; };
 		343CE87D7B6726D122F057C1 /* Pods_restaurant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_restaurant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		425B3FAF216851A40037C088 /* CouponService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponService.swift; sourceTree = "<group>"; };
+		425B3FB12168534A0037C088 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		425B3FB3216853580037C088 /* FeedBackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackService.swift; sourceTree = "<group>"; };
+		425B3FB5216853660037C088 /* LotteryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryService.swift; sourceTree = "<group>"; };
+		425B3FB7216853730037C088 /* RestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantService.swift; sourceTree = "<group>"; };
+		425B3FB92168537F0037C088 /* SynchronizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizationService.swift; sourceTree = "<group>"; };
 		6E69CFA72157857C00A06020 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		6E69CFAF2157907900A06020 /* SubSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSettingTableViewCell.swift; sourceTree = "<group>"; };
@@ -174,6 +186,12 @@
 			isa = PBXGroup;
 			children = (
 				D01BA5D32157634200E6ADE9 /* CommonService.swift */,
+				425B3FAF216851A40037C088 /* CouponService.swift */,
+				425B3FB12168534A0037C088 /* EventService.swift */,
+				425B3FB3216853580037C088 /* FeedBackService.swift */,
+				425B3FB5216853660037C088 /* LotteryService.swift */,
+				425B3FB7216853730037C088 /* RestaurantService.swift */,
+				425B3FB92168537F0037C088 /* SynchronizationService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -533,14 +551,20 @@
 				D06CD59C21572F9100D0C982 /* restaurant.xcdatamodeld in Sources */,
 				D085D0352157471300936233 /* SettingViewController.swift in Sources */,
 				6E69CFA92157857C00A06020 /* SettingTableViewCell.swift in Sources */,
+				425B3FBA2168537F0037C088 /* SynchronizationService.swift in Sources */,
 				6E9E96BA2162727D0029FDBD /* CyusenListViewCell.swift in Sources */,
 				D01BA5CE21575F4500E6ADE9 /* DefaultData.swift in Sources */,
+				425B3FB0216851A40037C088 /* CouponService.swift in Sources */,
 				D01BA5DD215768FD00E6ADE9 /* BearCollectionViewCell.swift in Sources */,
 				D01BA5D42157634200E6ADE9 /* CommonService.swift in Sources */,
 				D01BA5C621575E5F00E6ADE9 /* SpotVIew.swift in Sources */,
 				D01BA5DA215765F500E6ADE9 /* ExtensionKit.swift in Sources */,
 				6E9E969F215F538F0029FDBD /* UserViewController.swift in Sources */,
+				425B3FB22168534A0037C088 /* EventService.swift in Sources */,
+				425B3FB6216853660037C088 /* LotteryService.swift in Sources */,
+				425B3FB4216853580037C088 /* FeedBackService.swift in Sources */,
 				6E9E96AF215F975E0029FDBD /* VersionViewController.swift in Sources */,
+				425B3FB8216853730037C088 /* RestaurantService.swift in Sources */,
 				D085D01A2157449A00936233 /* TabBarController.swift in Sources */,
 				D01BA5CC21575EE600E6ADE9 /* Restaurant.swift in Sources */,
 				6E69CFBD215797C200A06020 /* LegalViewController.swift in Sources */,
