@@ -11,7 +11,6 @@ import AlamofireImage
 
 protocol SpotViewDelegate: class {
     func routeGuideOrOnlyForClose()
-    func useCoupon()
 }
 
 class SpotView: UIView {
@@ -49,9 +48,6 @@ class SpotView: UIView {
         if delegate is MapViewController {
             delegate?.routeGuideOrOnlyForClose()
         }
-//        if delegate is CouponViewController {
-//            delegate?.useCoupon()
-//        }
     }
     
     // MARK: - メソッド：View（施設情報画面）を表示させる
@@ -101,4 +97,3 @@ class SpotView: UIView {
         }
     }
 }
-
