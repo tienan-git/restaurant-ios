@@ -37,12 +37,12 @@ class CyuSenListViewController: UIViewController,UITableViewDelegate,UITableView
         
         if indexPath.item == 0 {
             cell.CyusenDateLabel.text = "抽選日時"
-            cell.CyusenItemLabel.text = "抽選アイテム"
+           // cell.CyusenItemLabel.text = "抽選アイテム"
             cell.CyusenResultLabel.text = "抽選結果"
             return cell
         }else{
             cell.CyusenDateLabel.text = results[indexPath.item-1].applyDateTime
-            cell.CyusenItemLabel.text = results[indexPath.item-1].lotteryTitle
+           // cell.CyusenItemLabel.text = results[indexPath.item-1].lotteryTitle
             cell.CyusenResultLabel.text = results[indexPath.item-1].lotteryStatus
             return cell
         }
