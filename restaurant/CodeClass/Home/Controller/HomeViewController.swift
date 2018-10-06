@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import RealmSwift
+import AlamofireImage
 
 class HomeViewController: UIViewController {
 
@@ -116,6 +117,7 @@ class HomeViewController: UIViewController {
             url: apiGetLotteries,
             succeed: { (lottery) in
                 self.addLottery(newLottery: lottery)
+                self.showLottery()
         },
             failed: { (message) in
                 let realm = try! Realm()
@@ -143,6 +145,14 @@ class HomeViewController: UIViewController {
 
         
         itemNameLabel.text = nowLottery?.lotteryTitle
+        itemPriceLabel.text = nowLottery?.lotteryDetail
+        oboNumbersLabel.text = String((nowLottery?.count)!)
+        oboEndtimeLabel.text = nowLottery?.endDatetime
+        oboResultTimeLabel.text = nowLottery?.announcementDatetime
+        
+        let url: URL!
+        url = URL(string: (nowLottery?.lotteryImageUrl)!)
+        imageView.af_setImage(withURL: url!, placeholderImage: UIImage(named: "noImage")) // AlamofireImageにて自動的にキャッシュ管理をしてくれる
     }
     
     func apply(_ lotteryId:Int) {
