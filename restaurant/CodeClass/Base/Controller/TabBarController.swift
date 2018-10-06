@@ -17,7 +17,7 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addChildVC(vc: homeVC, title: "ホーム")
+        addChildVC(vc: homeVC, title: "抽選")
         addChildVC(vc: mapVC, title: "地図")
 //        addChildVC(vc: couponVC, title: "クーポン")
         addChildVC(vc: settingVC, title: "設定")
