@@ -34,7 +34,7 @@ class FeedBackViewController: UIViewController {
     // フィードバック
     func postFeedBack() {
         
-        if feedbackTextView.text == nil {
+        if feedbackTextView.text == "" {
             let title:String = "本文をご記入ください"
             let message:String=""
             UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: title,message: message, sureHandler: nil)
