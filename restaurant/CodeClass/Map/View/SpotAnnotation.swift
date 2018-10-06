@@ -11,8 +11,13 @@ import MapKit
 
 class SpotAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0, 0)
-    var spotName: String?
-    var spotType: String?
-    var spotImageUrl: String?
-    var spotServiceArray: [Bool] = []
+    var restaurantId: String?
+    var restaurantName: String?
+    var restaurantAddress: String?
+    var restaurantPhoneNumber: String?
+    var restaurantBusinessHours: String?
+    var restaurantSiteUrl: String?
+    var restaurantImageUrl: String?
+    var restaurantLatitude: Double?
+    var restaurantLongitude: Double?
 }

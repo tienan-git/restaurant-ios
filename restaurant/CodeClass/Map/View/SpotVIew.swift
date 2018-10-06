@@ -51,39 +51,27 @@ class SpotView: UIView {
     }
     
     // MARK: - メソッド：View（施設情報画面）を表示させる
-    internal func makeMyWindow(spotName: String?, spotType: String?, spotServiceArray: [Bool]?, spotImageUrl: String?){
+    internal func makeMyWindow(spotAnnotation: SpotAnnotation){
         UIApplication.shared.keyWindow?.addSubview(self)
         UIView.animate(withDuration: 0.20) {
             self.alpha = 1
         }
+        spotNameLabel.text = spotAnnotation.restaurantName
+        spotTypeLabel.text = "中華料理"
         
-        if spotName == "NULL" || spotName == "null" || spotName == ""{
-            spotNameLabel.text = ""
-        } else {
-            spotNameLabel.text = spotName
-        }
         
-        if spotType == "NULL" || spotType == "null" || spotName == ""{
-            spotTypeLabel.text = "その他施設"
-        } else {
-            spotTypeLabel.text = spotType
-        }
-        
-        var text = "「利用可能サービス」"
-        if (spotServiceArray?.count)! > 0 {
-            for i in 0...(spotServiceArray?.count)! - 1 {
-                if spotServiceArray![i] {
-                    text = text + "\r\n" + spotServiceNameArray[i]
-                }
-            }
-        }
+        let text1 = "住所：" + spotAnnotation.restaurantAddress!  + "\r\n"
+        let text2 = "電話：" + spotAnnotation.restaurantAddress!  + "\r\n"
+        let text3 = "営業時間：" + spotAnnotation.restaurantAddress!  + "\r\n"
+        let text4 = "ホームページ：" + spotAnnotation.restaurantSiteUrl!
+        let text = text1 + text2 + text3 + text4
         spotServiceLabel.text = text
         
         let url: URL!
-        if spotImageUrl == "NULL" || spotImageUrl == "null" || spotImageUrl == ""{
+        if spotAnnotation.restaurantImageUrl == nil {
             url = URL(fileURLWithPath: "noImage")
         } else {
-            url = URL(string: spotImageUrl!)
+            url = URL(string: spotAnnotation.restaurantImageUrl!)
         }
         spotImageView.af_setImage(withURL: url!, placeholderImage: UIImage(named: "noImage")) // AlamofireImageにて自動的にキャッシュ管理をしてくれる
     }

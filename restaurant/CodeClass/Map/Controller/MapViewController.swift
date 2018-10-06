@@ -96,18 +96,14 @@ class MapViewController: UIViewController {
         var spotAnnotations = [SpotAnnotation]()
         for spot in spots {
             let spotAnnotation = SpotAnnotation()
-            spotAnnotation.coordinate = CLLocationCoordinate2DMake(Double(spot.spotLatitude)!, Double(spot.spotLongitude)!)
-            spotAnnotation.spotName = spot.spotName
-            spotAnnotation.spotType = spot.spotType
-            spotAnnotation.spotImageUrl = spot.spotImageUrl
-            spotAnnotation.spotServiceArray.append(spot.spotService1)
-            spotAnnotation.spotServiceArray.append(spot.spotService2)
-            spotAnnotation.spotServiceArray.append(spot.spotService3)
-            spotAnnotation.spotServiceArray.append(spot.spotService4)
-            spotAnnotation.spotServiceArray.append(spot.spotService5)
-            spotAnnotation.spotServiceArray.append(spot.spotService6)
-            spotAnnotation.spotServiceArray.append(spot.spotService7)
-            spotAnnotation.spotServiceArray.append(spot.spotService8)
+            spotAnnotation.coordinate = CLLocationCoordinate2DMake(spot.restaurantLatitude, spot.restaurantLongitude)
+            spotAnnotation.restaurantId = spot.restaurantId
+            spotAnnotation.restaurantName = spot.restaurantName
+            spotAnnotation.restaurantAddress = spot.restaurantAddress
+            spotAnnotation.restaurantPhoneNumber = spot.restaurantPhoneNumber
+            spotAnnotation.restaurantBusinessHours = spot.restaurantBusinessHours
+            spotAnnotation.restaurantSiteUrl = spot.restaurantSiteUrl
+            spotAnnotation.restaurantImageUrl = spot.restaurantImageUrl
             spotAnnotations.append(spotAnnotation)
         }
         mapView.addAnnotations(spotAnnotations)
@@ -234,12 +230,8 @@ extension MapViewController: MKMapViewDelegate, SpotViewDelegate {
         // 施設情報画面を表示させる
         tappedAnnotationLocation = view.annotation?.coordinate
         let spotAnnotation = view.annotation as! SpotAnnotation
-        let spotName = spotAnnotation.spotName
-        let spotType = spotAnnotation.spotType
-        let spotImageUrl = spotAnnotation.spotImageUrl
-        let spotServiceArray = spotAnnotation.spotServiceArray
         let spotView = Bundle.main.loadNibNamed("SpotView", owner: nil, options: nil)?.first as! SpotView
-        spotView.makeMyWindow(spotName: spotName, spotType: spotType, spotServiceArray: spotServiceArray, spotImageUrl: spotImageUrl)
+        spotView.makeMyWindow(spotAnnotation: spotAnnotation)
         spotView.delegate = self
         
         // ピンマークの選択を解除する（同じピンマークを再度タップするための制御）

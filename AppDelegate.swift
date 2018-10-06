@@ -109,10 +109,7 @@ extension AppDelegate {
         try! realm.write {
             realm.delete(oldSpots)
             for spot in newSpots {
-                // 施設情報に不備がある場合、取り込み対象外とする
-                if spot.spotId != "" {
-                    realm.add(spot)
-                }
+                realm.add(spot)
             }
         }
     }
