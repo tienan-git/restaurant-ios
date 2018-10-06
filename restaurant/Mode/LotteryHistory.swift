@@ -22,8 +22,8 @@ class LotteryHistory: Object {
         
         lotteryTitle = json["lotteryTitle"].stringValue
         lotteryDetail = json["lotteryDetail"].stringValue
-        lotteryStatus = json["lotteryStatus"].stringValue
-        applyDateTime = json["applyDateTime"].stringValue
+        lotteryStatus = json["lotteryApplicationStatus"].stringValue
+        applyDateTime = json["applyDatetime"].stringValue
     }
     
     // ObjectからDictionaryへ変換
@@ -31,8 +31,8 @@ class LotteryHistory: Object {
         let dic = [
             "lotteryTitle": lotteryTitle,
             "lotteryDetail": lotteryDetail,
-            "lotteryStatus": lotteryStatus,
-            "applyDateTime": applyDateTime
+            "lotteryApplicationStatus": lotteryStatus,
+            "applyDatetime": applyDateTime
             ] as [String : Any]
         return dic
     }
