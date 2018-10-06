@@ -56,5 +56,25 @@ let eventUnspecialBearImageNameArray = ["ゆたぽん（イエロー）", "ゆ�
 let bearImageNameArray = ["ゆたぽん（レッド）", "ゆたぽん（ピンク）", "ゆたぽん（イエロー）", "ゆたぽん（グリーン）", "ゆたぽん（ブルー）"]
 
 // MARK: - API関連
-let apiDomain = "http://api.restaurant.sparkworks.jp"
-let restaurantsDir = "/api/restaurants"
+let apiDomain = "http://api.restaurant.sparkworks.jp/api"
+let restaurantsDir = apiDomain + "/restaurants"
+//１、同期
+let apiPostSynchronizations = apiDomain + "/synchronizations"
+//２、店一覧
+let apiGetRestaurants = apiDomain + "/restaurants"
+//３、クーポン追加
+let apiPostCoupons = apiDomain + "/coupons"
+//４、クーポン削除
+let apiDeleteCoupons = apiDomain + "/coupons"
+//５、今の抽選
+let apiGetLotteries = apiDomain + "/lotteries"
+//６、抽選応募
+let apiPostLotteries = apiDomain + "/lotteries"
+//７、抽選履歴取得
+let apiGetLotteriesHistories = apiDomain + "/lotteries/histories"
+//８、フィードバック
+let apiPostFeedbacks = apiDomain + "/feedbacks"
+//９、イベント作成
+//１０、イベント取消
+//１１、イベント詳細
+//１２、イベント参加状態変更(参加・不参加・保留)
