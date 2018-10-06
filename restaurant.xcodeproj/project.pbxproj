@@ -14,6 +14,7 @@
 		425B3FB8216853730037C088 /* RestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3FB7216853730037C088 /* RestaurantService.swift */; };
 		425B3FBA2168537F0037C088 /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3FB92168537F0037C088 /* SynchronizationService.swift */; };
 		425B3FBC21688C800037C088 /* FeedBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3FBB21688C800037C088 /* FeedBack.swift */; };
+		425B3FC0216910B90037C088 /* LotteryHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B3FBF216910B90037C088 /* LotteryHistory.swift */; };
 		427DBFD6CEB472C5DFFD612E /* Pods_restaurant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343CE87D7B6726D122F057C1 /* Pods_restaurant.framework */; };
 		6E69CFA92157857C00A06020 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69CFA72157857C00A06020 /* SettingTableViewCell.swift */; };
 		6E69CFAA2157857C00A06020 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */; };
@@ -75,6 +76,7 @@
 		425B3FB7216853730037C088 /* RestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantService.swift; sourceTree = "<group>"; };
 		425B3FB92168537F0037C088 /* SynchronizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizationService.swift; sourceTree = "<group>"; };
 		425B3FBB21688C800037C088 /* FeedBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBack.swift; sourceTree = "<group>"; };
+		425B3FBF216910B90037C088 /* LotteryHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryHistory.swift; sourceTree = "<group>"; };
 		6E69CFA72157857C00A06020 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		6E69CFAF2157907900A06020 /* SubSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSettingTableViewCell.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				D06956C92168575300295551 /* Spot.swift */,
 				425B3FBB21688C800037C088 /* FeedBack.swift */,
 				D06956CB2168AFD400295551 /* Lottery.swift */,
+				425B3FBF216910B90037C088 /* LotteryHistory.swift */,
 			);
 			path = Mode;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				425B3FB8216853730037C088 /* RestaurantService.swift in Sources */,
 				D085D01A2157449A00936233 /* TabBarController.swift in Sources */,
 				6E69CFBD215797C200A06020 /* LegalViewController.swift in Sources */,
+				425B3FC0216910B90037C088 /* LotteryHistory.swift in Sources */,
 				D01BA5C221574E2300E6ADE9 /* UtilClass.swift in Sources */,
 				D06CD59621572F9100D0C982 /* ViewController.swift in Sources */,
 				6E69CFB52157974300A06020 /* CyuSenListViewController.swift in Sources */,
