@@ -80,32 +80,10 @@ class HomeViewController: UIViewController {
     
     @IBAction func oboOnClick(_ sender: Any) {
         
-        
-//        let realm = try! Realm()
-//        let oboInfo = realm.objects(OboInfo.self).first
-//        let lotterId:String = (oboInfo?.lotteryId)!
-//
-//        //応募する
-//        let url = apiPostLotteries + lotterId
-//        LotteryService.shared.postLottery(url: url,
-//        succeed: { (message) in
-//            print(message)
-//           self.oboButton.isEnabled = false
-//           self.oboButton.setTitleColor(UIColor.gray, for: .normal)
-//           self.oboButton.setTitle("応募ずみ", for: .normal)
-//
-//           UserDefaults.standard.set(lotterId, forKey: "lotterId")
-//           UserDefaults.standard.set(1, forKey: "oboStatus")
-//
-//        },
-//
-//         failed: { (message) in
-//            print(message)
-//            UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: message, sureHandler: nil)
-//            UserDefaults.standard.set(lotterId, forKey: "lotterId")
-//            UserDefaults.standard.set(0, forKey: "oboStatus")
-//        })
-
+        let realm = try! Realm()
+        let nowLottery = realm.objects(Lottery.self).first
+        let lotteryId = nowLottery?.lotteryId
+        apply(lotteryId!)
         
     }
     
@@ -147,6 +125,11 @@ class HomeViewController: UIViewController {
         itemNameLabel.text = nowLottery?.lotteryTitle
         itemPriceLabel.text = nowLottery?.lotteryDetail
         oboNumbersLabel.text = String((nowLottery?.count)!)
+        if (nowLottery?.lotteryApplicationStatus != "0") {
+            self.oboButton.isEnabled = false
+            self.oboButton.setTitleColor(UIColor.gray, for: .normal)
+            self.oboButton.setTitle("応募ずみ", for: .normal)
+        }
         oboEndtimeLabel.text = nowLottery?.endDatetime
         oboResultTimeLabel.text = nowLottery?.announcementDatetime
         
@@ -160,6 +143,9 @@ class HomeViewController: UIViewController {
         LotteryService.shared.postLottery(url: apiPostLotteries + "/" + String(lotteryId),
                                           succeed: { (message) in
                                             dPrint(message)
+                                            self.oboButton.isEnabled = false
+                                            self.oboButton.setTitleColor(UIColor.gray, for: .normal)
+                                            self.oboButton.setTitle("応募ずみ", for: .normal)
                                             let title:String = "応募ありがとうございます！"
                                             let message:String=""
                                             UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: title,message: message, sureHandler: nil)
