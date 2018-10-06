@@ -102,17 +102,17 @@ extension AppDelegate {
     }
     
     // 施設情報洗替
-    func addSpots(newSpots: [Restaurant]) {
+    func addSpots(newSpots: [Spot]) {
         
         let realm = try! Realm()
-        let oldSpots = realm.objects(Restaurant.self)
+        let oldSpots = realm.objects(Spot.self)
         try! realm.write {
             realm.delete(oldSpots)
             for spot in newSpots {
                 // 施設情報に不備がある場合、取り込み対象外とする
-//                if spot.spotId != "" {
-//                    realm.add(spot)
-//                }
+                if spot.spotId != "" {
+                    realm.add(spot)
+                }
             }
         }
     }
