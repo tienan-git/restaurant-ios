@@ -87,7 +87,7 @@ extension SettingViewController: UITableViewDelegate {
         //ここに遷移処理を書く
         switch sections[indexPath.section].rowItems[indexPath.row] {
         case .user:
-            self.navigationController?.pushViewController(UserViewController(), animated: true)
+//            self.navigationController?.pushViewController(UserViewController(), animated: true)
             break
 //        case .cyusen:
 //            self.navigationController?.pushViewController(CyuSenListViewController(), animated: true)
@@ -120,7 +120,7 @@ extension SettingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.section == 0 {
-            return 200.0
+            return 44.0
         } else {
             return 44.0
         }
