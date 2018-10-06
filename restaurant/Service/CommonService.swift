@@ -25,7 +25,7 @@ class CommonService: NSObject {
         AlamofireInstance.requestBySwiftyJSON(method: .get, URLString: url, encoding: JSONEncoding.default, completionHandler: {(response, data) in
             if response?.statusCode == 200 {
                 dPrint("data------------\(data)")
-                let json = data!["data"].arrayValue
+                let json = data!["restaurants"].arrayValue
                 dPrint("dataJSON------------\(json)")
                 let spots = json.map(Spot.init)
                 succeed(spots)
