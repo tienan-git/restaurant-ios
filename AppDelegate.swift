@@ -84,7 +84,6 @@ extension AppDelegate {
         let deviceId = UIDevice.current.identifierForVendor!.uuidString
         CommonService.shared.getSpots(
             url: apiDomain + restaurantsDir,
-            headers: ["From": deviceId],
             succeed: { (spots) in
                 self.addSpots(newSpots: spots)
             },

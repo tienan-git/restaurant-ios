@@ -61,8 +61,8 @@ class SpotView: UIView {
         
         
         let text1 = "住所：" + spotAnnotation.restaurantAddress!  + "\r\n"
-        let text2 = "電話：" + spotAnnotation.restaurantAddress!  + "\r\n"
-        let text3 = "営業時間：" + spotAnnotation.restaurantAddress!  + "\r\n"
+        let text2 = "電話：" + spotAnnotation.restaurantPhoneNumber!  + "\r\n"
+        let text3 = "営業時間：" + spotAnnotation.restaurantBusinessHours!  + "\r\n"
         let text4 = "ホームページ：" + spotAnnotation.restaurantSiteUrl!
         let text = text1 + text2 + text3 + text4
         spotServiceLabel.text = text

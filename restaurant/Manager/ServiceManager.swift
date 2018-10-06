@@ -44,9 +44,11 @@ class ServiceManager: NSObject {
                              URLString: String,
                              parameters: [String: Any]? = nil,
                              encoding: ParameterEncoding,
-                             headers: [String: String]? = nil,
                              completionHandler: @escaping (_ response: HTTPURLResponse?, _ data: JSON?) -> Void) {
         let urlStr = URLString.toLocalizableURLString()
+        // 端末ID取得
+        let deviceId = UIDevice.current.identifierForVendor!.uuidString
+        let headers = ["From": deviceId]
         Alamofire.request(urlStr, method: method, parameters: parameters, encoding: encoding, headers: headers)
             .responseSwiftyJSON { dataResponse in
                 dPrint("parameters---\(parameters as Any)")

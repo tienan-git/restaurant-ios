@@ -20,9 +20,9 @@ class CommonService: NSObject {
     }
     
     // MARK: - メソッド：施設情報取得
-    func getSpots(url: String, headers: [String: String]?, succeed: @escaping ([Spot]) -> Void, failed: @escaping (String) -> Void) {
+    func getSpots(url: String, succeed: @escaping ([Spot]) -> Void, failed: @escaping (String) -> Void) {
         URLCache.shared.removeAllCachedResponses()
-        AlamofireInstance.requestBySwiftyJSON(method: .get, URLString: url, encoding: JSONEncoding.default, headers: headers, completionHandler: {(response, data) in
+        AlamofireInstance.requestBySwiftyJSON(method: .get, URLString: url, encoding: JSONEncoding.default, completionHandler: {(response, data) in
             if response?.statusCode == 200 {
                 dPrint("data------------\(data)")
                 let json = data!["data"].arrayValue
