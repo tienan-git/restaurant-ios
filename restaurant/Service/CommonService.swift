@@ -49,5 +49,18 @@ class CommonService: NSObject {
         })
     }
     
+    // MARK: - メソッド：同期処理
+    func runSync(url: String, nickNameDic: [String: Any], succeed: @escaping (String) -> Void, failed: @escaping (String) -> Void) {
+        AlamofireInstance.requestNoHeader(method: .post, URLString: url, parameters: nickNameDic, encoding: JSONEncoding.default, completionHandler: {(response, result, data) in
+            if response?.statusCode == 200 {
+                let message = "同期処理が完了できました。"
+                succeed(message)
+            } else {
+                let message = "同期処理が完了できません。"
+                failed(message)
+            }
+        })
+    }
+    
 }
 

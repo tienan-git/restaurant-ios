@@ -40,6 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
         let _ = try! Realm(configuration: config)
         
+        // 同期処理
+        runSync()
+        
         // 最新施設情報取得
         getSpots()
         return true
@@ -61,6 +64,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        
+        // 同期処理
+        runSync()
         
         // 最新施設情報取得
         getSpots()
@@ -146,6 +152,26 @@ extension AppDelegate {
                                             }
                                             )
         }
+        )
+    }
+    
+    // 同期処理
+    func runSync() {
+        
+        let nickName: String = UserDefaults.standard.string(forKey: "nickName") ?? ""
+        let nickNameDic: [String:Any] = [
+            "nickName": nickName
+        ]
+        
+        CommonService.shared.runSync(
+            url: apiPostSynchronizations,
+            nickNameDic: nickNameDic,
+            succeed: { (message) in
+                dPrint(message)
+            },
+            failed: { (message) in
+                dPrint(message)
+            }
         )
     }
 }

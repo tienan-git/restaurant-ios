@@ -25,7 +25,7 @@ class CyuSenListViewController: UIViewController,UITableViewDelegate,UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let results = realm.objects(Cyusen.self)
-        return results.count
+        return results.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,14 +34,14 @@ class CyuSenListViewController: UIViewController,UITableViewDelegate,UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "CyusenListViewController", for: indexPath) as! CyusenListViewCell
         
         if indexPath.section == 0 {
-            cell.CyusenDateLabel.text = "抽選日"
+            cell.CyusenDateLabel.text = "抽選日時"
             cell.CyusenItemLabel.text = "抽選アイテム"
             cell.CyusenResultLabel.text = "抽選結果"
             return cell
         }else{
-            cell.CyusenDateLabel.text = results[indexPath.item].cyusenDate
-            cell.CyusenItemLabel.text = results[indexPath.item].cyusenItem
-            cell.CyusenResultLabel.text = results[indexPath.item].cyusenResult
+            cell.CyusenDateLabel.text = results[indexPath.item].applyDateTime
+            cell.CyusenItemLabel.text = results[indexPath.item].lotteryTitle
+            cell.CyusenResultLabel.text = results[indexPath.item].lotteryStatus
             return cell
         }
       
