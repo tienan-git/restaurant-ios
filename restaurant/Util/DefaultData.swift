@@ -54,3 +54,7 @@ let eventUnspecialBearImageNameArray = ["ゆたぽん（イエロー）", "ゆ�
 
 // MARK: - 通常施設ゆたぽんのイメージネーム配列
 let bearImageNameArray = ["ゆたぽん（レッド）", "ゆたぽん（ピンク）", "ゆたぽん（イエロー）", "ゆたぽん（グリーン）", "ゆたぽん（ブルー）"]
+
+// MARK: - API関連
+let apiDomain = "http://api.restaurant.sparkworks.jp"
+let restaurantsDir = "/api/restaurants"

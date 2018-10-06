@@ -79,25 +79,21 @@ extension AppDelegate {
     
     // 最新施設情報取得
     func getSpots() {
-        // 本番URLでAPIを呼び出し
-        CommonService.shared.getSpots(url: getSpotsProdUrl,
-                                      succeed: { (spots) in
-                                        self.addSpots(newSpots: spots)
-        },
-                                      failed: { (message) in
-                                        // テストURLでAPIを呼び出し（本番URLで失敗する場合）
-                                        CommonService.shared.getSpots(url: getSpotsTestUrl,
-                                                                      succeed: { (spots) in
-                                                                        self.addSpots(newSpots: spots)
-                                        },
-                                                                      failed: { (message) in
-                                                                        let realm = try! Realm()
-                                                                        if realm.objects(Spot.self).isEmpty { // 最新施設情報取得失敗時にローカル施設情報が無い場合、下記アラートを画面に表示させる
-                                                                            UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: message, sureHandler: nil)
-                                                                        }
-                                        }
-                                        )
-        }
+
+        // 端末ID取得
+        let deviceId = UIDevice.current.identifierForVendor!.uuidString
+        CommonService.shared.getSpots(
+            url: apiDomain + restaurantsDir,
+            headers: ["From": deviceId],
+            succeed: { (spots) in
+                self.addSpots(newSpots: spots)
+            },
+            failed: { (message) in
+                let realm = try! Realm()
+                if realm.objects(Spot.self).isEmpty { // 最新施設情報取得失敗時にローカル施設情報が無い場合、下記アラートを画面に表示させる
+                    UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: message, sureHandler: nil)
+                }
+            }
         )
     }
     
