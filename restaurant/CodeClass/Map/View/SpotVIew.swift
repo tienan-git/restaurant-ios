@@ -19,7 +19,6 @@ class SpotView: UIView {
     @IBOutlet weak var spotNameLabel: UILabel!
     @IBOutlet weak var spotCloseUpButton: UIButton!
     @IBOutlet weak var spotImageView: UIImageView!
-    @IBOutlet weak var spotTypeLabel: UILabel!
     @IBOutlet weak var spotServiceLabel: UILabel!
     @IBOutlet weak var spotRouteGuideButton: UIButton!
     
@@ -56,14 +55,13 @@ class SpotView: UIView {
         UIView.animate(withDuration: 0.20) {
             self.alpha = 1
         }
+        
         spotNameLabel.text = spotAnnotation.restaurantName
-        spotTypeLabel.text = "中華料理"
         
-        
-        let text1 = "住所：" + spotAnnotation.restaurantAddress!  + "\r\n"
-        let text2 = "電話：" + spotAnnotation.restaurantPhoneNumber!  + "\r\n"
-        let text3 = "営業時間：" + spotAnnotation.restaurantBusinessHours!  + "\r\n"
-        let text4 = "ホームページ：" + spotAnnotation.restaurantSiteUrl!
+        let text1 = "住所：" + "\r\n" + spotAnnotation.restaurantAddress!  + "\r\n"
+        let text2 = "電話：" + "\r\n" + spotAnnotation.restaurantPhoneNumber!  + "\r\n"
+        let text3 = "営業時間：" + "\r\n" + spotAnnotation.restaurantBusinessHours!  + "\r\n"
+        let text4 = "ホームページ：" + "\r\n" + spotAnnotation.restaurantSiteUrl!
         let text = text1 + text2 + text3 + text4
         spotServiceLabel.text = text
         
