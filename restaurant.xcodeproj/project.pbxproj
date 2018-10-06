@@ -385,6 +385,8 @@
 			children = (
 				6E69CFB32157974300A06020 /* CyuSenListViewController.swift */,
 				6E69CFB42157974300A06020 /* CyuSenListViewController.xib */,
+				6E9E96B82162727D0029FDBD /* CyusenListViewCell.swift */,
+				6E9E96B92162727D0029FDBD /* CyusenListViewCell.xib */,
 				6E69CFB7215797AE00A06020 /* FeedBackViewController.swift */,
 				6E69CFB8215797AE00A06020 /* FeedBackViewController.xib */,
 				6E69CFBB215797C200A06020 /* LegalViewController.swift */,
@@ -393,8 +395,6 @@
 				6E9E969E215F538F0029FDBD /* UserViewController.xib */,
 				6E9E96AD215F975E0029FDBD /* VersionViewController.swift */,
 				6E9E96AE215F975E0029FDBD /* VersionViewController.xib */,
-				6E9E96B82162727D0029FDBD /* CyusenListViewCell.swift */,
-				6E9E96B92162727D0029FDBD /* CyusenListViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";

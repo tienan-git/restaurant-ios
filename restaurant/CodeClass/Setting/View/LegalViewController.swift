@@ -47,6 +47,7 @@ class LegalViewController: UIViewController {
         
         textview.text = message
 
+        title = "利用規約"
     }
 
 

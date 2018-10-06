@@ -20,6 +20,8 @@ class CyuSenListViewController: UIViewController,UITableViewDelegate,UITableView
         cyusenTableView.register(UINib(nibName: "CyusenListViewCell", bundle: nil), forCellReuseIdentifier: "CyusenListViewController")
         cyusenTableView.dataSource = self
         cyusenTableView.delegate = self
+        
+        title = "抽選履歴"
     }
     
     

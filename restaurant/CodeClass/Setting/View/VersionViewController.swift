@@ -20,6 +20,8 @@ class VersionViewController: UIViewController {
         let versionno: String! = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         
         version.text="バージョン "+versionno
+        
+        title = "バージョン情報"
     }
 
 

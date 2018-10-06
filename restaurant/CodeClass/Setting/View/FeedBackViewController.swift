@@ -24,6 +24,8 @@ class FeedBackViewController: UIViewController {
         //是否可以滚动
         feedbackTextView.isScrollEnabled = true
         // Do any additional setup after loading the view.
+        
+        title = "フィードバック"
     }
     
     @IBAction func saveButtonClicked(_ sender:Any){
