@@ -57,7 +57,6 @@ let bearImageNameArray = ["ゆたぽん（レッド）", "ゆたぽん（ピン�
 
 // MARK: - API関連
 let apiDomain = "http://api.restaurant.sparkworks.jp/api"
-let restaurantsDir = apiDomain + "/restaurants"
 //１、同期
 let apiPostSynchronizations = apiDomain + "/synchronizations"
 //２、店一覧

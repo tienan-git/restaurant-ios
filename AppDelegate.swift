@@ -80,10 +80,8 @@ extension AppDelegate {
     // 最新施設情報取得
     func getSpots() {
 
-        // 端末ID取得
-        let deviceId = UIDevice.current.identifierForVendor!.uuidString
         CommonService.shared.getSpots(
-            url: apiDomain + restaurantsDir,
+            url: apiGetRestaurants,
             succeed: { (spots) in
                 self.addSpots(newSpots: spots)
             },

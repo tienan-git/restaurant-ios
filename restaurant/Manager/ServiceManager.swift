@@ -23,11 +23,13 @@ class ServiceManager: NSObject {
                          URLString: String,
                          parameters: [String: Any]? = nil,
                          encoding: ParameterEncoding,
-                         headers: [String: String]? = nil,
                          completionHandler: @escaping (_ response: HTTPURLResponse?, _ result: Result<Any>, _ data: Data?) -> Void)
     {
         let urlStr = URLString.toLocalizableURLString()
-        Alamofire.request(urlStr, method: method, parameters: parameters, encoding: encoding).responseJSON(completionHandler: { (response) in
+        // 端末ID取得
+        let deviceId = UIDevice.current.identifierForVendor!.uuidString
+        let headers = ["From": deviceId]
+        Alamofire.request(urlStr, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON(completionHandler: { (response) in
             if response.result.error != nil {
                 dPrint("response.result.error---\(response.result.error as Any)")
             }
