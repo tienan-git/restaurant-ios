@@ -7,31 +7,75 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import RealmSwift
 
 class FeedBackViewController: UIViewController {
-
+    
     @IBOutlet weak var feedbackTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        feedbackTextView.text = "入力してください"
+        
+        feedbackTextView.text = ""
         feedbackTextView.layer.borderWidth = 1
         //是否可以滚动
         feedbackTextView.isScrollEnabled = true
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func saveButtonClicked(_ sender:Any){
+        
+        postFeedBack()
     }
-    */
-
+    
+    // フィードバック
+    func postFeedBack() {
+        
+        if feedbackTextView.text == nil {
+            let title:String = "本文をご記入ください"
+            let message:String=""
+            UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: title,message: message, sureHandler: nil)
+            return
+        }
+        
+        
+        
+        // フィードバック情報取得
+        var feedBack:FeedBack = FeedBack()
+        feedBack.type = "01"// TODO 一旦固定
+        feedBack.detail = feedbackTextView.text
+        
+        // APIを呼び出し
+        FeedBackService.shared.postFeedBack(url: apiPostFeedbacks, feedbackDic: feedBack.convertIntoDictionary(),
+                                            succeed: { (message) in
+                                                dPrint(message)
+                                                let title:String = "フィードバックありがとうございます！"
+                                                let message:String=""
+                                                UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: title,message: message, sureHandler: nil)
+                                                
+        },
+                                            failed: { (message) in
+                                                let title:String = "フィードバック送信失敗しました！"
+                                                let message:String="しばらくしてから再送信してください"
+                                                UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: title,message: message, sureHandler: nil)
+                                                dPrint(message)
+                                                
+        }
+        )
+        
+    }
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
