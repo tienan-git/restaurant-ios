@@ -92,7 +92,7 @@ extension AppDelegate {
                                         },
                                                                       failed: { (message) in
                                                                         let realm = try! Realm()
-                                                                        if realm.objects(Restaurant.self).isEmpty { // 最新施設情報取得失敗時にローカル施設情報が無い場合、下記アラートを画面に表示させる
+                                                                        if realm.objects(Spot.self).isEmpty { // 最新施設情報取得失敗時にローカル施設情報が無い場合、下記アラートを画面に表示させる
                                                                             UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: message, sureHandler: nil)
                                                                         }
                                         }
