@@ -30,6 +30,8 @@ class ServiceManager: NSObject {
         let deviceId = UIDevice.current.identifierForVendor!.uuidString
         let headers = ["From": deviceId]
         Alamofire.request(urlStr, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON(completionHandler: { (response) in
+            dPrint("parameters---\(parameters as Any)")
+            dPrint("headers---\(headers as Any)")
             if response.result.error != nil {
                 dPrint("response.result.error---\(response.result.error as Any)")
             }
