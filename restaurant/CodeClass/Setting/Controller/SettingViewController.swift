@@ -23,7 +23,7 @@ class SettingViewController: UIViewController {
 //        case userInfoTitle
 //            case otherTitle
         case user
-//        case cyusen
+        case cyusen
         case feedback
         case legal
         case version
@@ -36,7 +36,7 @@ class SettingViewController: UIViewController {
     
      func initializeTableViewStruct(){
         sections = [Section(sectionType: .userInfo, rowItems: [.user]),
-                    Section(sectionType: .other, rowItems: [.feedback, .legal, .version])
+                    Section(sectionType: .other, rowItems: [.cyusen, .feedback, .legal, .version])
         
         ]
     }
@@ -46,7 +46,7 @@ class SettingViewController: UIViewController {
             (""),
             ],
         [
-//            ("抽選応募履歴"),
+            ("抽選履歴"),
             ("フィードバック"),
             ("利用規約"),
             ("バージョン情報"),
@@ -89,9 +89,9 @@ extension SettingViewController: UITableViewDelegate {
         case .user:
 //            self.navigationController?.pushViewController(UserViewController(), animated: true)
             break
-//        case .cyusen:
-//            self.navigationController?.pushViewController(CyuSenListViewController(), animated: true)
-//            break
+        case .cyusen:
+            self.navigationController?.pushViewController(CyuSenListViewController(), animated: true)
+            break
         case .feedback:
             self.navigationController?.pushViewController(FeedBackViewController(), animated: true)
             break

@@ -49,5 +49,22 @@ class LotteryService: NSObject {
         })
     }
     
+        // MARK: - メソッド：抽選履歴情報取得
+    func getLotteryHistories(url: String, succeed: @escaping ([LotteryHistory]) -> Void, failed: @escaping (String) -> Void) {
+        URLCache.shared.removeAllCachedResponses()
+        AlamofireInstance.requestBySwiftyJSON(method: .get, URLString: url, encoding: JSONEncoding.default, completionHandler: {(response, data) in
+            if response?.statusCode == 200 {
+                dPrint("data------------\(data)")
+                let json = data!["lotteryHistories"].arrayValue
+                dPrint("dataJSON------------\(json)")
+                let LotteryHistories = json.map(LotteryHistory.init)
+                succeed(LotteryHistories)
+            } else {
+                let message = "抽選履歴は取得できません。"
+                failed(message)
+            }
+        })
+    }
+    
 }
 

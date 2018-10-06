@@ -26,28 +26,61 @@ class CyuSenListViewController: UIViewController,UITableViewDelegate,UITableView
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let results = realm.objects(Cyusen.self)
+        let results = realm.objects(LotteryHistory.self)
         return results.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let results = realm.objects(Cyusen.self)
+        let results = realm.objects(LotteryHistory.self)
         // セルを取得する
         let cell = tableView.dequeueReusableCell(withIdentifier: "CyusenListViewController", for: indexPath) as! CyusenListViewCell
         
-        if indexPath.section == 0 {
+        if indexPath.item == 0 {
             cell.CyusenDateLabel.text = "抽選日時"
             cell.CyusenItemLabel.text = "抽選アイテム"
             cell.CyusenResultLabel.text = "抽選結果"
             return cell
         }else{
-            cell.CyusenDateLabel.text = results[indexPath.item].applyDateTime
-            cell.CyusenItemLabel.text = results[indexPath.item].lotteryTitle
-            cell.CyusenResultLabel.text = results[indexPath.item].lotteryStatus
+            cell.CyusenDateLabel.text = results[indexPath.item-1].applyDateTime
+            cell.CyusenItemLabel.text = results[indexPath.item-1].lotteryTitle
+            cell.CyusenResultLabel.text = results[indexPath.item-1].lotteryStatus
             return cell
         }
-      
-        
     }
-   
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    
+        getLotteryHistory()
+    }
+    
+    // 最新施設情報取得
+    func getLotteryHistory() {
+        
+        LotteryService.shared.getLotteryHistories(
+            url: apiGetLotteriesHistories,
+            succeed: { (lotteryHistories) in
+                self.addLotteryHistories(newLotteryHistories: lotteryHistories)
+                self.cyusenTableView.reloadData()
+                
+        },
+            failed: { (message) in
+                dPrint("取得していなかったが、何もしないつもり")
+                }
+        )
+    }
+    
+    // 施設情報洗替
+    func addLotteryHistories(newLotteryHistories: [LotteryHistory]) {
+        
+        let realm = try! Realm()
+        let oldLotteryHistories = realm.objects(LotteryHistory.self)
+        try! realm.write {
+            realm.delete(oldLotteryHistories)
+            for lotteryHistory in newLotteryHistories {
+                realm.add(lotteryHistory)
+            }
+        }
+    }
+    
 }
