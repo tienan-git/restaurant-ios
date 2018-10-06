@@ -729,7 +729,8 @@
 			baseConfigurationReference = 268C020143075963CC51C406 /* Pods-restaurant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3Q2AY77295;
 				INFOPLIST_FILE = restaurant/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -739,6 +740,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.sparkworks.restaurant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = restaurantProfile;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -749,7 +751,8 @@
 			baseConfigurationReference = F1AC3716CB83D9E425280DC2 /* Pods-restaurant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3Q2AY77295;
 				INFOPLIST_FILE = restaurant/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -759,6 +762,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.sparkworks.restaurant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = restaurantProfile;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
