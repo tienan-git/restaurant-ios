@@ -46,6 +46,7 @@
 		D01BA5DE215768FD00E6ADE9 /* BearCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01BA5DC215768FD00E6ADE9 /* BearCollectionViewCell.xib */; };
 		D01BA5E42157699F00E6ADE9 /* BearReleaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BA5E32157699F00E6ADE9 /* BearReleaseView.swift */; };
 		D01BA5E6215769C100E6ADE9 /* BearReleaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01BA5E5215769C100E6ADE9 /* BearReleaseView.xib */; };
+		D06956CA2168575300295551 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06956C92168575300295551 /* Spot.swift */; };
 		D06CD59421572F9100D0C982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CD59321572F9100D0C982 /* AppDelegate.swift */; };
 		D06CD59621572F9100D0C982 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CD59521572F9100D0C982 /* ViewController.swift */; };
 		D06CD59921572F9100D0C982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06CD59721572F9100D0C982 /* Main.storyboard */; };
@@ -104,6 +105,7 @@
 		D01BA5DC215768FD00E6ADE9 /* BearCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BearCollectionViewCell.xib; sourceTree = "<group>"; };
 		D01BA5E32157699F00E6ADE9 /* BearReleaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearReleaseView.swift; sourceTree = "<group>"; };
 		D01BA5E5215769C100E6ADE9 /* BearReleaseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BearReleaseView.xib; sourceTree = "<group>"; };
+		D06956C92168575300295551 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		D06CD59021572F9100D0C982 /* restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06CD59321572F9100D0C982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D06CD59521572F9100D0C982 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				D01BA5CB21575EE600E6ADE9 /* Restaurant.swift */,
 				D01BA5D7215763AD00E6ADE9 /* Coupon.swift */,
+				D06956C92168575300295551 /* Spot.swift */,
 			);
 			path = Mode;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				6E69CFA92157857C00A06020 /* SettingTableViewCell.swift in Sources */,
 				425B3FBA2168537F0037C088 /* SynchronizationService.swift in Sources */,
 				6E9E96BA2162727D0029FDBD /* CyusenListViewCell.swift in Sources */,
+				D06956CA2168575300295551 /* Spot.swift in Sources */,
 				D01BA5CE21575F4500E6ADE9 /* DefaultData.swift in Sources */,
 				425B3FB0216851A40037C088 /* CouponService.swift in Sources */,
 				D01BA5DD215768FD00E6ADE9 /* BearCollectionViewCell.swift in Sources */,
