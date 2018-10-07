@@ -22,8 +22,27 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アプリの機能に関するご意見・ご要望をお聞かせください。すべてスタッフが目を通し、随時機能改善してまいります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNE-jY-oHg">
+                    <rect key="frame" x="16" y="27" width="343" height="87"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="87" id="kcO-Ao-MwY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Raf-ea-AHJ">
+                    <rect key="frame" x="16" y="122" width="343" height="160"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="TFi-VO-Hbq"/>
+                    </constraints>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgF-AS-6LZ">
-                    <rect key="frame" x="71" y="420" width="215" height="35"/>
+                    <rect key="frame" x="80" y="302" width="215" height="30"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <state key="normal" title="送信する">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,35 +51,18 @@
                         <action selector="saveButtonClicked:" destination="-1" eventType="touchUpInside" id="S1W-4p-VU9"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アプリの機能に関するご意見・ご要望をお聞かせください。すべてスタッフが目を通し、随時機能改善してまいります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNE-jY-oHg">
-                    <rect key="frame" x="16" y="20" width="343" height="61"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Raf-ea-AHJ">
-                    <rect key="frame" x="16" y="89" width="343" height="260"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="260" id="78r-2I-aXu"/>
-                    </constraints>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="cNE-jY-oHg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0AQ-IH-hXE"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cNE-jY-oHg" secondAttribute="trailing" constant="16" id="1cv-H0-j7F"/>
-                <constraint firstItem="cNE-jY-oHg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="7Sm-9y-8Gc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BgF-AS-6LZ" secondAttribute="trailing" constant="89" id="PYf-3n-eSu"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Raf-ea-AHJ" secondAttribute="trailing" constant="16" id="Qip-jF-Kzg"/>
-                <constraint firstItem="Raf-ea-AHJ" firstAttribute="top" secondItem="cNE-jY-oHg" secondAttribute="bottom" constant="8" id="jBB-SV-I2S"/>
-                <constraint firstItem="BgF-AS-6LZ" firstAttribute="top" secondItem="Raf-ea-AHJ" secondAttribute="bottom" constant="71" id="mMG-Kd-M1b"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BgF-AS-6LZ" secondAttribute="bottom" constant="212" id="o4d-cp-tnt"/>
-                <constraint firstItem="Raf-ea-AHJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="sCq-9i-nZ9"/>
-                <constraint firstItem="BgF-AS-6LZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="71" id="vKA-S8-tzn"/>
+                <constraint firstItem="Raf-ea-AHJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5lH-8G-mwJ"/>
+                <constraint firstItem="BgF-AS-6LZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="5oL-Ve-avd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Raf-ea-AHJ" secondAttribute="trailing" constant="16" id="Ltb-1o-dWr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BgF-AS-6LZ" secondAttribute="trailing" constant="80" id="O22-5p-FGV"/>
+                <constraint firstItem="cNE-jY-oHg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="7" id="at0-Ac-pr9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cNE-jY-oHg" secondAttribute="trailing" constant="16" id="j9Y-0e-LUQ"/>
+                <constraint firstItem="Raf-ea-AHJ" firstAttribute="top" secondItem="cNE-jY-oHg" secondAttribute="bottom" constant="8" id="mpK-XO-Po7"/>
+                <constraint firstItem="cNE-jY-oHg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="vYP-4w-29A"/>
+                <constraint firstItem="BgF-AS-6LZ" firstAttribute="top" secondItem="Raf-ea-AHJ" secondAttribute="bottom" constant="20" id="wxh-kI-vA4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="55.200000000000003" y="48.125937031484263"/>
