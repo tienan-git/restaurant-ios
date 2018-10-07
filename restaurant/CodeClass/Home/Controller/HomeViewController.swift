@@ -27,6 +27,25 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.viewWillEnterForeground(_:)), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.viewDidEnterBackground(_:)), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        
+        
+    }
+    
+    @objc func viewWillEnterForeground(_ notification: Notification?) {
+        if (self.isViewLoaded && (self.view.window != nil)) {
+            dPrint("フォアグラウンド")
+            
+            // 応募情報取得
+            getLottery()
+        }
+    }
+    
+    @objc func viewDidEnterBackground(_ notification: Notification?) {
+        if (self.isViewLoaded && (self.view.window != nil)) {
+            dPrint("バックグラウンド")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
