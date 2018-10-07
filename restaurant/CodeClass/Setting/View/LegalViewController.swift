@@ -19,9 +19,6 @@ class LegalViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         var message:String="\n"
-        message=message+"利用上の注意（免責事項）"
-        message=message+"\n"
-        message=message+"\n"
         message=message+"株式会社スパークワークス（以下、「当社」といいます）は、この規約（以下、「本規約」といいます）に基づいて、"
         message=message+"「中華グルメ」サービス（以下、「本サービス」といいます）を提供いたします。\n"
         message=message+"\n"
