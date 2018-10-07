@@ -13,7 +13,7 @@ import RealmSwift
 import AlamofireImage
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemPriceLabel: UILabel!
@@ -27,46 +27,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        // Lottery情報APIを呼び出し
-//        LotteryService.shared.getLottery(url: apiGetLotteries,
-//           succeed: { (lotteryInfo) in
-//           addLotterInfo(newOboInfo: lotteryInfo)
-//        },
-//           failed: { (message) in
-//           dPrint(message)
-//        })
-//
-//
-//        // Lottery情報洗替
-//        func addLotterInfo(newOboInfo: [OboInfo]) {
-//
-//            let realm = try! Realm()
-//            let oldOboInfo = realm.objects(OboInfo.self)
-//            try! realm.write {
-//                realm.delete(oldOboInfo)
-//                realm.add(newOboInfo)
-//
-//            }
-//
-//        }
-//
-//        let realm = try! Realm()
-//        let oboInfo = realm.objects(OboInfo.self).first
-//        let newLotterId = oboInfo?.lotteryId
-//
-//        let oboStatus = UserDefaults.standard.integer(forKey: "oboStatus")
-//        let oboLotterId = UserDefaults.standard.string(forKey: "lotterId")
-//
-//        if oboStatus == 1 && oboLotterId == newLotterId {
-//            self.oboButton.isEnabled = false
-//            self.oboButton.setTitleColor(UIColor.gray, for: .normal)
-//            self.oboButton.setTitle("応募ずみ", for: .normal)
-//        }
-        
-        
-        // 応募情報取得
-        getLottery()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,7 +37,6 @@ class HomeViewController: UIViewController {
         getLottery()
     }
     
-    
     @IBAction func oboOnClick(_ sender: Any) {
         
         let realm = try! Realm()
@@ -86,7 +45,6 @@ class HomeViewController: UIViewController {
         apply(lotteryId!)
         
     }
-    
     
     
     func getLottery() {
@@ -105,7 +63,7 @@ class HomeViewController: UIViewController {
         }
         )
     }
-
+    
     func addLottery(newLottery: Lottery) {
         
         let realm = try! Realm()
@@ -120,15 +78,20 @@ class HomeViewController: UIViewController {
         
         let realm = try! Realm()
         let nowLottery = realm.objects(Lottery.self).first
-
+        
         
         itemNameLabel.text = nowLottery?.lotteryTitle
         itemPriceLabel.text = nowLottery?.lotteryDetail
         oboNumbersLabel.text = String((nowLottery?.count)!)
+        
         if (nowLottery?.lotteryApplicationStatus != "0") {
-            self.oboButton.isEnabled = false
-            self.oboButton.setTitleColor(UIColor.gray, for: .normal)
-            self.oboButton.setTitle("応募ずみ", for: .normal)
+            oboButton.isEnabled = false
+            oboButton.setTitleColor(UIColor.gray, for: .normal)
+            oboButton.setTitle(nowLottery?.lotteryApplicationStatusName, for: .normal)
+        }else{
+            oboButton.isEnabled = true
+            oboButton.setTitleColor(UIColor.black, for: .normal)
+            oboButton.setTitle("応募する", for: .normal)
         }
         oboEndtimeLabel.text = nowLottery?.endDatetime
         oboResultTimeLabel.text = nowLottery?.announcementDatetime
@@ -143,17 +106,16 @@ class HomeViewController: UIViewController {
         LotteryService.shared.postLottery(url: apiPostLotteries + "/" + String(lotteryId),
                                           succeed: { (message) in
                                             dPrint(message)
-                                            self.oboButton.isEnabled = false
-                                            self.oboButton.setTitleColor(UIColor.gray, for: .normal)
-                                            self.oboButton.setTitle("応募ずみ", for: .normal)
+                                            self.getLottery()
+                                            self.showLottery()
                                             let title:String = "応募ありがとうございます！"
                                             let message:String=""
                                             UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: title,message: message, sureHandler: nil)
                                             
         },
                                           failed: { (message) in
-                                            let title:String = "応募送信失敗しました！"
-                                            let message:String="しばらくしてから再送信してください"
+                                            let title:String = "応募失敗しました！"
+                                            let message:String="しばらくしてから再度応募してください"
                                             UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: title,message: message, sureHandler: nil)
                                             dPrint(message)
                                             

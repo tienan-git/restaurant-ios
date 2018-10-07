@@ -75,7 +75,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znh-Xc-43X">
                     <rect key="frame" x="65" y="369" width="245" height="47"/>
-                    <color key="backgroundColor" red="0.70869263800000004" green="0.68927646679999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="1" green="0.47256197239999997" blue="0.01271577799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="応募する">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
