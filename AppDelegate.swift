@@ -41,7 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let _ = try! Realm(configuration: config)
         
         // 同期処理
-        runSync()
+        //->別APIと同じタイミングで実施すると、サーバ側重複deviceIdが作られてしまった可能性がありますので、一旦コメントアウト
+        //runSync()
         
         // 最新施設情報取得
         getSpots()
@@ -66,7 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
         
         // 同期処理
-        runSync()
+        //->別APIと同じタイミングで実施すると、サーバ側重複deviceIdが作られてしまった可能性がありますので、一旦コメントアウト
+        //runSync()
         
         // 最新施設情報取得
         getSpots()
@@ -111,48 +113,6 @@ extension AppDelegate {
                 realm.add(spot)
             }
         }
-    }
-    
-    // ゆたぽん情報同期
-    func postYutapons() {
-        
-        // 端末ID取得
-        let deviceId = UIDevice.current.identifierForVendor!.uuidString
-        
-        // ゆたぽん情報取得
-        let realm = try! Realm()
-        let bearObjs = realm.objects(Coupon.self)
-        var bearDics: [[String:Any]] = []
-        if bearObjs.count > 0 {
-            for bearObj: Coupon in bearObjs {
-                let bearDic: [String:Any] = bearObj.convertIntoDictionary()
-                bearDics.append(bearDic)
-            }
-        }
-        let yutaponDic: [String:Any] = [
-            "deviceId": deviceId,
-            "data": bearDics
-        ]
-        
-        // 本番URLでAPIを呼び出し
-        CommonService.shared.postYutapons(url: postYutaponsProdUrl, yutaponDic: yutaponDic,
-                                          succeed: { (message) in
-                                            dPrint(message)
-        },
-                                          failed: { (message) in
-                                            dPrint(message)
-                                            
-                                            // テストURLでAPIを呼び出し（本番URLで失敗する場合）
-                                            CommonService.shared.postYutapons(url: postYutaponsTestUrl, yutaponDic: yutaponDic,
-                                                                              succeed: { (message) in
-                                                                                dPrint(message)
-                                            },
-                                                                              failed: { (message) in
-                                                                                dPrint(message)
-                                            }
-                                            )
-        }
-        )
     }
     
     // 同期処理
