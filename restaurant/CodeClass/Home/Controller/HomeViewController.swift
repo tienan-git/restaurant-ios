@@ -56,6 +56,27 @@ class HomeViewController: UIViewController {
         getLottery()
     }
     
+    // MARK: - イベント：「抽選について」ボタンをタップする時
+    @IBAction func aboutLettery(_ sender: UIButton) {
+        let title:String="抽選について"
+
+        var message:String="\n"
+        message=message+"【抽選方法】\n"
+        message=message+"不定期に抽選内容を掲載します。\n"
+        message=message+"抽選期間内抽選画面の「応募する」ボタンを押せば応募できます。\n"
+        message=message+"応募された方から抽選を行います。\n"
+        message=message+"抽選結果は発表日付以降確認できます。\n"
+        message=message+"\n"
+        message=message+"【あたりの連絡方法】\n"
+        message=message+"フィードバックで連絡方式を記載した上ご連絡お願いします。\n"
+        message=message+"\n"
+        message=message+"\n"
+        message=message+"※当アプリにおける抽選は\n株式会社スパークワークス独自が行うものであり、\nApple.Incは一切関係ありません。"
+        
+        
+        UtilClass.alertViewShowWithoutCancel(vc: UtilClass.AppCurrentViewController() ?? UIViewController(), title: title,message: message, sureHandler: nil)
+    }
+    
     @IBAction func oboOnClick(_ sender: Any) {
         
         let realm = try! Realm()

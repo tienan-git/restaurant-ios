@@ -49,7 +49,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018/01/01 (土) 10:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nl-wq-7CN">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018/09/25 (木) 10:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nl-wq-7CN">
                     <rect key="frame" x="65" y="554" width="210" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -102,6 +102,23 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gru-nt-qyU">
+                    <rect key="frame" x="293" y="622" width="66" height="25"/>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="抽選について">
+                                <attributes>
+                                    <font key="NSFont" size="11" name="MS-PMincho"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    <integer key="NSUnderline" value="1"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="aboutLettery:" destination="-1" eventType="touchUpInside" id="HRl-la-Val"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -129,6 +146,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QhQ-qi-h2J" secondAttribute="bottom" constant="370" id="WVA-lc-qxD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LzC-mg-qc1" secondAttribute="trailing" constant="215" id="Zfm-hs-2jp"/>
                 <constraint firstItem="QhQ-qi-h2J" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="75" id="ZnR-a1-O93"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gru-nt-qyU" secondAttribute="bottom" constant="20" id="aqX-WX-AKB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QhQ-qi-h2J" secondAttribute="trailing" constant="75" id="dK9-7E-iOg"/>
                 <constraint firstItem="OpU-iI-ece" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="65" id="dUU-8V-5o1"/>
                 <constraint firstItem="f8j-E6-KO3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="65" id="dYQ-Vy-9ZY"/>
@@ -137,12 +155,14 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sUs-kD-Ea6" secondAttribute="trailing" constant="65" id="hyB-Vp-Noh"/>
                 <constraint firstItem="ULP-Rh-DHs" firstAttribute="top" secondItem="f8j-E6-KO3" secondAttribute="bottom" constant="5" id="nof-ac-j4f"/>
                 <constraint firstItem="OpU-iI-ece" firstAttribute="top" secondItem="QhQ-qi-h2J" secondAttribute="bottom" constant="10" id="oEV-Ng-uhy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gru-nt-qyU" secondAttribute="trailing" constant="16" id="oYT-XQ-aZM"/>
                 <constraint firstItem="4nl-wq-7CN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="65" id="rub-qC-6QB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4nl-wq-7CN" secondAttribute="trailing" constant="100" id="ufd-N0-9zn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RfL-DM-Zgo" secondAttribute="trailing" constant="100" id="xWg-0p-Q6m"/>
                 <constraint firstItem="LzC-mg-qc1" firstAttribute="top" secondItem="ULP-Rh-DHs" secondAttribute="bottom" constant="15" id="xwv-LU-nDT"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="133.59999999999999" y="139.880059970015"/>
         </view>
         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5JW-wt-fXh">
             <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
