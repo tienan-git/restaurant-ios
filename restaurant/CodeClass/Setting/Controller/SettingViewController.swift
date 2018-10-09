@@ -49,7 +49,7 @@ class SettingViewController: UIViewController {
             ("抽選履歴"),
             ("フィードバック"),
             ("利用規約"),
-            ("バージョン情報"),
+            ("アプリ情報"),
             ],
         ]
     
