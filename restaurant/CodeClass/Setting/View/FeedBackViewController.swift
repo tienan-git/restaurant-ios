@@ -28,6 +28,10 @@ class FeedBackViewController: UIViewController {
         title = "フィードバック"
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
     @IBAction func saveButtonClicked(_ sender:Any){
         
         postFeedBack()
