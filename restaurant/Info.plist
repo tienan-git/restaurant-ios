@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>0.2</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -33,6 +33,8 @@
 	<string>Please open your location switch for using the map.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>”中華グルメ”から写真へのアクセスを求めます</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>プロフィール画像を選択するため</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
