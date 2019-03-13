@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TimedSilver
 
 class UserViewController: UIViewController {
 
@@ -80,7 +79,7 @@ class UserViewController: UIViewController {
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 let picker = UIImagePickerController()
                 picker.sourceType = .camera
-                picker.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+                picker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
                 picker.allowsEditing = true
                 self.present(picker, animated: true, completion: nil)
                 
@@ -96,7 +95,7 @@ class UserViewController: UIViewController {
             -> Void in
             let picker = UIImagePickerController()
             picker.sourceType = .photoLibrary
-            picker.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            picker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
             picker.allowsEditing = true
             self.present(picker, animated: true, completion: nil)
             
@@ -112,33 +111,26 @@ class UserViewController: UIViewController {
 }
 
 
-        extension UserViewController: UIImagePickerControllerDelegate {
-            // ユーザーが写真を選んた後
-            func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-
-                imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-                
-                UserDefaults.standard.set(UIImageJPEGRepresentation((info[UIImagePickerControllerOriginalImage] as? UIImage ?? nil)!, 0.8), forKey: "userImage")
-                
-                let imageDate:NSData = UserDefaults.standard.object(forKey: "userImage") as! NSData
-                imageView.image = UIImage(data:imageDate as Data)
-
-                
-                // 必须写这行，否则拍照后点击重新拍摄或使用时没有返回效果。
-                picker.dismiss(animated: true, completion: nil)
-
-            }
-        }
-
-        extension UserViewController: UINavigationControllerDelegate {
-            // do nothing
-        }
-
-
-
-//extension UserViewController: UIAlertViewDelegate{
+//        extension UserViewController: UIImagePickerControllerDelegate {
+//            // ユーザーが写真を選んた後
+//            private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+//
+//                imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+//
+//                UserDefaults.standard.set(UIImageJPEGRepresentation((info[UIImagePickerControllerOriginalImage] as? UIImage ?? nil)!, 0.8), forKey: "userImage")
+//
+//                let imageDate:NSData = UserDefaults.standard.object(forKey: "userImage") as! NSData
+//                imageView.image = UIImage(data:imageDate as Data)
 //
 //
-//}
+//                // 必须写这行，否则拍照后点击重新拍摄或使用时没有返回效果。
+//                picker.dismiss(animated: true, completion: nil)
+//
+//            }
+//        }
+//
+//        extension UserViewController: UINavigationControllerDelegate {
+//            // do nothing
+//        }
 
 

@@ -6,12 +6,9 @@
 //  Copyright © 2018年 劉鉄男. All rights reserved.
 //
 
-import UIKit
-import TimedSilver
-
 class SettingViewController: UIViewController {
-    @IBOutlet weak var settingTableView: UITableView!
     
+    @IBOutlet weak var settingTableView: UITableView!
     fileprivate var sections = [Section]()
     
     fileprivate enum SettingTableViewSettingType: Int {
@@ -56,8 +53,10 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.view.backgroundColor = UIColor.viewBackgroundColor
-        self.settingTableView.ts_registerCellNib(SettingTableViewCell.self)
-        self.settingTableView.ts_registerCellNib(SubSettingTableViewCell.self)
+        let settingCell = UINib(nibName: SettingTableViewCell.nibName, bundle: nil)
+        settingTableView.register(settingCell, forCellReuseIdentifier: SettingTableViewCell.reuseID)
+        let subSettingCell = UINib(nibName: SubSettingTableViewCell.nibName, bundle: nil)
+        settingTableView.register(subSettingCell, forCellReuseIdentifier: SubSettingTableViewCell.reuseID)
         settingTableView.dataSource = self
         settingTableView.delegate = self
         self.settingTableView.tableFooterView = UIView()
@@ -106,7 +105,9 @@ extension SettingViewController: UITableViewDelegate {
     }
 }
 
-// MARK: @protocol - UITableViewDataSource
+// ================================================================================
+// MARK: - UITableViewDataSource
+
 extension SettingViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.itemDataSouce.count
@@ -127,14 +128,11 @@ extension SettingViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if indexPath.section == 0 {
-            //自定义cell
-            let cell:SettingTableViewCell = tableView.ts_dequeueReusableCell(SettingTableViewCell.self)
+            let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.reuseID, for: indexPath) as! SettingTableViewCell
             return cell
         } else {
-           //自定义cell
-            let cell:SubSettingTableViewCell = tableView.ts_dequeueReusableCell(SubSettingTableViewCell.self)
+            let cell = tableView.dequeueReusableCell(withIdentifier: SubSettingTableViewCell.reuseID, for: indexPath) as! SubSettingTableViewCell
             let item = self.itemDataSouce[indexPath.section][indexPath.row]
             cell.titleLabel.text = item
             return cell

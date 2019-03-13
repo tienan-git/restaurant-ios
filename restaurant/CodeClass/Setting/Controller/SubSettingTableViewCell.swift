@@ -6,11 +6,13 @@
 //  Copyright © 2018年 劉鉄男. All rights reserved.
 //
 
-import UIKit
+import SwiftTips
 
-class SubSettingTableViewCell: UITableViewCell {
+class SubSettingTableViewCell: UITableViewCell, NibProtocol {
+    typealias NibT = SubSettingTableViewCell
 
     @IBOutlet weak var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -6,7 +6,6 @@
 //  Copyright © 2018年 劉鉄男. All rights reserved.
 //
 
-import UIKit
 import MapKit
 import RealmSwift
 //import CoreLocation
@@ -72,14 +71,14 @@ class MapViewController: UIViewController {
     func addCircleOverlay() {
         for overlay in mapView.overlays {
             if overlay is MKCircle {
-                mapView.remove(overlay)
+                mapView.removeOverlay(overlay)
             }
         }
         var circle = MKCircle()
         if userLocation != nil {
             circle = MKCircle.init(center: userLocation, radius: 1000)
         }
-        mapView.add(circle)
+        mapView.addOverlay(circle)
     }
     
     // MARK: - メソッド：MapViewに施設ピンマークを追加する
@@ -90,7 +89,7 @@ class MapViewController: UIViewController {
         // 施設情報取得
         let realm = try! Realm()
         let spots = realm.objects(Spot.self)
-        dPrint("spots: \(spots)")
+//        dPrint("spots: \(spots)")
         
         // 施設アノテーション追加
         var spotAnnotations = [SpotAnnotation]()
@@ -111,7 +110,7 @@ class MapViewController: UIViewController {
     
     // MARK: - イベント：「現在地に戻る」ボタン（画面右下の画像）をタップする時
     @IBAction func backOriginAction(_ sender: Any) {
-        dPrint("現在地戻りボタンをタップする時")
+//        dPrint("現在地戻りボタンをタップする時")
         setOriginLocation()
         addCircleOverlay()
     }
@@ -121,7 +120,7 @@ class MapViewController: UIViewController {
         policyLineIsShowing = false
         for overlay in mapView.overlays {
             if overlay is MKPolyline {
-                mapView.remove(overlay)
+                mapView.removeOverlay(overlay)
             }
         }
         routeCancelButton.isHidden = true
@@ -133,7 +132,7 @@ class MapViewController: UIViewController {
     
     // MARK: - イベント：「経路案内」ボタン（施設情報画面にある）をタップする時
     func routeGuideOrOnlyForClose() {
-        dPrint("経路案内ボタンをタップする時")
+//        dPrint("経路案内ボタンをタップする時")
         if isLocationEnable(){
             policyLineIsShowing = true
             policyLineIsFirstShowing = true
@@ -163,7 +162,7 @@ class MapViewController: UIViewController {
         let toItem   = MKMapItem(placemark:toPlacemark)
         
         // MKMapItem をセットして MKDirectionsRequest を生成
-        let request = MKDirectionsRequest()
+        let request = MKDirections.Request()
         
         request.source = fromItem
         request.destination = toItem
@@ -172,7 +171,7 @@ class MapViewController: UIViewController {
         
         let directions = MKDirections(request:request)
         directions.calculate(completionHandler: {
-            (response:MKDirectionsResponse!, error:Error!) -> Void in
+            (response:MKDirections.Response!, error:Error!) -> Void in
             if (error != nil || response.routes.isEmpty) {
                 return
             }
@@ -180,15 +179,15 @@ class MapViewController: UIViewController {
             // 経路を描画
             for overlay in self.mapView.overlays {
                 if overlay is MKPolyline {
-                    self.mapView.remove(overlay)
+                    self.mapView.removeOverlay(overlay)
                 }
             }
-            self.mapView.add(route.polyline)
+            self.mapView.addOverlay(route.polyline)
             // 現在地と目的地を含む表示範囲を設定する
             if self.policyLineIsFirstShowing == true {
                 self.showUserAndDestinationOnMap()
             }
-        })
+            } as! MKDirections.DirectionsHandler)
     }
     
     // MARK: - メソッド：初回経路表示する時の最適な地図表示範囲を計算する
@@ -208,11 +207,11 @@ class MapViewController: UIViewController {
         let span_x:Double = fmax(leastCoordSpan, fabs(maxLat - minLat) * mapMargin);
         let span_y:Double = fmax(leastCoordSpan, fabs(maxLon - minLon) * mapMargin);
         
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(span_x, span_y);
+        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: span_x, longitudeDelta: span_y);
         
         // 現在地を目的地の中心を計算
         let center:CLLocationCoordinate2D = CLLocationCoordinate2DMake((maxLat + minLat) / 2, (maxLon + minLon) / 2);
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(center, span);
+        let region:MKCoordinateRegion = MKCoordinateRegion(center: center, span: span);
         
         mapView.setRegion(mapView.regionThatFits(region), animated:true);
     }
@@ -222,7 +221,7 @@ extension MapViewController: MKMapViewDelegate, SpotViewDelegate {
     
     // MARK: - イベント：施設ピンマークをタップする時
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        dPrint("アノテーションをタップする時")
+//        dPrint("アノテーションをタップする時")
         if view.annotation is MKUserLocation {
             return
         }
@@ -242,7 +241,7 @@ extension MapViewController: MKMapViewDelegate, SpotViewDelegate {
     
     // MARK: - イベント：施設ピンマークが表示される時
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        dPrint("アノテーションが表示される時")
+//        dPrint("アノテーションが表示される時")
         if annotation is MKUserLocation {
             return nil
         }
@@ -266,7 +265,7 @@ extension MapViewController: MKMapViewDelegate, SpotViewDelegate {
         
         // サークルを描画する時
         if overlay is MKCircle {
-            dPrint("オーバレイ「サークル」が描画される時")
+//            dPrint("オーバレイ「サークル」が描画される時")
             let circleRenderer = MKCircleRenderer(circle: overlay as! MKCircle)
             circleRenderer.fillColor = UIColor.blue.withAlphaComponent(0.05)
             circleRenderer.strokeColor = UIColor.blue.withAlphaComponent(0.2)
@@ -278,7 +277,7 @@ extension MapViewController: MKMapViewDelegate, SpotViewDelegate {
         // 経路を描画する時
         if policyLineIsShowing == true {
             if overlay is MKPolyline {
-                dPrint("オーバレイ「経路」が描画される時")
+//                dPrint("オーバレイ「経路」が描画される時")
                 let polylineRenderer = MKPolylineRenderer(overlay: overlay)
                 polylineRenderer.strokeColor = UIColor.blue
                 polylineRenderer.lineWidth = 5
@@ -287,7 +286,7 @@ extension MapViewController: MKMapViewDelegate, SpotViewDelegate {
         }
         
         // サークル、経路以外を描画する時
-        dPrint("オーバレイ「サークル」「経路」以外が描画される時")
+//        dPrint("オーバレイ「サークル」「経路」以外が描画される時")
         return MKOverlayRenderer()
     }
     
@@ -297,9 +296,9 @@ extension MapViewController: CLLocationManagerDelegate {
     
     // MARK: - イベント：ユーザー位置が変わる時
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        dPrint("GPS現在位置が変わる時")
+//        dPrint("GPS現在位置が変わる時")
         for location in locations {
-            print("緯度:\(location.coordinate.latitude) 経度:\(location.coordinate.longitude) 取得時刻:\(location.timestamp.description)")
+//            print("緯度:\(location.coordinate.latitude) 経度:\(location.coordinate.longitude) 取得時刻:\(location.timestamp.description)")
         }
         userLocation = locations.last?.coordinate
         addCircleOverlay()

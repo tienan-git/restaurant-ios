@@ -22,38 +22,25 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var oboNumbersLabel: UILabel!
     @IBOutlet weak var oboEndtimeLabel: UILabel!
     @IBOutlet weak var oboResultTimeLabel: UILabel!
+    var lotterDataSource: LotteryDataSource
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.viewWillEnterForeground(_:)), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.viewDidEnterBackground(_:)), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
-        
-        
+    init() {
+       let lotterDataSource = LotteryDataSource()
+       self.lotterDataSource = lotterDataSource
+       super.init(nibName: nil, bundle: nil)
     }
     
-    @objc func viewWillEnterForeground(_ notification: Notification?) {
-        if (self.isViewLoaded && (self.view.window != nil)) {
-            dPrint("フォアグラウンド")
-            
-            // 応募情報取得
-            getLottery()
-        }
-    }
-    
-    @objc func viewDidEnterBackground(_ notification: Notification?) {
-        if (self.isViewLoaded && (self.view.window != nil)) {
-            dPrint("バックグラウンド")
-        }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         super.viewWillAppear(animated)
-        
-        // 応募情報取得
-        getLottery()
+        DispatchQueue.main.async {
+            // 応募情報取得
+            self.lotterDataSource.updateLotteryByRefresh(true)
+        }
+        showLottery()
     }
     
     // MARK: - イベント：「抽選について」ボタンをタップする時

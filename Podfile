@@ -7,10 +7,13 @@ target 'restaurant' do
 
   pod 'Alamofire-SwiftyJSON'
   pod 'RealmSwift'
+  pod 'SDWebImage','4.4.6'
   pod 'AlamofireImage'
   pod 'MJRefresh', '~> 3.1.12'
   pod 'SVProgressHUD', '~> 2.2'
-  pod 'TimedSilver', '1.1.0'
+  pod 'Timepiece'
+  pod 'FrameAccessor'
+  pod 'SwiftyUserDefaults'
 
   # Pods for LotterApp
 

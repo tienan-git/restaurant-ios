@@ -176,11 +176,11 @@ extension Date {
         //        formatter.locale = Locale.init(identifier: "japanese") // NSLocale(localeIdentifier: NSCalendar.Identifier.japanese.rawValue) as Locale!
     }
     
-    func isToday() -> Bool{ // 判断日期是否是今天
-        let format = DateFormatter()
-        format.dateFormat = "yyyy-MM-dd"
-        return format.string(from: self) == format.string(from: Date())
-    }
+//    func isToday() -> Bool{ // 判断日期是否是今天
+//        let format = DateFormatter()
+//        format.dateFormat = "yyyy-MM-dd"
+//        return format.string(from: self) == format.string(from: Date())
+//    }
     
     func isYestoday() -> Bool{ // 判断日期是否是昨天
         let format = DateFormatter()

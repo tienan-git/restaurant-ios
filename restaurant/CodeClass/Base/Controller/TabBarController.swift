@@ -24,7 +24,7 @@ class TabBarController: UITabBarController {
     }
     
     override func viewDidLayoutSubviews() {
-        let numberOfItems = CGFloat(self.childViewControllers.count)
+        let numberOfItems = CGFloat(self.children.count)
         let tabBarItemSize = CGSize(width: tabBar.frame.width / numberOfItems, height: tabBar.frame.height)
         tabBar.selectionIndicatorImage = imageWithColor(color: UIColor.blue, size: tabBarItemSize).resizableImage(withCapInsets: UIEdgeInsets.zero)
         tabBar.tintColor = UIColor.white
@@ -51,9 +51,9 @@ class TabBarController: UITabBarController {
     // MARK: - メソッド：親Viewに子Viewを追加する
     func addChildVC(vc: UIViewController, title: String) {
         vc.tabBarItem.title = title
-        vc.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "Avenir-Medium", size: 14) as Any], for: .normal)
-        vc.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -12)
-        addChildViewController(vc)
+        vc.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "Avenir-Medium", size: 14) as Any], for: .normal)
+        vc.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -12)
+        addChild(vc)
     }
     
 }

@@ -23,7 +23,7 @@ class BearCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - メソッド：「逃がす」ボタンに必要情報を追加する
-    func configureData(bearName: String, catchTime: String, catchPlace: String, target: Any?, action: Selector, events: UIControlEvents, tag: Int) {
+    func configureData(bearName: String, catchTime: String, catchPlace: String, target: Any?, action: Selector, events: UIControl.Event, tag: Int) {
         timeLabel.text = catchTime
         locationLabel.text = catchPlace
         imageView.image = UIImage(named: bearName)

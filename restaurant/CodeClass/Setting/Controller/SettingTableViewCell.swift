@@ -6,9 +6,10 @@
 //  Copyright © 2018年 劉鉄男. All rights reserved.
 //
 
-import UIKit
+import SwiftTips
 
-class SettingTableViewCell: UITableViewCell {
+class SettingTableViewCell: UITableViewCell, NibProtocol {
+    typealias NibT = SettingTableViewCell
 
     @IBOutlet weak var label: UILabel!
     

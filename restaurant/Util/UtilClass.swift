@@ -85,15 +85,15 @@ class UtilClass: NSObject {
     
     // MARK: - 自适应高度
     class func heightAdaptationWithStr(str: String, width: CGFloat, fontFloat: CGFloat) -> CGFloat {
-        let dic = NSDictionary.init(object: UIFont.systemFont(ofSize: fontFloat), forKey: NSAttributedStringKey.font as NSCopying)
-        let bounds: CGRect = str.boundingRect(with: CGSize(width: width, height: 0), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: dic as? [NSAttributedStringKey : Any], context: nil)
+        let dic = NSDictionary.init(object: UIFont.systemFont(ofSize: fontFloat), forKey: NSAttributedString.Key.font as NSCopying)
+        let bounds: CGRect = str.boundingRect(with: CGSize(width: width, height: 0), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: dic as? [NSAttributedString.Key : Any], context: nil)
         return bounds.size.height
     }
     
     // MARK: - 自适应宽度
     class func widthAdaptationWithStr(str: String, height: CGFloat, fontFloat: CGFloat) -> CGFloat {
-        let dic = NSDictionary.init(object: UIFont.systemFont(ofSize: fontFloat), forKey: NSAttributedStringKey.font as NSCopying)
-        let bounds: CGRect = str.boundingRect(with: CGSize(width: 0, height: height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: dic as? [NSAttributedStringKey : Any], context: nil)
+        let dic = NSDictionary.init(object: UIFont.systemFont(ofSize: fontFloat), forKey: NSAttributedString.Key.font as NSCopying)
+        let bounds: CGRect = str.boundingRect(with: CGSize(width: 0, height: height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: dic as? [NSAttributedString.Key : Any], context: nil)
         return bounds.size.width
     }
     
@@ -116,7 +116,7 @@ class UtilClass: NSObject {
             let attributedString = NSMutableAttributedString.init()
             for i in 0 ..< strs.count {
                 let attriStr = NSMutableAttributedString(string: strs[i])
-                attriStr.addAttributes([NSAttributedStringKey.foregroundColor : colors[i]], range: NSRange.init(location: 0, length: strs[i].count))
+                attriStr.addAttributes([NSAttributedString.Key.foregroundColor : colors[i]], range: NSRange.init(location: 0, length: strs[i].count))
                 attributedString.append(attriStr)
             }
             
@@ -125,8 +125,8 @@ class UtilClass: NSObject {
             }
             
             if font != nil {
-                attributedString.addAttributes([NSAttributedStringKey.font: font!], range: NSRange.init(location: 0, length: attributedString.length - count))
-                attributedString.addAttributes([NSAttributedStringKey.font: UIFont.init(name: font!.fontName, size: font!.pointSize / 2)!], range: NSRange.init(location: attributedString.length - count, length: count))
+                attributedString.addAttributes([NSAttributedString.Key.font: font!], range: NSRange.init(location: 0, length: attributedString.length - count))
+                attributedString.addAttributes([NSAttributedString.Key.font: UIFont.init(name: font!.fontName, size: font!.pointSize / 2)!], range: NSRange.init(location: attributedString.length - count, length: count))
             }
             
             return attributedString
@@ -147,10 +147,10 @@ class UtilClass: NSObject {
     class func AppTopViewController() -> UIViewController? {
         var topVC = UIViewController()
         var keyWindow = UIApplication.shared.keyWindow
-        if keyWindow?.windowLevel != UIWindowLevelNormal {
+        if keyWindow?.windowLevel != UIWindow.Level.normal {
             let windows = UIApplication.shared.windows
             for window in windows {
-                if window.windowLevel == UIWindowLevelNormal {
+                if window.windowLevel == UIWindow.Level.normal {
                     keyWindow = window
                     break
                 }

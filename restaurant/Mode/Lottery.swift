@@ -24,7 +24,6 @@ class Lottery: Object {
     // JSONからObjectへ変換
     convenience init(_ json: JSON) {
         self.init()
-        
         lotteryId = json["lotteryId"].intValue
         lotteryTitle = json["lotteryTitle"].stringValue
         lotteryDetail = json["lotteryDetail"].stringValue
@@ -50,6 +49,25 @@ class Lottery: Object {
             "announcementDatetime": announcementDatetime
             ] as [String : Any]
         return dic
+    }
+    
+    ///応募情報取得を取得
+    open class func getLotteryInfo(_ completion: @escaping (_ Lottery: Lottery?, _ error: Error?) ->Void) {
+        
+        ApiClient.sharedClient.GET("lotteries",
+                                   parameters: [:]) {(responceObject, error) in
+                                    
+                                    if error == nil {
+                                        DBLog(responceObject)
+                                        
+                                        let jsonArray = SwiftyJSON.JSON(responceObject!["lottery"]!)
+                                        let lotteryObj = Lottery.init(jsonArray)
+                                        completion(lotteryObj, nil)
+                                    } else {
+                                        DBLog(error)
+                                        completion(nil, error)
+                                    }
+        }
     }
     
 }
