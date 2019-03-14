@@ -13,7 +13,7 @@
 
 import SwiftyJSON
 
-public let ErrorDomain = "com.labit.error"
+public let ErrorDomain = "sparkworks.error"
 let ErrorAccountBanNotification = "ErrorAccountBanNotification"
 let ErrorOfflineNotification = "ErrorOfflineNotification"
 let ErrorMaintenanceNotification = "ErrorMaintenanceNotification"

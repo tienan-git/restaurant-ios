@@ -17,7 +17,7 @@ class LotteryDataSource: BaseDataSource {
     }
 
     private func getLottery(shouldRefresh: Bool) {
-        Lottery.getLotteryInfo({ [weak self] (lotteryObj, error) in
+        Lottery.getLotteryInfo({(lotteryObj, error) in
             if let lottery = lotteryObj {
                 let realm = try! Realm()
                 let oldLottery = realm.objects(Lottery.self)

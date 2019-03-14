@@ -97,6 +97,8 @@ open class BaseApiClient: SessionManager {
                         completion(nil, error)
                         return
                     }
+                    print("Endpoint: \(self.requestString(endpoint))")
+                    print("Params: \(String(describing: parameters))")
                     completion(resp, nil)
                     break
                 case .failure(let error as NSError):
