@@ -6,7 +6,6 @@
 //  Copyright © 2019 劉鉄男. All rights reserved.
 //
 
-import UIKit
 import SwiftTips
 
 class SettingCell: UITableViewCell, NibProtocol {

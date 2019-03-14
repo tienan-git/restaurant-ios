@@ -8,6 +8,10 @@
 
 import UIKit
 
+//
+public let kCommonDeviceWidth = UIScreen.main.bounds.size.width
+public let kCommonDeviceHeight = UIScreen.main.bounds.size.height
+public let kCommonStatusBarHeight = UIApplication.shared.statusBarFrame.size.height
 // よく使うカラーとか、よく使う定数をここにまとめている
 public let kBackGroundColor: UIColor = UIColor.colorWithHex(0xECEDED)
 public let kBorderColor: UIColor = UIColor.colorWithHex(0xE0E0E0)

@@ -14,6 +14,7 @@ target 'restaurant' do
   pod 'Timepiece'
   pod 'FrameAccessor'
   pod 'SwiftyUserDefaults'
+  pod 'RMUniversalAlert'
 
   # Pods for LotterApp
 

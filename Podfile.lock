@@ -12,6 +12,12 @@ PODS:
   - Realm/Headers (3.13.1)
   - RealmSwift (3.13.1):
     - Realm (= 3.13.1)
+  - RMUniversalAlert (0.8.1):
+    - RMUniversalAlert/Core (= 0.8.1)
+  - RMUniversalAlert/Core (0.8.1):
+    - "UIActionSheet+Blocks (>= 0.9)"
+    - "UIAlertController+Blocks (>= 0.9)"
+    - "UIAlertView+Blocks (>= 0.9)"
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
@@ -19,6 +25,9 @@ PODS:
   - SwiftyJSON (4.0.0)
   - SwiftyUserDefaults (3.0.1)
   - Timepiece (1.3.1)
+  - "UIActionSheet+Blocks (0.9)"
+  - "UIAlertController+Blocks (0.9.2)"
+  - "UIAlertView+Blocks (0.9)"
 
 DEPENDENCIES:
   - Alamofire-SwiftyJSON
@@ -26,6 +35,7 @@ DEPENDENCIES:
   - FrameAccessor
   - MJRefresh (~> 3.1.12)
   - RealmSwift
+  - RMUniversalAlert
   - SDWebImage (= 4.4.6)
   - SVProgressHUD (~> 2.2)
   - SwiftyUserDefaults
@@ -40,11 +50,15 @@ SPEC REPOS:
     - MJRefresh
     - Realm
     - RealmSwift
+    - RMUniversalAlert
     - SDWebImage
     - SVProgressHUD
     - SwiftyJSON
     - SwiftyUserDefaults
     - Timepiece
+    - "UIActionSheet+Blocks"
+    - "UIAlertController+Blocks"
+    - "UIAlertView+Blocks"
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -54,12 +68,16 @@ SPEC CHECKSUMS:
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  RMUniversalAlert: ce7118101a19fa41b9adedf907b66a8cc3bd32c8
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
   Timepiece: c0760ec0e545697d86b80424dcd2b4d5ef66cf51
+  "UIActionSheet+Blocks": e180b7dad0a721ab7f212ac9742af799008bb358
+  "UIAlertController+Blocks": 80e28b92523fb58aba4d1bccec013d5a0b0bddb2
+  "UIAlertView+Blocks": a46c99c5144f6c5dbc7d62fd2a0678daceec89a3
 
-PODFILE CHECKSUM: 1d8737165b4ee46122f73364d65bcd8f220e0490
+PODFILE CHECKSUM: 9346601a101e31bfd695f7fa4f140fc4851f6bb5
 
 COCOAPODS: 1.5.3
