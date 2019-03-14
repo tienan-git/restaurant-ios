@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PictureBookViewController" customModule="ARAPP" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PictureBookViewController" customModule="restaurant" customModuleProvider="target">
             <connections>
-                <outlet property="bearCollectionView" destination="LMh-dO-rLQ" id="zDl-kj-u7z"/>
                 <outlet property="view" destination="iN0-l3-epB" id="LWd-BL-fjG"/>
             </connections>
         </placeholder>
@@ -20,30 +19,8 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="LMh-dO-rLQ">
-                    <rect key="frame" x="0.0" y="20" width="414" height="716"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DFR-R9-CbD">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="50" height="50"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="3qu-b7-qJe"/>
-                        <outlet property="delegate" destination="-1" id="DvF-Ya-pU5"/>
-                    </connections>
-                </collectionView>
-            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <gestureRecognizers/>
-            <constraints>
-                <constraint firstItem="LMh-dO-rLQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0KX-9h-7ve"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LMh-dO-rLQ" secondAttribute="bottom" id="Ffd-za-SKE"/>
-                <constraint firstItem="LMh-dO-rLQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="LGR-PT-Enr"/>
-                <constraint firstItem="LMh-dO-rLQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ddw-lH-Bvq"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>

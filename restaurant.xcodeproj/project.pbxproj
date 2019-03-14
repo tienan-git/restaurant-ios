@@ -43,10 +43,6 @@
 		6E1FBE4A22377C850080BBD1 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FBE3622377C850080BBD1 /* UIImageView+Extension.swift */; };
 		6E1FBE4C2237906D0080BBD1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1FBE4B2237906D0080BBD1 /* CoreData.framework */; };
 		6E1FBE4F223795080080BBD1 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FBE4E223795080080BBD1 /* Const.swift */; };
-		6E69CFA92157857C00A06020 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69CFA72157857C00A06020 /* SettingTableViewCell.swift */; };
-		6E69CFAA2157857C00A06020 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */; };
-		6E69CFB12157907900A06020 /* SubSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69CFAF2157907900A06020 /* SubSettingTableViewCell.swift */; };
-		6E69CFB22157907900A06020 /* SubSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFB02157907900A06020 /* SubSettingTableViewCell.xib */; };
 		6E69CFB52157974300A06020 /* CyuSenListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69CFB32157974300A06020 /* CyuSenListViewController.swift */; };
 		6E69CFB62157974300A06020 /* CyuSenListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E69CFB42157974300A06020 /* CyuSenListViewController.xib */; };
 		6E69CFB9215797AE00A06020 /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69CFB7215797AE00A06020 /* FeedBackViewController.swift */; };
@@ -58,6 +54,10 @@
 		6E71836D2237B7ED00DBFB10 /* BaseModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E71836C2237B7ED00DBFB10 /* BaseModelObject.swift */; };
 		6E71836F2237EDF100DBFB10 /* JSONCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E71836E2237EDF100DBFB10 /* JSONCache.swift */; };
 		6E71837522388CDA00DBFB10 /* SwiftTips.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E71837422388CDA00DBFB10 /* SwiftTips.framework */; };
+		6E7183792239EB4A00DBFB10 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7183772239EB4A00DBFB10 /* SettingCell.swift */; };
+		6E71837A2239EB4A00DBFB10 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E7183782239EB4A00DBFB10 /* SettingCell.xib */; };
+		6E71837C2239EFDC00DBFB10 /* SettingSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E71837B2239EFDC00DBFB10 /* SettingSectionHeader.swift */; };
+		6E7183802239FE1500DBFB10 /* SettingSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E71837F2239FE1500DBFB10 /* SettingSectionHeader.xib */; };
 		6E9E969F215F538F0029FDBD /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E969D215F538F0029FDBD /* UserViewController.swift */; };
 		6E9E96A0215F538F0029FDBD /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E969E215F538F0029FDBD /* UserViewController.xib */; };
 		6E9E96AF215F975E0029FDBD /* VersionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E96AD215F975E0029FDBD /* VersionViewController.swift */; };
@@ -137,21 +137,21 @@
 		6E1FBE3622377C850080BBD1 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		6E1FBE4B2237906D0080BBD1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6E1FBE4E223795080080BBD1 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		6E69CFA72157857C00A06020 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
-		6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
-		6E69CFAF2157907900A06020 /* SubSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSettingTableViewCell.swift; sourceTree = "<group>"; };
-		6E69CFB02157907900A06020 /* SubSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubSettingTableViewCell.xib; sourceTree = "<group>"; };
-		6E69CFB32157974300A06020 /* CyuSenListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CyuSenListViewController.swift; path = restaurant/CodeClass/Setting/View/CyuSenListViewController.swift; sourceTree = SOURCE_ROOT; };
-		6E69CFB42157974300A06020 /* CyuSenListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CyuSenListViewController.xib; path = restaurant/CodeClass/Setting/View/CyuSenListViewController.xib; sourceTree = SOURCE_ROOT; };
-		6E69CFB7215797AE00A06020 /* FeedBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedBackViewController.swift; path = restaurant/CodeClass/Setting/View/FeedBackViewController.swift; sourceTree = SOURCE_ROOT; };
-		6E69CFB8215797AE00A06020 /* FeedBackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FeedBackViewController.xib; path = restaurant/CodeClass/Setting/View/FeedBackViewController.xib; sourceTree = SOURCE_ROOT; };
-		6E69CFBB215797C200A06020 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LegalViewController.swift; path = restaurant/CodeClass/Setting/View/LegalViewController.swift; sourceTree = SOURCE_ROOT; };
-		6E69CFBC215797C200A06020 /* LegalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LegalViewController.xib; path = restaurant/CodeClass/Setting/View/LegalViewController.xib; sourceTree = SOURCE_ROOT; };
+		6E69CFB32157974300A06020 /* CyuSenListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CyuSenListViewController.swift; path = restaurant/CodeClass/Setting/Controller/CyuSenListViewController.swift; sourceTree = SOURCE_ROOT; };
+		6E69CFB42157974300A06020 /* CyuSenListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CyuSenListViewController.xib; path = restaurant/CodeClass/Setting/Controller/CyuSenListViewController.xib; sourceTree = SOURCE_ROOT; };
+		6E69CFB7215797AE00A06020 /* FeedBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedBackViewController.swift; path = restaurant/CodeClass/Setting/Controller/FeedBackViewController.swift; sourceTree = SOURCE_ROOT; };
+		6E69CFB8215797AE00A06020 /* FeedBackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FeedBackViewController.xib; path = restaurant/CodeClass/Setting/Controller/FeedBackViewController.xib; sourceTree = SOURCE_ROOT; };
+		6E69CFBB215797C200A06020 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LegalViewController.swift; path = restaurant/CodeClass/Setting/Controller/LegalViewController.swift; sourceTree = SOURCE_ROOT; };
+		6E69CFBC215797C200A06020 /* LegalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LegalViewController.xib; path = restaurant/CodeClass/Setting/Controller/LegalViewController.xib; sourceTree = SOURCE_ROOT; };
 		6E7183662237B48D00DBFB10 /* BaseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataSource.swift; sourceTree = "<group>"; };
 		6E7183682237B59900DBFB10 /* LotterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotterDataSource.swift; sourceTree = "<group>"; };
 		6E71836C2237B7ED00DBFB10 /* BaseModelObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelObject.swift; sourceTree = "<group>"; };
 		6E71836E2237EDF100DBFB10 /* JSONCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCache.swift; sourceTree = "<group>"; };
 		6E71837422388CDA00DBFB10 /* SwiftTips.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTips.framework; path = Carthage/Build/iOS/SwiftTips.framework; sourceTree = "<group>"; };
+		6E7183772239EB4A00DBFB10 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		6E7183782239EB4A00DBFB10 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		6E71837B2239EFDC00DBFB10 /* SettingSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSectionHeader.swift; sourceTree = "<group>"; };
+		6E71837F2239FE1500DBFB10 /* SettingSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingSectionHeader.xib; sourceTree = "<group>"; };
 		6E9E969D215F538F0029FDBD /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		6E9E969E215F538F0029FDBD /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		6E9E96AD215F975E0029FDBD /* VersionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionViewController.swift; sourceTree = "<group>"; };
@@ -498,21 +498,8 @@
 			children = (
 				D085D0332157471300936233 /* SettingViewController.swift */,
 				D085D0342157471300936233 /* SettingViewController.xib */,
-				6E69CFA72157857C00A06020 /* SettingTableViewCell.swift */,
-				6E69CFA82157857C00A06020 /* SettingTableViewCell.xib */,
-				6E69CFAF2157907900A06020 /* SubSettingTableViewCell.swift */,
-				6E69CFB02157907900A06020 /* SubSettingTableViewCell.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		D085D026215746A300936233 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				6E69CFB32157974300A06020 /* CyuSenListViewController.swift */,
 				6E69CFB42157974300A06020 /* CyuSenListViewController.xib */,
-				6E9E96B82162727D0029FDBD /* CyusenListViewCell.swift */,
-				6E9E96B92162727D0029FDBD /* CyusenListViewCell.xib */,
 				6E69CFB7215797AE00A06020 /* FeedBackViewController.swift */,
 				6E69CFB8215797AE00A06020 /* FeedBackViewController.xib */,
 				6E69CFBB215797C200A06020 /* LegalViewController.swift */,
@@ -521,6 +508,19 @@
 				6E9E969E215F538F0029FDBD /* UserViewController.xib */,
 				6E9E96AD215F975E0029FDBD /* VersionViewController.swift */,
 				6E9E96AE215F975E0029FDBD /* VersionViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D085D026215746A300936233 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E7183772239EB4A00DBFB10 /* SettingCell.swift */,
+				6E7183782239EB4A00DBFB10 /* SettingCell.xib */,
+				6E71837B2239EFDC00DBFB10 /* SettingSectionHeader.swift */,
+				6E71837F2239FE1500DBFB10 /* SettingSectionHeader.xib */,
+				6E9E96B82162727D0029FDBD /* CyusenListViewCell.swift */,
+				6E9E96B92162727D0029FDBD /* CyusenListViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -594,14 +594,14 @@
 			files = (
 				D085D0362157471300936233 /* SettingViewController.xib in Resources */,
 				D06CD5A121572F9200D0C982 /* LaunchScreen.storyboard in Resources */,
+				6E7183802239FE1500DBFB10 /* SettingSectionHeader.xib in Resources */,
 				D06CD59E21572F9200D0C982 /* Assets.xcassets in Resources */,
 				6E9E96BB2162727D0029FDBD /* CyusenListViewCell.xib in Resources */,
-				6E69CFAA2157857C00A06020 /* SettingTableViewCell.xib in Resources */,
+				6E71837A2239EB4A00DBFB10 /* SettingCell.xib in Resources */,
 				6E69CFBE215797C200A06020 /* LegalViewController.xib in Resources */,
 				D06CD59921572F9100D0C982 /* Main.storyboard in Resources */,
 				D01BA5DE215768FD00E6ADE9 /* BearCollectionViewCell.xib in Resources */,
 				D01BA5E6215769C100E6ADE9 /* BearReleaseView.xib in Resources */,
-				6E69CFB22157907900A06020 /* SubSettingTableViewCell.xib in Resources */,
 				D085D02E215746EE00936233 /* MapViewController.xib in Resources */,
 				6E69CFBA215797AE00A06020 /* FeedBackViewController.xib in Resources */,
 				6E9E96B0215F975E0029FDBD /* VersionViewController.xib in Resources */,
@@ -710,8 +710,8 @@
 				425B3FBC21688C800037C088 /* FeedBack.swift in Sources */,
 				D01BA5BD21574B4200E6ADE9 /* SpotAnnotation.swift in Sources */,
 				6E69CFB9215797AE00A06020 /* FeedBackViewController.swift in Sources */,
+				6E7183792239EB4A00DBFB10 /* SettingCell.swift in Sources */,
 				6E1FBE3722377C850080BBD1 /* Number+Extension.swift in Sources */,
-				6E69CFB12157907900A06020 /* SubSettingTableViewCell.swift in Sources */,
 				6E1FBE3E22377C850080BBD1 /* Collection+Extension.swift in Sources */,
 				6E1FBE4022377C850080BBD1 /* UIColor+Extension.swift in Sources */,
 				D06CD59C21572F9100D0C982 /* restaurant.xcdatamodeld in Sources */,
@@ -719,7 +719,6 @@
 				6E1FBE19223775E30080BBD1 /* ApiClient.swift in Sources */,
 				D085D0352157471300936233 /* SettingViewController.swift in Sources */,
 				6E71836F2237EDF100DBFB10 /* JSONCache.swift in Sources */,
-				6E69CFA92157857C00A06020 /* SettingTableViewCell.swift in Sources */,
 				425B3FBA2168537F0037C088 /* SynchronizationService.swift in Sources */,
 				6E9E96BA2162727D0029FDBD /* CyusenListViewCell.swift in Sources */,
 				6E7183692237B59900DBFB10 /* LotterDataSource.swift in Sources */,
@@ -756,6 +755,7 @@
 				425B3FB8216853730037C088 /* RestaurantService.swift in Sources */,
 				D085D01A2157449A00936233 /* TabBarController.swift in Sources */,
 				6E69CFBD215797C200A06020 /* LegalViewController.swift in Sources */,
+				6E71837C2239EFDC00DBFB10 /* SettingSectionHeader.swift in Sources */,
 				425B3FC0216910B90037C088 /* LotteryHistory.swift in Sources */,
 				D01BA5C221574E2300E6ADE9 /* UtilClass.swift in Sources */,
 				D06CD59621572F9100D0C982 /* ViewController.swift in Sources */,

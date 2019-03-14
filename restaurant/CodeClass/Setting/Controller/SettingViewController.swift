@@ -6,137 +6,110 @@
 //  Copyright © 2018年 劉鉄男. All rights reserved.
 //
 
+import SwiftTips
+
 class SettingViewController: UIViewController {
     
     @IBOutlet weak var settingTableView: UITableView!
-    fileprivate var sections = [Section]()
-    
-    fileprivate enum SettingTableViewSettingType: Int {
-        case userInfo
-        case other
-    }
-    
-    fileprivate enum SettingTableViewRowType {
-//        case userInfoTitle
-//            case otherTitle
-        case user
-        case cyusen
-        case feedback
-        case legal
-        case version
-    }
-    
-    fileprivate struct Section {
-        var sectionType: SettingTableViewSettingType
-        var rowItems: [SettingTableViewRowType]
-    }
-    
-     func initializeTableViewStruct(){
-        sections = [Section(sectionType: .userInfo, rowItems: [.user]),
-                    Section(sectionType: .other, rowItems: [.cyusen, .feedback, .legal, .version])
-        
-        ]
-    }
-    
-    fileprivate let itemDataSouce: [[(String)]] = [
-        [
-            (""),
-            ],
-        [
-            ("抽選履歴"),
-            ("フィードバック"),
-            ("利用規約"),
-            ("アプリ情報"),
-            ],
-        ]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor.viewBackgroundColor
-        let settingCell = UINib(nibName: SettingTableViewCell.nibName, bundle: nil)
-        settingTableView.register(settingCell, forCellReuseIdentifier: SettingTableViewCell.reuseID)
-        let subSettingCell = UINib(nibName: SubSettingTableViewCell.nibName, bundle: nil)
-        settingTableView.register(subSettingCell, forCellReuseIdentifier: SubSettingTableViewCell.reuseID)
+        settingTableView.backgroundColor = kBackGroundColor
         settingTableView.dataSource = self
         settingTableView.delegate = self
-        self.settingTableView.tableFooterView = UIView()
-        self.initializeTableViewStruct()
-
-    }
-
-}
-
-// MARK: @protocol - UITableViewDelegate
-extension SettingViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 {
-            return 15
-        } else {
-            return 20
-        }
+        let nibCell = UINib(nibName: SettingCell.nibName, bundle: nil)
+        settingTableView.register(nibCell, forCellReuseIdentifier: SettingCell.reuseID)
+        let nibHeader = UINib(nibName: SettingSectionHeader.nibName, bundle: nil)
+        settingTableView.register(nibHeader, forHeaderFooterViewReuseIdentifier: SettingSectionHeader.reuseID)
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.00001
-    }
+    fileprivate let numberOfSections: Int = 3
+    fileprivate let sectionHeaderTexts: [String] = [
+        "ユーザー情報",
+        "抽選情報",
+        "規約"
+    ]
+    fileprivate let faqTexts: [[String]] = [
+        ["プロフィール"],
+        ["抽選履歴","フィードバック"],
+        ["利用規約","アプリ情報"]
+    ]
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        //ここに遷移処理を書く
-        switch sections[indexPath.section].rowItems[indexPath.row] {
-        case .user:
-//            self.navigationController?.pushViewController(UserViewController(), animated: true)
-            break
-        case .cyusen:
-            self.navigationController?.pushViewController(CyuSenListViewController(), animated: true)
-            break
-        case .feedback:
-            self.navigationController?.pushViewController(FeedBackViewController(), animated: true)
-            break
-        case .legal:
-            self.navigationController?.pushViewController(LegalViewController(), animated: true)
-            break
-        case .version:
-            self.navigationController?.pushViewController(VersionViewController(), animated: true)
-            break
-        }
-
-    }
+    fileprivate let faqIcon: [[String]] = [
+        ["ic_set_profile"],
+        ["ic_set_history","ic_set_history"],
+        ["ic_set_terms","ic_set_terms"]
+    ]
 }
 
 // ================================================================================
 // MARK: - UITableViewDataSource
 
 extension SettingViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return self.itemDataSouce.count
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let rows = self.itemDataSouce[section]
-        return rows.count
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if indexPath.section == 0 {
-            return 44.0
-        } else {
-            return 44.0
-        }
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.reuseID, for: indexPath) as! SettingTableViewCell
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: SubSettingTableViewCell.reuseID, for: indexPath) as! SubSettingTableViewCell
-            let item = self.itemDataSouce[indexPath.section][indexPath.row]
-            cell.titleLabel.text = item
-            return cell
-        }
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return self.numberOfSections
     }
     
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.faqTexts[section].count
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: SettingCell.reuseID, for: indexPath) as! SettingCell
+        cell.titleLabel.text = self.faqTexts[indexPath.section][indexPath.row]
+        cell.iconImage.image = UIImage(named: self.faqIcon[indexPath.section][indexPath.row])
+        return cell
+    }
+}
+
+// ================================================================================
+// MARK: - UITableViewDelegate
+
+extension SettingViewController: UITableViewDelegate {
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: SettingSectionHeader.reuseID) as? SettingSectionHeader {
+            header.sectionHeaderLabel.text = self.sectionHeaderTexts[section]
+            let backgroundView = UIView(frame: header.bounds)
+            backgroundView.backgroundColor = UIColor(red: 237/255, green: 237/255, blue: 237/255, alpha: 0.8)
+            header.backgroundView = backgroundView
+            return header
+        }
+        return nil
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return .leastNonzeroMagnitude
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        var controller: UIViewController
+        switch indexPath.section {
+        case 0:
+            controller = UserViewController()
+            break
+        case 1:
+            if indexPath.row == 0 {
+                controller = CyuSenListViewController()
+            } else {
+                controller = FeedBackViewController()
+            }
+            break
+        case 2:
+            if indexPath.row == 0 {
+                controller = LegalViewController()
+            } else {
+                controller = VersionViewController()
+            }
+            break
+        default:
+            fatalError("settingPage Section failed")
+        }
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }

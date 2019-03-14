@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VersionViewController" customModule="restaurant" customModuleProvider="target">
+            <connections>
+                <outlet property="version" destination="D4I-k3-EBR" id="0JC-do-mkv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="バージョン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-k3-EBR">
+                    <rect key="frame" x="16" y="259" width="343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中華グルメ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elN-Sp-BP0">
+                    <rect key="frame" x="16" y="215" width="343" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©2018 SparkWorks Co.,Ltd. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvQ-7g-yIT">
+                    <rect key="frame" x="16" y="631" width="343" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="D4I-k3-EBR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="6jv-EV-gkh"/>
+                <constraint firstItem="RvQ-7g-yIT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PSp-SO-GRL"/>
+                <constraint firstItem="elN-Sp-BP0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="195" id="VNW-01-yEa"/>
+                <constraint firstItem="D4I-k3-EBR" firstAttribute="top" secondItem="elN-Sp-BP0" secondAttribute="bottom" constant="8" id="WWi-ji-1jY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="D4I-k3-EBR" secondAttribute="trailing" constant="16" id="WzV-0y-Sfh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="elN-Sp-BP0" secondAttribute="trailing" constant="16" id="pC7-0d-ygo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RvQ-7g-yIT" secondAttribute="bottom" constant="20" id="pgD-5l-Zvs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RvQ-7g-yIT" secondAttribute="trailing" constant="16" id="w8s-Ou-Xfi"/>
+                <constraint firstItem="elN-Sp-BP0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="yAb-YI-zNg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+        </view>
+    </objects>
+</document>

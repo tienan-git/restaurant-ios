@@ -9,6 +9,6 @@
 import UIKit
 
 // よく使うカラーとか、よく使う定数をここにまとめている
-
+public let kBackGroundColor: UIColor = UIColor.colorWithHex(0xECEDED)
 public let kBorderColor: UIColor = UIColor.colorWithHex(0xE0E0E0)
 let deviceId = UIDevice.current.identifierForVendor!.uuidString
