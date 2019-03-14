@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
             // 応募情報取得
-            self.lotterDataSource.updateLotteryByRefresh(true)
+            self.lotterDataSource.getLottery()
         }
         showLottery()
     }

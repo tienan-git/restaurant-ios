@@ -12,11 +12,7 @@ import RealmSwift
 class LotteryDataSource: BaseDataSource {
 
     //応募情報取得
-    open func updateLotteryByRefresh(_ shouldRefresh: Bool) {
-        getLottery(shouldRefresh: shouldRefresh)
-    }
-
-    private func getLottery(shouldRefresh: Bool) {
+    open func getLottery() {
         Lottery.getLotteryInfo({(lotteryObj, error) in
             if let lottery = lotteryObj {
                 let realm = try! Realm()
