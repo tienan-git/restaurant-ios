@@ -12,8 +12,7 @@ import SwiftyJSON
 import RealmSwift
 import AlamofireImage
 
-class HomeViewController: UIViewController {
-    
+class HomeViewController: UIViewController, LotteryDataSourceDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemPriceLabel: UILabel!
@@ -28,6 +27,7 @@ class HomeViewController: UIViewController {
        let lotterDataSource = LotteryDataSource()
        self.lotterDataSource = lotterDataSource
        super.init(nibName: nil, bundle: nil)
+       lotterDataSource.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,7 +40,6 @@ class HomeViewController: UIViewController {
             // 応募情報取得
             self.lotterDataSource.getLottery()
         }
-        showLottery()
     }
     
     // MARK: - イベント：「抽選について」ボタンをタップする時
@@ -73,6 +72,13 @@ class HomeViewController: UIViewController {
         
     }
     
+    func completeRequest() {
+        showLottery()
+    }
+    
+    func failedRequest(_ error: Error) {
+        print("-----------failed")
+    }
     
     func getLottery() {
         
