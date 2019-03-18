@@ -73,6 +73,10 @@
 		6E7183A5223A93B000DBFB10 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7183A4223A93B000DBFB10 /* NavigationBarView.swift */; };
 		6E7183A7223A9B2E00DBFB10 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7183A6223A9B2E00DBFB10 /* User.swift */; };
 		6E7183A9223A9B9E00DBFB10 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7183A8223A9B9E00DBFB10 /* Photo.swift */; };
+		6E7183AC223F399900DBFB10 /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7183AA223F399900DBFB10 /* BaseWebViewController.swift */; };
+		6E7183AD223F399900DBFB10 /* BaseWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E7183AB223F399900DBFB10 /* BaseWebViewController.xib */; };
+		6E7183B2223F3E6500DBFB10 /* ToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7183B0223F3E6500DBFB10 /* ToolViewController.swift */; };
+		6E7183B3223F3E6500DBFB10 /* ToolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E7183B1223F3E6500DBFB10 /* ToolViewController.xib */; };
 		6E9E96AF215F975E0029FDBD /* VersionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E96AD215F975E0029FDBD /* VersionViewController.swift */; };
 		6E9E96B0215F975E0029FDBD /* VersionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E96AE215F975E0029FDBD /* VersionViewController.xib */; };
 		6E9E96BA2162727D0029FDBD /* CyusenListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E96B82162727D0029FDBD /* CyusenListViewCell.swift */; };
@@ -180,6 +184,10 @@
 		6E7183A4223A93B000DBFB10 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		6E7183A6223A9B2E00DBFB10 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6E7183A8223A9B9E00DBFB10 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		6E7183AA223F399900DBFB10 /* BaseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
+		6E7183AB223F399900DBFB10 /* BaseWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseWebViewController.xib; sourceTree = "<group>"; };
+		6E7183B0223F3E6500DBFB10 /* ToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolViewController.swift; sourceTree = "<group>"; };
+		6E7183B1223F3E6500DBFB10 /* ToolViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToolViewController.xib; sourceTree = "<group>"; };
 		6E9E96AD215F975E0029FDBD /* VersionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionViewController.swift; sourceTree = "<group>"; };
 		6E9E96AE215F975E0029FDBD /* VersionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VersionViewController.xib; sourceTree = "<group>"; };
 		6E9E96B82162727D0029FDBD /* CyusenListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyusenListViewCell.swift; sourceTree = "<group>"; };
@@ -324,6 +332,23 @@
 			path = UITableView;
 			sourceTree = "<group>";
 		};
+		6E7183AF223F3E3A00DBFB10 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				6E7183B4223F3EE000DBFB10 /* Controller */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		6E7183B4223F3EE000DBFB10 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E7183B0223F3E6500DBFB10 /* ToolViewController.swift */,
+				6E7183B1223F3E6500DBFB10 /* ToolViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		819D4BC6683FBEBEF2F35B2C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +445,7 @@
 				D085D0152157437B00936233 /* Base */,
 				D085D01B215745D000936233 /* Home */,
 				D085D01C215745DF00936233 /* Map */,
+				6E7183AF223F3E3A00DBFB10 /* Tool */,
 				D085D01D215745ED00936233 /* Coupon */,
 				D085D01E215745F700936233 /* Setting */,
 			);
@@ -442,6 +468,8 @@
 			children = (
 				D085D0192157449A00936233 /* TabBarController.swift */,
 				6E7183A2223A90A000DBFB10 /* BaseImagePickerController.swift */,
+				6E7183AA223F399900DBFB10 /* BaseWebViewController.swift */,
+				6E7183AB223F399900DBFB10 /* BaseWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -641,6 +669,7 @@
 			files = (
 				D085D0362157471300936233 /* SettingViewController.xib in Resources */,
 				6E718397223A527D00DBFB10 /* LabelPickerCell.xib in Resources */,
+				6E7183AD223F399900DBFB10 /* BaseWebViewController.xib in Resources */,
 				D06CD5A121572F9200D0C982 /* LaunchScreen.storyboard in Resources */,
 				6E7183802239FE1500DBFB10 /* SettingSectionHeader.xib in Resources */,
 				D06CD59E21572F9200D0C982 /* Assets.xcassets in Resources */,
@@ -649,6 +678,7 @@
 				6E71838C223A42F600DBFB10 /* UserViewController.xib in Resources */,
 				6E69CFBE215797C200A06020 /* LegalViewController.xib in Resources */,
 				6E718393223A4D7F00DBFB10 /* LabelTextFieldCell.xib in Resources */,
+				6E7183B3223F3E6500DBFB10 /* ToolViewController.xib in Resources */,
 				6E71839F223A658400DBFB10 /* ButtonCell.xib in Resources */,
 				D06CD59921572F9100D0C982 /* Main.storyboard in Resources */,
 				D01BA5DE215768FD00E6ADE9 /* BearCollectionViewCell.xib in Resources */,
@@ -755,6 +785,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E7183B2223F3E6500DBFB10 /* ToolViewController.swift in Sources */,
 				6E1FBE4422377C850080BBD1 /* UIViewController+Extension.swift in Sources */,
 				D085D029215746D000936233 /* HomeViewController.swift in Sources */,
 				6E1FBE4522377C850080BBD1 /* NSAttributedString+Extension.swift in Sources */,
@@ -785,6 +816,7 @@
 				6E71838E223A43B100DBFB10 /* ProfileSettingHeaderView.swift in Sources */,
 				D01BA5CE21575F4500E6ADE9 /* DefaultData.swift in Sources */,
 				425B3FB0216851A40037C088 /* CouponService.swift in Sources */,
+				6E7183AC223F399900DBFB10 /* BaseWebViewController.swift in Sources */,
 				6E1FBE4722377C850080BBD1 /* UIButton+Extension.swift in Sources */,
 				6E71836D2237B7ED00DBFB10 /* BaseModelObject.swift in Sources */,
 				6E1FBE1D22377AE40080BBD1 /* Utility.swift in Sources */,

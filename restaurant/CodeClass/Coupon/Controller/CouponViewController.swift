@@ -6,6 +6,9 @@
 //  Copyright © 2018年 劉鉄男. All rights reserved.
 //
 
-class CouponViewController: UIViewController {
+import UIKit
+import RealmSwift
+
+class CouponViewController: UIViewController{
 
 }
